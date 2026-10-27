@@ -28,7 +28,7 @@ test('web table', async({page})=> {
   console.log(totalCount);
 
   // to print all the data present in the table
-  for(let i=0; i<totalCount; i++)
+  for(let j=0; j<totalCount; j++)
   {
     const row = counts.nth(i);
     const rowText = await row.innerText();
