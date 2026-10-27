@@ -1,0 +1,1497 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: windowHandling.spec.js >> myntra
+- Location: tests\windowHandling.spec.js:23:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f9e1]:
+  - banner [ref=f9e3]:
+    - text: "| | |"
+    - generic:
+      - link [ref=f9e5] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=f9e6]:
+        - generic [ref=f9e7]:
+          - link "Men" [ref=f9e10] [cursor=pointer]:
+            - /url: /shop/men
+          - link "Women" [ref=f9e13] [cursor=pointer]:
+            - /url: /shop/women
+          - link "Kids" [ref=f9e16] [cursor=pointer]:
+            - /url: /shop/kids
+          - link "Home" [ref=f9e19] [cursor=pointer]:
+            - /url: /shop/home-living
+          - link "Beauty" [ref=f9e22] [cursor=pointer]:
+            - /url: /personal-care
+          - link "Genz" [ref=f9e25] [cursor=pointer]:
+            - /url: /shop/fwd-women
+          - generic [ref=f9e27]:
+            - link "Studio" [ref=f9e28] [cursor=pointer]:
+              - /url: /studio/home
+            - superscript [ref=f9e30]: new
+      - generic [ref=f9e31]:
+        - generic [ref=f9e32]: Profile
+        - link "Wishlist":
+          - /url: /wishlist
+          - generic [ref=f9e36] [cursor=pointer]
+        - link "Bag":
+          - /url: /checkout/cart
+          - generic [ref=f9e38] [cursor=pointer]
+      - textbox "Search for products, brands and more" [ref=f9e41]
+  - generic [ref=f9e45]:
+    - main [ref=f9e46]:
+      - list [ref=f9e49]:
+        - listitem [ref=f9e50]:
+          - link "Home" [ref=f9e51] [cursor=pointer]:
+            - /url: /?src=bc
+          - text: /
+        - listitem [ref=f9e52]:
+          - link "Clothing" [ref=f9e53] [cursor=pointer]:
+            - /url: /clothing?src=bc
+          - text: /
+        - listitem [ref=f9e54]: Dresses
+      - generic [ref=f9e56]:
+        - heading "Dresses" [level=1] [ref=f9e57]
+        - generic [ref=f9e58]: "- 348889 items"
+      - generic [ref=f9e59]:
+        - generic [ref=f9e62]:
+          - generic [ref=f9e63]: FILTERS
+          - list [ref=f9e65]:
+            - listitem [ref=f9e66]:
+              - generic [ref=f9e67] [cursor=pointer]: Men
+            - listitem [ref=f9e68]:
+              - generic [ref=f9e69] [cursor=pointer]: Women
+            - listitem [ref=f9e70]:
+              - generic [ref=f9e71] [cursor=pointer]: Boys
+            - listitem [ref=f9e72]:
+              - generic [ref=f9e73] [cursor=pointer]: Girls
+          - generic [ref=f9e74]:
+            - generic [ref=f9e75]: Categories
+            - list [ref=f9e76]:
+              - listitem [ref=f9e77]:
+                - generic [ref=f9e78] [cursor=pointer]:
+                  - text: Dresses
+                  - generic [ref=f9e79]: (335696)
+              - listitem [ref=f9e81]:
+                - generic [ref=f9e82] [cursor=pointer]:
+                  - text: Ethnic Dresses
+                  - generic [ref=f9e83]: (13271)
+          - generic [ref=f9e85]:
+            - generic [ref=f9e86]: Brand
+            - generic [ref=f9e88] [cursor=pointer]
+            - list [ref=f9e89]:
+              - listitem [ref=f9e90]:
+                - generic [ref=f9e91] [cursor=pointer]:
+                  - text: LULU & SKY
+                  - generic [ref=f9e92]: (11599)
+              - listitem [ref=f9e94]:
+                - generic [ref=f9e95] [cursor=pointer]:
+                  - text: BAESD
+                  - generic [ref=f9e96]: (8304)
+              - listitem [ref=f9e98]:
+                - generic [ref=f9e99] [cursor=pointer]:
+                  - text: Trendyol
+                  - generic [ref=f9e100]: (7306)
+              - listitem [ref=f9e102]:
+                - generic [ref=f9e103] [cursor=pointer]:
+                  - text: JC Mode
+                  - generic [ref=f9e104]: (6638)
+              - listitem [ref=f9e106]:
+                - generic [ref=f9e107] [cursor=pointer]:
+                  - text: StyleCast
+                  - generic [ref=f9e108]: (6593)
+              - listitem [ref=f9e110]:
+                - generic [ref=f9e111] [cursor=pointer]:
+                  - text: YK
+                  - generic [ref=f9e112]: (6254)
+              - listitem [ref=f9e114]:
+                - generic [ref=f9e115] [cursor=pointer]:
+                  - text: DressBerry
+                  - generic [ref=f9e116]: (5837)
+              - listitem [ref=f9e118]:
+                - generic [ref=f9e119] [cursor=pointer]:
+                  - text: StyleCast x Revolte
+                  - generic [ref=f9e120]: (5756)
+            - generic [ref=f9e122] [cursor=pointer]: + 4421 more
+          - generic [ref=f9e123]:
+            - generic [ref=f9e124]: Price
+            - generic [ref=f9e126]:
+              - generic [ref=f9e127]:
+                - button [ref=f9e130]
+                - button [ref=f9e132]
+              - generic [ref=f9e134]: ₹100 - ₹10,100+
+          - generic [ref=f9e135]:
+            - generic [ref=f9e136]: Color
+            - generic [ref=f9e138] [cursor=pointer]
+            - list [ref=f9e139]:
+              - listitem [ref=f9e140]:
+                - generic [ref=f9e141] [cursor=pointer]:
+                  - text: Black
+                  - generic [ref=f9e143]: (51427)
+              - listitem [ref=f9e145]:
+                - generic [ref=f9e146] [cursor=pointer]:
+                  - text: Blue
+                  - generic [ref=f9e148]: (40541)
+              - listitem [ref=f9e150]:
+                - generic [ref=f9e151] [cursor=pointer]:
+                  - text: Pink
+                  - generic [ref=f9e153]: (36927)
+              - listitem [ref=f9e155]:
+                - generic [ref=f9e156] [cursor=pointer]:
+                  - text: White
+                  - generic [ref=f9e158]: (29747)
+              - listitem [ref=f9e160]:
+                - generic [ref=f9e161] [cursor=pointer]:
+                  - text: Green
+                  - generic [ref=f9e163]: (24757)
+              - listitem [ref=f9e165]:
+                - generic [ref=f9e166] [cursor=pointer]:
+                  - text: Red
+                  - generic [ref=f9e168]: (20330)
+              - listitem [ref=f9e170]:
+                - generic [ref=f9e171] [cursor=pointer]:
+                  - text: Yellow
+                  - generic [ref=f9e173]: (14115)
+            - generic [ref=f9e175] [cursor=pointer]: + 43 more
+          - generic [ref=f9e177]:
+            - generic [ref=f9e178]: Discount Range
+            - list [ref=f9e179]:
+              - listitem [ref=f9e180]:
+                - generic [ref=f9e181] [cursor=pointer]: 10% and above
+              - listitem [ref=f9e182]:
+                - generic [ref=f9e183] [cursor=pointer]: 20% and above
+              - listitem [ref=f9e184]:
+                - generic [ref=f9e185] [cursor=pointer]: 30% and above
+              - listitem [ref=f9e186]:
+                - generic [ref=f9e187] [cursor=pointer]: 40% and above
+              - listitem [ref=f9e188]:
+                - generic [ref=f9e189] [cursor=pointer]: 50% and above
+              - listitem [ref=f9e190]:
+                - generic [ref=f9e191] [cursor=pointer]: 60% and above
+              - listitem [ref=f9e192]:
+                - generic [ref=f9e193] [cursor=pointer]: 70% and above
+              - listitem [ref=f9e194]:
+                - generic [ref=f9e195] [cursor=pointer]: 80% and above
+              - listitem [ref=f9e196]:
+                - generic [ref=f9e197] [cursor=pointer]: 90% and above
+        - generic [ref=f9e199]:
+          - generic [ref=f9e202]:
+            - generic [ref=f9e203]: "Sort by : Recommended"
+            - list [ref=f9e209]:
+              - listitem [ref=f9e210] [cursor=pointer]:
+                - heading "Bundles" [level=4] [ref=f9e212]
+              - listitem [ref=f9e214] [cursor=pointer]:
+                - heading "Country of Origin" [level=4] [ref=f9e216]
+              - listitem [ref=f9e218] [cursor=pointer]:
+                - heading "Size" [level=4] [ref=f9e220]
+              - listitem
+          - generic [ref=f9e223]:
+            - list [ref=f9e224]:
+              - listitem [ref=f9e225]:
+                - generic [ref=f9e226]:
+                  - generic [ref=f9e227]: "4.5"
+                  - generic [ref=f9e229]:
+                    - generic [ref=f9e230]: "|"
+                    - text: "283"
+                - link "Sangria Women Floral Embroidered Ethnic Dress Sangria Women Embroidered Ethnic Dress Rs. 1003Rs. 4099(76% OFF)" [ref=f9e231] [cursor=pointer]:
+                  - /url: ethnic-dresses/sangria/sangria-women-floral-embroidered-ethnic-dress/36880462/buy
+                  - img "Sangria Women Floral Embroidered Ethnic Dress" [ref=f9e237]
+                  - generic [ref=f9e238]:
+                    - heading "Sangria" [level=3] [ref=f9e239]
+                    - heading "Women Embroidered Ethnic Dress" [level=4] [ref=f9e240]
+                    - generic [ref=f9e241]:
+                      - generic [ref=f9e242]:
+                        - generic [ref=f9e243]: Rs. 1003
+                        - generic [ref=f9e244]: Rs. 4099
+                      - text: (76% OFF)
+              - listitem [ref=f9e245]:
+                - generic [ref=f9e246]:
+                  - generic [ref=f9e247]: "4.5"
+                  - generic [ref=f9e249]:
+                    - generic [ref=f9e250]: "|"
+                    - text: 15.7k
+                - link "anayna Women Checked Cotton Fit & Flare Maxi Dresses anayna Women Fit & Flared Dresses Rs. 990Rs. 3840(74% OFF)" [ref=f9e251] [cursor=pointer]:
+                  - /url: ethnic-dresses/anayna/anayna-women-checked-cotton-fit--flare-maxi-dresses/31067543/buy
+                  - img "anayna Women Checked Cotton Fit & Flare Maxi Dresses" [ref=f9e257]
+                  - generic [ref=f9e258]:
+                    - heading "anayna" [level=3] [ref=f9e259]
+                    - heading "Women Fit & Flared Dresses" [level=4] [ref=f9e260]
+                    - generic [ref=f9e261]:
+                      - generic [ref=f9e262]:
+                        - generic [ref=f9e263]: Rs. 990
+                        - generic [ref=f9e264]: Rs. 3840
+                      - text: (74% OFF)
+              - listitem [ref=f9e265]:
+                - generic [ref=f9e266]:
+                  - generic [ref=f9e267]: "4.2"
+                  - generic [ref=f9e269]:
+                    - generic [ref=f9e270]: "|"
+                    - text: "74"
+                - generic [ref=f9e271]: AD
+                - link "U.S. Polo Assn. Kids Shirt Dress U.S. Polo Assn. Kids Kids Shirt Dress Rs. 1039Rs. 1999(48% OFF)" [ref=f9e272] [cursor=pointer]:
+                  - /url: dresses/u.s.+polo+assn.+kids/us-polo-assn-kids-shirt-dress/34083437/buy
+                  - img "U.S. Polo Assn. Kids Shirt Dress" [ref=f9e278]
+                  - generic [ref=f9e279]:
+                    - heading "U.S. Polo Assn. Kids" [level=3] [ref=f9e280]
+                    - heading "Kids Shirt Dress" [level=4] [ref=f9e281]
+                    - generic [ref=f9e282]:
+                      - generic [ref=f9e283]:
+                        - generic [ref=f9e284]: Rs. 1039
+                        - generic [ref=f9e285]: Rs. 1999
+                      - text: (48% OFF)
+              - listitem [ref=f9e286]:
+                - generic [ref=f9e287]:
+                  - generic [ref=f9e288]: "4"
+                  - generic [ref=f9e290]:
+                    - generic [ref=f9e291]: "|"
+                    - text: 1.4k
+                - link "KALINI Embroidered Georgette Ethnic Gown KALINI Embroidered Ethnic Gown Rs. 1199Rs. 7999(85% OFF)" [ref=f9e292] [cursor=pointer]:
+                  - /url: ethnic-dresses/kalini/kalini-embroidered-georgette-ethnic-gown/30861385/buy
+                  - img "KALINI Embroidered Georgette Ethnic Gown" [ref=f9e298]
+                  - generic [ref=f9e299]:
+                    - heading "KALINI" [level=3] [ref=f9e300]
+                    - heading "Embroidered Ethnic Gown" [level=4] [ref=f9e301]
+                    - generic [ref=f9e302]:
+                      - generic [ref=f9e303]:
+                        - generic [ref=f9e304]: Rs. 1199
+                        - generic [ref=f9e305]: Rs. 7999
+                      - text: (85% OFF)
+              - listitem [ref=f9e306]:
+                - link "KALAMIR Puff Sleeve Maxi Dress NEW KALAMIR Maxi Puff Sleeve Dress Rs. 486Rs. 2999(84% OFF)" [ref=f9e307] [cursor=pointer]:
+                  - /url: dresses/kalamir/kalamir-puff-sleeve-maxi-dress/47536652/buy
+                  - generic [ref=f9e309]:
+                    - img "KALAMIR Puff Sleeve Maxi Dress" [ref=f9e313]
+                    - generic [ref=f9e314]: NEW
+                  - generic [ref=f9e315]:
+                    - heading "KALAMIR" [level=3] [ref=f9e316]
+                    - heading "Maxi Puff Sleeve Dress" [level=4] [ref=f9e317]
+                    - generic [ref=f9e318]:
+                      - generic [ref=f9e319]:
+                        - generic [ref=f9e320]: Rs. 486
+                        - generic [ref=f9e321]: Rs. 2999
+                      - text: (84% OFF)
+              - listitem [ref=f9e322]:
+                - generic [ref=f9e323]:
+                  - generic [ref=f9e324]: "4.2"
+                  - generic [ref=f9e326]:
+                    - generic [ref=f9e327]: "|"
+                    - text: "32"
+                - generic [ref=f9e328]: AD
+                - link "Globus Women One Shoulder Fit & Flare Midi Dress Globus Women One Shoulder Dress Rs. 1362Rs. 2299(41% OFF)" [ref=f9e329] [cursor=pointer]:
+                  - /url: dresses/globus/globus-women--one-shoulder-fit--flare-midi-dress/36682419/buy
+                  - img "Globus Women One Shoulder Fit & Flare Midi Dress" [ref=f9e335]
+                  - generic [ref=f9e336]:
+                    - heading "Globus" [level=3] [ref=f9e337]
+                    - heading "Women One Shoulder Dress" [level=4] [ref=f9e338]
+                    - generic [ref=f9e339]:
+                      - generic [ref=f9e340]:
+                        - generic [ref=f9e341]: Rs. 1362
+                        - generic [ref=f9e342]: Rs. 2299
+                      - text: (41% OFF)
+              - listitem [ref=f9e343]:
+                - generic [ref=f9e344]:
+                  - generic [ref=f9e345]: "4.1"
+                  - generic [ref=f9e347]:
+                    - generic [ref=f9e348]: "|"
+                    - text: "174"
+                - link "Babypattu Embroidered V-Neck Fit and Flare Ethnic Dresses Babypattu Embroidered Ethnic Dresses Rs. 1233Rs. 1499(18% OFF)" [ref=f9e349] [cursor=pointer]:
+                  - /url: ethnic-dresses/babypattu/babypattu-embroidered-v-neck-fit-and-flare-ethnic-dresses/42294369/buy
+                  - img "Babypattu Embroidered V-Neck Fit and Flare Ethnic Dresses" [ref=f9e355]
+                  - generic [ref=f9e356]:
+                    - heading "Babypattu" [level=3] [ref=f9e357]
+                    - heading "Embroidered Ethnic Dresses" [level=4] [ref=f9e358]
+                    - generic [ref=f9e359]:
+                      - generic [ref=f9e360]:
+                        - generic [ref=f9e361]: Rs. 1233
+                        - generic [ref=f9e362]: Rs. 1499
+                      - text: (18% OFF)
+              - listitem [ref=f9e363]:
+                - generic [ref=f9e364]:
+                  - generic [ref=f9e365]: "4.4"
+                  - generic [ref=f9e367]:
+                    - generic [ref=f9e368]: "|"
+                    - text: 16.4k
+                - link "Claura Women Floral Printed Silk Puff Sleeve Fit & Flare Midi Dress Claura Fit & Flare Puff Sleeve Silk Dress Rs. 869Rs. 2899(70% OFF)" [ref=f9e369] [cursor=pointer]:
+                  - /url: dresses/claura/claura-women-floral-printed-silk-puff-sleeve-fit--flare-midi-dress/31375705/buy
+                  - img "Claura Women Floral Printed Silk Puff Sleeve Fit & Flare Midi Dress" [ref=f9e375]
+                  - generic [ref=f9e376]:
+                    - heading "Claura" [level=3] [ref=f9e377]
+                    - heading "Fit & Flare Puff Sleeve Silk Dress" [level=4] [ref=f9e378]
+                    - generic [ref=f9e379]:
+                      - generic [ref=f9e380]:
+                        - generic [ref=f9e381]: Rs. 869
+                        - generic [ref=f9e382]: Rs. 2899
+                      - text: (70% OFF)
+              - listitem [ref=f9e383]:
+                - generic [ref=f9e384]:
+                  - generic [ref=f9e385]: "4.4"
+                  - generic [ref=f9e387]:
+                    - generic [ref=f9e388]: "|"
+                    - text: "118"
+                - generic [ref=f9e389]: AD
+                - link "Aujjessa Ethnic Motifs Print Maternity Kaftan Maxi Dress Aujjessa Maternity Feeding Kaftan Dress Rs. 1399Rs. 2295(39% OFF)" [ref=f9e390] [cursor=pointer]:
+                  - /url: dresses/aujjessa/aujjessa-ethnic-motifs-print-maternity-kaftan-maxi-dress/40239329/buy
+                  - img "Aujjessa Ethnic Motifs Print Maternity Kaftan Maxi Dress" [ref=f9e396]
+                  - generic [ref=f9e397]:
+                    - heading "Aujjessa" [level=3] [ref=f9e398]
+                    - heading "Maternity Feeding Kaftan Dress" [level=4] [ref=f9e399]
+                    - generic [ref=f9e400]:
+                      - generic [ref=f9e401]:
+                        - generic [ref=f9e402]: Rs. 1399
+                        - generic [ref=f9e403]: Rs. 2295
+                      - text: (39% OFF)
+              - listitem [ref=f9e404]:
+                - generic [ref=f9e405]:
+                  - generic [ref=f9e406]: "4.5"
+                  - generic [ref=f9e408]:
+                    - generic [ref=f9e409]: "|"
+                    - text: 46.3k
+                - link "anayna Red Floral Ethnic A-Line Cotton Midi Ethnic Dress anayna Floral A-Line Midi Ethnic Dress Rs. 881Rs. 2698(67% OFF)" [ref=f9e410] [cursor=pointer]:
+                  - /url: ethnic-dresses/anayna/anayna-red-floral-ethnic-a-line-cotton-midi-ethnic-dress/21334304/buy
+                  - img "anayna Red Floral Ethnic A-Line Cotton Midi Ethnic Dress" [ref=f9e416]
+                  - generic [ref=f9e417]:
+                    - heading "anayna" [level=3] [ref=f9e418]
+                    - heading "Floral A-Line Midi Ethnic Dress" [level=4] [ref=f9e419]
+                    - generic [ref=f9e420]:
+                      - generic [ref=f9e421]:
+                        - generic [ref=f9e422]: Rs. 881
+                        - generic [ref=f9e423]: Rs. 2698
+                      - text: (67% OFF)
+              - listitem [ref=f9e424]:
+                - link "S.TAJMINA DRESSES Puff Sleeve Ruffled Net Maxi Dress S.TAJMINA DRESSES Net Maxi Puff Sleeve Dress Rs. 679Rs. 999(32% OFF)" [ref=f9e425] [cursor=pointer]:
+                  - /url: dresses/s.tajmina+dresses/stajmina-dresses-puff-sleeve-ruffled-net-maxi-dress/47452777/buy
+                  - img "S.TAJMINA DRESSES Puff Sleeve Ruffled Net Maxi Dress" [ref=f9e431]
+                  - generic [ref=f9e432]:
+                    - heading "S.TAJMINA DRESSES" [level=3] [ref=f9e433]
+                    - heading "Net Maxi Puff Sleeve Dress" [level=4] [ref=f9e434]
+                    - generic [ref=f9e435]:
+                      - generic [ref=f9e436]:
+                        - generic [ref=f9e437]: Rs. 679
+                        - generic [ref=f9e438]: Rs. 999
+                      - text: (32% OFF)
+              - listitem [ref=f9e439]:
+                - generic [ref=f9e440]: AD
+                - link "Sztori Crepe Maxi Flared Sleeve Dress Rs. 999Rs. 2599(62% OFF)" [ref=f9e441] [cursor=pointer]:
+                  - /url: dresses/sztori/sztori-floral-print-flared-sleeve-crepe-maxi-dress/47369040/buy
+                  - generic [ref=f9e446]:
+                    - heading "Sztori" [level=3] [ref=f9e447]
+                    - heading "Crepe Maxi Flared Sleeve Dress" [level=4] [ref=f9e448]
+                    - generic [ref=f9e449]:
+                      - generic [ref=f9e450]:
+                        - generic [ref=f9e451]: Rs. 999
+                        - generic [ref=f9e452]: Rs. 2599
+                      - text: (62% OFF)
+              - listitem [ref=f9e453]:
+                - generic [ref=f9e454]:
+                  - generic [ref=f9e455]: "3.9"
+                  - generic [ref=f9e457]:
+                    - generic [ref=f9e458]: "|"
+                    - text: 1.3k
+                - link "Vishudh Empire Midi Ethnic Dress Rs. 734Rs. 2449(70% OFF)" [ref=f9e459] [cursor=pointer]:
+                  - /url: ethnic-dresses/vishudh/vishudh-blue-ethnic-motifs-printed-v-neck-tiered-empire-midi-ethnic-dress/24201698/buy
+                  - generic [ref=f9e464]:
+                    - heading "Vishudh" [level=3] [ref=f9e465]
+                    - heading "Empire Midi Ethnic Dress" [level=4] [ref=f9e466]
+                    - generic [ref=f9e467]:
+                      - generic [ref=f9e468]:
+                        - generic [ref=f9e469]: Rs. 734
+                        - generic [ref=f9e470]: Rs. 2449
+                      - text: (70% OFF)
+              - listitem [ref=f9e471]:
+                - generic [ref=f9e472]:
+                  - generic [ref=f9e473]: "4.5"
+                  - generic [ref=f9e475]:
+                    - generic [ref=f9e476]: "|"
+                    - text: 46.3k
+                - link "anayna Printed Ethnic Dresses Rs. 990Rs. 3324(70% OFF)" [ref=f9e477] [cursor=pointer]:
+                  - /url: ethnic-dresses/anayna/anayna-printed-cotton-fit--flare-ethnic-dress/30560718/buy
+                  - generic [ref=f9e482]:
+                    - heading "anayna" [level=3] [ref=f9e483]
+                    - heading "Printed Ethnic Dresses" [level=4] [ref=f9e484]
+                    - generic [ref=f9e485]:
+                      - generic [ref=f9e486]:
+                        - generic [ref=f9e487]: Rs. 990
+                        - generic [ref=f9e488]: Rs. 3324
+                      - text: (70% OFF)
+              - listitem [ref=f9e489]:
+                - generic [ref=f9e490]:
+                  - generic [ref=f9e491]: "4.3"
+                  - generic [ref=f9e493]:
+                    - generic [ref=f9e494]: "|"
+                    - text: "78"
+                - generic [ref=f9e495]: AD
+                - link "Hopscotch Checked Empire Dress Rs. 854Rs. 999(15% OFF)" [ref=f9e496] [cursor=pointer]:
+                  - /url: dresses/hopscotch/hopscotch-beige-checked-cozy-bow-plaid-empire-dress/36352190/buy
+                  - generic [ref=f9e501]:
+                    - heading "Hopscotch" [level=3] [ref=f9e502]
+                    - heading "Checked Empire Dress" [level=4] [ref=f9e503]
+                    - generic [ref=f9e504]:
+                      - generic [ref=f9e505]:
+                        - generic [ref=f9e506]: Rs. 854
+                        - generic [ref=f9e507]: Rs. 999
+                      - text: (15% OFF)
+              - listitem [ref=f9e508]:
+                - generic [ref=f9e509]:
+                  - generic [ref=f9e510]: "4.4"
+                  - generic [ref=f9e512]:
+                    - generic [ref=f9e513]: "|"
+                    - text: 1.8k
+                - link "Selvia Women Fit & Flare Midi Dress Rs. 710Rs. 1898(63% OFF)" [ref=f9e514] [cursor=pointer]:
+                  - /url: dresses/selvia/selvia-women-solid-black-v-neck-ruffles-detail-fit--flare-wrap-midi-dress/34181758/buy
+                  - generic [ref=f9e519]:
+                    - heading "Selvia" [level=3] [ref=f9e520]
+                    - heading "Women Fit & Flare Midi Dress" [level=4] [ref=f9e521]
+                    - generic [ref=f9e522]:
+                      - generic [ref=f9e523]:
+                        - generic [ref=f9e524]: Rs. 710
+                        - generic [ref=f9e525]: Rs. 1898
+                      - text: (63% OFF)
+              - listitem [ref=f9e526]:
+                - link "Pahanawa Maternity Dress Rs. 649Rs. 1499(57% OFF)" [ref=f9e527] [cursor=pointer]:
+                  - /url: dresses/pahanawa/pahanawa-floral-print-puff-sleeve-maternity-a-line-maxi-dress/46337362/buy
+                  - generic [ref=f9e532]:
+                    - heading "Pahanawa" [level=3] [ref=f9e533]
+                    - heading "Maternity Dress" [level=4] [ref=f9e534]
+                    - generic [ref=f9e535]:
+                      - generic [ref=f9e536]:
+                        - generic [ref=f9e537]: Rs. 649
+                        - generic [ref=f9e538]: Rs. 1499
+                      - text: (57% OFF)
+              - listitem [ref=f9e539]:
+                - generic [ref=f9e540]: AD
+                - link "Sztori Floral Print Crepe Maxi Flared Sleeve Dress Rs. 999Rs. 2599(62% OFF)" [ref=f9e541] [cursor=pointer]:
+                  - /url: dresses/sztori/sztori-floral-print-flared-sleeve-crepe-maxi-dress/47369041/buy
+                  - generic [ref=f9e546]:
+                    - heading "Sztori" [level=3] [ref=f9e547]
+                    - heading "Floral Print Crepe Maxi Flared Sleeve Dress" [level=4] [ref=f9e548]
+                    - generic [ref=f9e549]:
+                      - generic [ref=f9e550]:
+                        - generic [ref=f9e551]: Rs. 999
+                        - generic [ref=f9e552]: Rs. 2599
+                      - text: (62% OFF)
+              - listitem [ref=f9e553]:
+                - generic [ref=f9e554]:
+                  - generic [ref=f9e555]: "4.4"
+                  - generic [ref=f9e557]:
+                    - generic [ref=f9e558]: "|"
+                    - text: 23k
+                - link "aayu Georgette Maxi Wrap Dress Rs. 905Rs. 1999(55% OFF)" [ref=f9e559] [cursor=pointer]:
+                  - /url: dresses/aayu/aayu-georgette-maxi-wrap-dress/21777996/buy
+                  - generic [ref=f9e564]:
+                    - heading "aayu" [level=3] [ref=f9e565]
+                    - heading "Georgette Maxi Wrap Dress" [level=4] [ref=f9e566]
+                    - generic [ref=f9e567]:
+                      - generic [ref=f9e568]:
+                        - generic [ref=f9e569]: Rs. 905
+                        - generic [ref=f9e570]: Rs. 1999
+                      - text: (55% OFF)
+              - listitem [ref=f9e571]:
+                - generic [ref=f9e572]:
+                  - generic [ref=f9e573]: "4.6"
+                  - generic [ref=f9e575]:
+                    - generic [ref=f9e576]: "|"
+                    - text: "359"
+                - link "Janasya A-Line Georgette Floral Dress Rs. 1626Rs. 4398(63% OFF)" [ref=f9e577] [cursor=pointer]:
+                  - /url: ethnic-dresses/janasya/janasya-green-floral-embroidered-georgette-fit--flare-maxi-ethnic-a-line-dress-with-cape/30538908/buy
+                  - generic [ref=f9e582]:
+                    - heading "Janasya" [level=3] [ref=f9e583]
+                    - heading "A-Line Georgette Floral Dress" [level=4] [ref=f9e584]
+                    - generic [ref=f9e585]:
+                      - generic [ref=f9e586]:
+                        - generic [ref=f9e587]: Rs. 1626
+                        - generic [ref=f9e588]: Rs. 4398
+                      - text: (63% OFF)
+              - listitem [ref=f9e589]:
+                - generic [ref=f9e590]:
+                  - generic [ref=f9e591]: "4.3"
+                  - generic [ref=f9e593]:
+                    - generic [ref=f9e594]: "|"
+                    - text: "25"
+                - generic [ref=f9e595]: AD
+                - link "Tamsa A-Line Midi Dress Rs. 899Rs. 1999(55% OFF)" [ref=f9e596] [cursor=pointer]:
+                  - /url: dresses/tamsa/tamsa-a-line-midi-dress/44366465/buy
+                  - generic [ref=f9e601]:
+                    - heading "Tamsa" [level=3] [ref=f9e602]
+                    - heading "A-Line Midi Dress" [level=4] [ref=f9e603]
+                    - generic [ref=f9e604]:
+                      - generic [ref=f9e605]:
+                        - generic [ref=f9e606]: Rs. 899
+                        - generic [ref=f9e607]: Rs. 1999
+                      - text: (55% OFF)
+              - listitem [ref=f9e608]:
+                - generic [ref=f9e609]:
+                  - generic [ref=f9e610]: "4.2"
+                  - generic [ref=f9e612]:
+                    - generic [ref=f9e613]: "|"
+                    - text: 8.1k
+                - link "Sangria Solid Cotton Tiered Dress Rs. 749Rs. 2899(74% OFF)" [ref=f9e614] [cursor=pointer]:
+                  - /url: dresses/sangria/sangria-printed-cotton-shirt-collar-a-line-midi-tiered-dress/40097504/buy
+                  - generic [ref=f9e619]:
+                    - heading "Sangria" [level=3] [ref=f9e620]
+                    - heading "Solid Cotton Tiered Dress" [level=4] [ref=f9e621]
+                    - generic [ref=f9e622]:
+                      - generic [ref=f9e623]:
+                        - generic [ref=f9e624]: Rs. 749
+                        - generic [ref=f9e625]: Rs. 2899
+                      - text: (74% OFF)
+              - listitem [ref=f9e626]:
+                - link "Pookiie Georgette A-Line Bell Sleeve Dress Rs. 999Rs. 2195(54% OFF)" [ref=f9e627] [cursor=pointer]:
+                  - /url: dresses/pookiie/pookiie-bell-sleeve-georgette-formal-a-line-dress/47534601/buy
+                  - generic [ref=f9e632]:
+                    - heading "Pookiie" [level=3] [ref=f9e633]
+                    - heading "Georgette A-Line Bell Sleeve Dress" [level=4] [ref=f9e634]
+                    - generic [ref=f9e635]:
+                      - generic [ref=f9e636]:
+                        - generic [ref=f9e637]: Rs. 999
+                        - generic [ref=f9e638]: Rs. 2195
+                      - text: (54% OFF)
+              - listitem [ref=f9e639]:
+                - generic [ref=f9e640]:
+                  - generic [ref=f9e641]: "4.6"
+                  - generic [ref=f9e643]:
+                    - generic [ref=f9e644]: "|"
+                    - text: "32"
+                - generic [ref=f9e645]: AD
+                - link "MomsBae Striped Dress Rs. 1499Rs. 3099(52% OFF)" [ref=f9e646] [cursor=pointer]:
+                  - /url: dresses/momsbae/momsbae-yellow-lime-striper-feeding-dress/40632584/buy
+                  - generic [ref=f9e651]:
+                    - heading "MomsBae" [level=3] [ref=f9e652]
+                    - heading "Striped Dress" [level=4] [ref=f9e653]
+                    - generic [ref=f9e654]:
+                      - generic [ref=f9e655]:
+                        - generic [ref=f9e656]: Rs. 1499
+                        - generic [ref=f9e657]: Rs. 3099
+                      - text: (52% OFF)
+              - listitem [ref=f9e658]:
+                - generic [ref=f9e659]:
+                  - generic [ref=f9e660]: "4.3"
+                  - generic [ref=f9e662]:
+                    - generic [ref=f9e663]: "|"
+                    - text: "335"
+                - link "Vishudh Ethnic Motifs Print A-Line Maxi Dress Rs. 472Rs. 3149(85% OFF)" [ref=f9e664] [cursor=pointer]:
+                  - /url: dresses/vishudh/vishudh-ethnic-motifs-print-a-line-maxi-dress/33725879/buy
+                  - generic [ref=f9e669]:
+                    - heading "Vishudh" [level=3] [ref=f9e670]
+                    - heading "Ethnic Motifs Print A-Line Maxi Dress" [level=4] [ref=f9e671]
+                    - generic [ref=f9e672]:
+                      - generic [ref=f9e673]:
+                        - generic [ref=f9e674]: Rs. 472
+                        - generic [ref=f9e675]: Rs. 3149
+                      - text: (85% OFF)
+              - listitem [ref=f9e676]:
+                - generic [ref=f9e677]:
+                  - generic [ref=f9e678]: "4.5"
+                  - generic [ref=f9e680]:
+                    - generic [ref=f9e681]: "|"
+                    - text: "341"
+                - link "VASTRAMAY Chikankari Cotton Ethnic Dress Rs. 799Rs. 2499(Rs. 1700 OFF)" [ref=f9e682] [cursor=pointer]:
+                  - /url: ethnic-dresses/vastramay/vastramay-girls-white-chikankari-cotton-ethnic-dress/19990738/buy
+                  - generic [ref=f9e687]:
+                    - heading "VASTRAMAY" [level=3] [ref=f9e688]
+                    - heading "Chikankari Cotton Ethnic Dress" [level=4] [ref=f9e689]
+                    - generic [ref=f9e690]:
+                      - generic [ref=f9e691]:
+                        - generic [ref=f9e692]: Rs. 799
+                        - generic [ref=f9e693]: Rs. 2499
+                      - text: (Rs. 1700 OFF)
+              - listitem [ref=f9e694]:
+                - generic [ref=f9e695]:
+                  - generic [ref=f9e696]: "4.4"
+                  - generic [ref=f9e698]:
+                    - generic [ref=f9e699]: "|"
+                    - text: "7"
+                - generic [ref=f9e700]: AD
+                - link "Virgio Floral Print Fit & Flare Midi Dress Rs. 1299Rs. 1990(35% OFF)" [ref=f9e701] [cursor=pointer]:
+                  - /url: dresses/virgio/virgio-printed-viscose-v-neck-short-sleeves-midi-dresses-for-women/42004278/buy
+                  - generic [ref=f9e706]:
+                    - heading "Virgio" [level=3] [ref=f9e707]
+                    - heading "Floral Print Fit & Flare Midi Dress" [level=4] [ref=f9e708]
+                    - generic [ref=f9e709]:
+                      - generic [ref=f9e710]:
+                        - generic [ref=f9e711]: Rs. 1299
+                        - generic [ref=f9e712]: Rs. 1990
+                      - text: (35% OFF)
+              - listitem [ref=f9e713]:
+                - generic [ref=f9e714]:
+                  - generic [ref=f9e715]: "4.5"
+                  - generic [ref=f9e717]:
+                    - generic [ref=f9e718]: "|"
+                    - text: 11.1k
+                - link "aayu Women Maxi Dress Rs. 963Rs. 2999(68% OFF)" [ref=f9e719] [cursor=pointer]:
+                  - /url: dresses/aayu/aayu-women-maternity-maxi-dress/34434040/buy
+                  - generic [ref=f9e724]:
+                    - heading "aayu" [level=3] [ref=f9e725]
+                    - heading "Women Maxi Dress" [level=4] [ref=f9e726]
+                    - generic [ref=f9e727]:
+                      - generic [ref=f9e728]:
+                        - generic [ref=f9e729]: Rs. 963
+                        - generic [ref=f9e730]: Rs. 2999
+                      - text: (68% OFF)
+              - listitem [ref=f9e731]:
+                - link "Twelve South Polka Dot Print A-Line Maxi Dress Rs. 1079Rs. 3599(70% OFF)" [ref=f9e732] [cursor=pointer]:
+                  - /url: dresses/twelve+south/twelve-south-polka-dot-print-a-line-maxi-dress/47538137/buy
+                  - generic [ref=f9e737]:
+                    - heading "Twelve South" [level=3] [ref=f9e738]
+                    - heading "Polka Dot Print A-Line Maxi Dress" [level=4] [ref=f9e739]
+                    - generic [ref=f9e740]:
+                      - generic [ref=f9e741]:
+                        - generic [ref=f9e742]: Rs. 1079
+                        - generic [ref=f9e743]: Rs. 3599
+                      - text: (70% OFF)
+              - listitem [ref=f9e744]:
+                - generic [ref=f9e745]:
+                  - generic [ref=f9e746]: "4.2"
+                  - generic [ref=f9e748]:
+                    - generic [ref=f9e749]: "|"
+                    - text: "104"
+                - generic [ref=f9e750]: AD
+                - link "ARAVALII Puff Sleeve A-Line Dress Rs. 1326Rs. 3199(59% OFF)" [ref=f9e751] [cursor=pointer]:
+                  - /url: dresses/aravalii/aravalii-puff-sleeve-tiered-cotton-a-line-dress/30714435/buy
+                  - generic [ref=f9e756]:
+                    - heading "ARAVALII" [level=3] [ref=f9e757]
+                    - heading "Puff Sleeve A-Line Dress" [level=4] [ref=f9e758]
+                    - generic [ref=f9e759]:
+                      - generic [ref=f9e760]:
+                        - generic [ref=f9e761]: Rs. 1326
+                        - generic [ref=f9e762]: Rs. 3199
+                      - text: (59% OFF)
+              - listitem [ref=f9e763]:
+                - generic [ref=f9e764]:
+                  - generic [ref=f9e765]: "4.4"
+                  - generic [ref=f9e767]:
+                    - generic [ref=f9e768]: "|"
+                    - text: 3.6k
+                - link "aayu Chiffon A-Line Maxi Dress Rs. 1033Rs. 3599(71% OFF)" [ref=f9e769] [cursor=pointer]:
+                  - /url: dresses/aayu/aayu-ruffled-chiffon-a-line-maxi-dress/38066174/buy
+                  - generic [ref=f9e774]:
+                    - heading "aayu" [level=3] [ref=f9e775]
+                    - heading "Chiffon A-Line Maxi Dress" [level=4] [ref=f9e776]
+                    - generic [ref=f9e777]:
+                      - generic [ref=f9e778]:
+                        - generic [ref=f9e779]: Rs. 1033
+                        - generic [ref=f9e780]: Rs. 3599
+                      - text: (71% OFF)
+              - listitem [ref=f9e781]:
+                - generic [ref=f9e782]:
+                  - generic [ref=f9e783]: "4.3"
+                  - generic [ref=f9e785]:
+                    - generic [ref=f9e786]: "|"
+                    - text: "132"
+                - link "Janasya Fit & Flare Puff Sleeve Rayon Dress Rs. 810Rs. 2398(66% OFF)" [ref=f9e787] [cursor=pointer]:
+                  - /url: dresses/janasya/janasya-women-red-rayon-solid-tiered-puff-sleeve-dress/32712588/buy
+                  - generic [ref=f9e792]:
+                    - heading "Janasya" [level=3] [ref=f9e793]
+                    - heading "Fit & Flare Puff Sleeve Rayon Dress" [level=4] [ref=f9e794]
+                    - generic [ref=f9e795]:
+                      - generic [ref=f9e796]:
+                        - generic [ref=f9e797]: Rs. 810
+                        - generic [ref=f9e798]: Rs. 2398
+                      - text: (66% OFF)
+              - listitem [ref=f9e799]:
+                - generic [ref=f9e800]: AD
+                - link "Moda Rapido Floral Print Crepe Maxi Flared Sleeve Dress Rs. 882Rs. 2599(66% OFF)" [ref=f9e801] [cursor=pointer]:
+                  - /url: dresses/moda+rapido/moda-rapido-floral-print-flared-sleeve-crepe-maxi-dress/47369002/buy
+                  - generic [ref=f9e806]:
+                    - heading "Moda Rapido" [level=3] [ref=f9e807]
+                    - heading "Floral Print Crepe Maxi Flared Sleeve Dress" [level=4] [ref=f9e808]
+                    - generic [ref=f9e809]:
+                      - generic [ref=f9e810]:
+                        - generic [ref=f9e811]: Rs. 882
+                        - generic [ref=f9e812]: Rs. 2599
+                      - text: (66% OFF)
+              - listitem [ref=f9e813]:
+                - generic [ref=f9e814]:
+                  - generic [ref=f9e815]: "4.3"
+                  - generic [ref=f9e817]:
+                    - generic [ref=f9e818]: "|"
+                    - text: 6.9k
+                - link "Varanga A-Line Maxi Dress Rs. 548Rs. 2999(82% OFF)" [ref=f9e819] [cursor=pointer]:
+                  - /url: dresses/varanga/varanga-a-line-maxi-dress/32882481/buy
+                  - generic [ref=f9e824]:
+                    - heading "Varanga" [level=3] [ref=f9e825]
+                    - heading "A-Line Maxi Dress" [level=4] [ref=f9e826]
+                    - generic [ref=f9e827]:
+                      - generic [ref=f9e828]:
+                        - generic [ref=f9e829]: Rs. 548
+                        - generic [ref=f9e830]: Rs. 2999
+                      - text: (82% OFF)
+              - listitem [ref=f9e831]:
+                - link "SFOTY Tropical Print Sheath Midi Dress Rs. 699Rs. 1499(53% OFF)" [ref=f9e832] [cursor=pointer]:
+                  - /url: dresses/sfoty/sfoty-tropical-print-sheath-midi-dress/47534797/buy
+                  - generic [ref=f9e837]:
+                    - heading "SFOTY" [level=3] [ref=f9e838]
+                    - heading "Tropical Print Sheath Midi Dress" [level=4] [ref=f9e839]
+                    - generic [ref=f9e840]:
+                      - generic [ref=f9e841]:
+                        - generic [ref=f9e842]: Rs. 699
+                        - generic [ref=f9e843]: Rs. 1499
+                      - text: (53% OFF)
+              - listitem [ref=f9e844]:
+                - generic [ref=f9e845]: AD
+                - link "NEW The Magic Wand A-Line Maxi Dress Rs. 704Rs. 849(17% OFF)" [ref=f9e846] [cursor=pointer]:
+                  - /url: dresses/the+magic+wand/the-magic-wand-ruffled-a-line-maxi-dress/47256142/buy
+                  - generic [ref=f9e847]: NEW
+                  - generic [ref=f9e852]:
+                    - heading "The Magic Wand" [level=3] [ref=f9e853]
+                    - heading "A-Line Maxi Dress" [level=4] [ref=f9e854]
+                    - generic [ref=f9e855]:
+                      - generic [ref=f9e856]:
+                        - generic [ref=f9e857]: Rs. 704
+                        - generic [ref=f9e858]: Rs. 849
+                      - text: (17% OFF)
+              - listitem [ref=f9e859]:
+                - generic [ref=f9e860]:
+                  - generic [ref=f9e861]: "4.2"
+                  - generic [ref=f9e863]:
+                    - generic [ref=f9e864]: "|"
+                    - text: "54"
+                - link "Sangria Fit & Flared Maxi Dress Rs. 912Rs. 2849(68% OFF)" [ref=f9e865] [cursor=pointer]:
+                  - /url: ethnic-dresses/sangria/sangria-roman-silk-foil-printed-fit--flared-maxi-dress/37253782/buy
+                  - generic [ref=f9e870]:
+                    - heading "Sangria" [level=3] [ref=f9e871]
+                    - heading "Fit & Flared Maxi Dress" [level=4] [ref=f9e872]
+                    - generic [ref=f9e873]:
+                      - generic [ref=f9e874]:
+                        - generic [ref=f9e875]: Rs. 912
+                        - generic [ref=f9e876]: Rs. 2849
+                      - text: (68% OFF)
+              - listitem [ref=f9e877]:
+                - generic [ref=f9e878]:
+                  - generic [ref=f9e879]: "4.6"
+                  - generic [ref=f9e881]:
+                    - generic [ref=f9e882]: "|"
+                    - text: 3.2k
+                - link "anayna Printed Halter Neck Dress Rs. 952Rs. 3850(75% OFF)" [ref=f9e883] [cursor=pointer]:
+                  - /url: dresses/anayna/anayna-printed-halter-neck-dress/30560723/buy
+                  - generic [ref=f9e888]:
+                    - heading "anayna" [level=3] [ref=f9e889]
+                    - heading "Printed Halter Neck Dress" [level=4] [ref=f9e890]
+                    - generic [ref=f9e891]:
+                      - generic [ref=f9e892]:
+                        - generic [ref=f9e893]: Rs. 952
+                        - generic [ref=f9e894]: Rs. 3850
+                      - text: (75% OFF)
+              - listitem [ref=f9e895]:
+                - generic [ref=f9e896]:
+                  - generic [ref=f9e897]: "4.4"
+                  - generic [ref=f9e899]:
+                    - generic [ref=f9e900]: "|"
+                    - text: "357"
+                - generic [ref=f9e901]: AD
+                - link "DressBerry Curve Plus Size Embroidered Dress Rs. 719Rs. 2399(70% OFF)" [ref=f9e902] [cursor=pointer]:
+                  - /url: dresses/dressberry+curve/dressberry-curve-plus-size-floral-embroidered-a-line-dress/25981634/buy
+                  - generic [ref=f9e907]:
+                    - heading "DressBerry Curve" [level=3] [ref=f9e908]
+                    - heading "Plus Size Embroidered Dress" [level=4] [ref=f9e909]
+                    - generic [ref=f9e910]:
+                      - generic [ref=f9e911]:
+                        - generic [ref=f9e912]: Rs. 719
+                        - generic [ref=f9e913]: Rs. 2399
+                      - text: (70% OFF)
+              - listitem [ref=f9e914]:
+                - generic [ref=f9e915]:
+                  - generic [ref=f9e916]: "3.7"
+                  - generic [ref=f9e918]:
+                    - generic [ref=f9e919]: "|"
+                    - text: "49"
+                - link "Sangria Maxi Ethnic Dresses Rs. 895Rs. 4999(82% OFF)" [ref=f9e920] [cursor=pointer]:
+                  - /url: ethnic-dresses/sangria/sangria-embroidered-round-neck-maxi-ethnic-dresses/42778947/buy
+                  - generic [ref=f9e925]:
+                    - heading "Sangria" [level=3] [ref=f9e926]
+                    - heading "Maxi Ethnic Dresses" [level=4] [ref=f9e927]
+                    - generic [ref=f9e928]:
+                      - generic [ref=f9e929]:
+                        - generic [ref=f9e930]: Rs. 895
+                        - generic [ref=f9e931]: Rs. 4999
+                      - text: (82% OFF)
+              - listitem [ref=f9e932]:
+                - link "Sangria Round Neck Ethnic Dresses Rs. 909Rs. 2499(64% OFF)" [ref=f9e933] [cursor=pointer]:
+                  - /url: ethnic-dresses/sangria/sangria-printed-round-neck-a-line-ethnic-dresses/47400535/buy
+                  - generic [ref=f9e938]:
+                    - heading "Sangria" [level=3] [ref=f9e939]
+                    - heading "Round Neck Ethnic Dresses" [level=4] [ref=f9e940]
+                    - generic [ref=f9e941]:
+                      - generic [ref=f9e942]:
+                        - generic [ref=f9e943]: Rs. 909
+                        - generic [ref=f9e944]: Rs. 2499
+                      - text: (64% OFF)
+              - listitem [ref=f9e945]:
+                - generic [ref=f9e946]:
+                  - generic [ref=f9e947]: "4.1"
+                  - generic [ref=f9e949]:
+                    - generic [ref=f9e950]: "|"
+                    - text: "25"
+                - generic [ref=f9e951]: AD
+                - link "NUVDESI Print A-Line Midi Puff Sleeve Dress Rs. 1373Rs. 4999(73% OFF)" [ref=f9e952] [cursor=pointer]:
+                  - /url: dresses/nuvdesi/nuvdesi-print-puff-sleeve-a-line-midi-dress/45314866/buy
+                  - generic [ref=f9e957]:
+                    - heading "NUVDESI" [level=3] [ref=f9e958]
+                    - heading "Print A-Line Midi Puff Sleeve Dress" [level=4] [ref=f9e959]
+                    - generic [ref=f9e960]:
+                      - generic [ref=f9e961]:
+                        - generic [ref=f9e962]: Rs. 1373
+                        - generic [ref=f9e963]: Rs. 4999
+                      - text: (73% OFF)
+              - listitem [ref=f9e964]:
+                - generic [ref=f9e965]:
+                  - generic [ref=f9e966]: "4.5"
+                  - generic [ref=f9e968]:
+                    - generic [ref=f9e969]: "|"
+                    - text: 15.7k
+                - link "anayna Fit & Flared Ethnic Dresses Rs. 1426Rs. 3992(64% OFF)" [ref=f9e970] [cursor=pointer]:
+                  - /url: ethnic-dresses/anayna/anayna-printed-cotton-fit--flared-maxi-ethnic-dresses/39422875/buy
+                  - generic [ref=f9e975]:
+                    - heading "anayna" [level=3] [ref=f9e976]
+                    - heading "Fit & Flared Ethnic Dresses" [level=4] [ref=f9e977]
+                    - generic [ref=f9e978]:
+                      - generic [ref=f9e979]:
+                        - generic [ref=f9e980]: Rs. 1426
+                        - generic [ref=f9e981]: Rs. 3992
+                      - text: (64% OFF)
+              - listitem [ref=f9e982]:
+                - generic [ref=f9e983]:
+                  - generic [ref=f9e984]: "4.6"
+                  - generic [ref=f9e986]:
+                    - generic [ref=f9e987]: "|"
+                    - text: 3.9k
+                - link "Inddus Embroidered Maxi Ethnic Dress Rs. 1498Rs. 5599(73% OFF)" [ref=f9e988] [cursor=pointer]:
+                  - /url: ethnic-dresses/inddus/inddus-floral-embroidered-v-neck-georgette-maxi-ethnic-motifs-dress/27070272/buy
+                  - generic [ref=f9e993]:
+                    - heading "Inddus" [level=3] [ref=f9e994]
+                    - heading "Embroidered Maxi Ethnic Dress" [level=4] [ref=f9e995]
+                    - generic [ref=f9e996]:
+                      - generic [ref=f9e997]:
+                        - generic [ref=f9e998]: Rs. 1498
+                        - generic [ref=f9e999]: Rs. 5599
+                      - text: (73% OFF)
+              - listitem [ref=f9e1000]:
+                - generic [ref=f9e1001]:
+                  - generic [ref=f9e1002]: "4.2"
+                  - generic [ref=f9e1004]:
+                    - generic [ref=f9e1005]: "|"
+                    - text: "146"
+                - generic [ref=f9e1006]: AD
+                - link "all about you Cable Knit Sweater Dress Rs. 1121Rs. 3399(67% OFF)" [ref=f9e1007] [cursor=pointer]:
+                  - /url: dresses/all+about+you/all-about-you-pure-acrylic-cable-knit-sweater-dress/29893235/buy
+                  - generic [ref=f9e1012]:
+                    - heading "all about you" [level=3] [ref=f9e1013]
+                    - heading "Cable Knit Sweater Dress" [level=4] [ref=f9e1014]
+                    - generic [ref=f9e1015]:
+                      - generic [ref=f9e1016]:
+                        - generic [ref=f9e1017]: Rs. 1121
+                        - generic [ref=f9e1018]: Rs. 3399
+                      - text: (67% OFF)
+              - listitem [ref=f9e1019]:
+                - generic [ref=f9e1020]:
+                  - generic [ref=f9e1021]: "3.9"
+                  - generic [ref=f9e1023]:
+                    - generic [ref=f9e1024]: "|"
+                    - text: "727"
+                - link "KALINI Embroidered Ethnic Dress Rs. 1359Rs. 7999(83% OFF)" [ref=f9e1025] [cursor=pointer]:
+                  - /url: ethnic-dresses/kalini/kalini-embroidered-fit--flared-ethnic-dress/31155416/buy
+                  - generic [ref=f9e1030]:
+                    - heading "KALINI" [level=3] [ref=f9e1031]
+                    - heading "Embroidered Ethnic Dress" [level=4] [ref=f9e1032]
+                    - generic [ref=f9e1033]:
+                      - generic [ref=f9e1034]:
+                        - generic [ref=f9e1035]: Rs. 1359
+                        - generic [ref=f9e1036]: Rs. 7999
+                      - text: (83% OFF)
+              - listitem [ref=f9e1037]:
+                - link "V-Mart Floral Print A-Line Dress Rs. 349" [ref=f9e1038] [cursor=pointer]:
+                  - /url: dresses/v-mart/v-mart-floral-print-a-line-dress/45469730/buy
+                  - generic [ref=f9e1043]:
+                    - heading "V-Mart" [level=3] [ref=f9e1044]
+                    - heading "Floral Print A-Line Dress" [level=4] [ref=f9e1045]
+                    - generic [ref=f9e1046]: Rs. 349
+              - listitem [ref=f9e1048]:
+                - generic [ref=f9e1049]: AD
+                - link "BAROMAAZ Print Rayon Maxi Dress Rs. 1399Rs. 3199(56% OFF)" [ref=f9e1050] [cursor=pointer]:
+                  - /url: dresses/baromaaz/baromaaz-print-halter-neck-rayon-maxi-dress/46193744/buy
+                  - generic [ref=f9e1055]:
+                    - heading "BAROMAAZ" [level=3] [ref=f9e1056]
+                    - heading "Print Rayon Maxi Dress" [level=4] [ref=f9e1057]
+                    - generic [ref=f9e1058]:
+                      - generic [ref=f9e1059]:
+                        - generic [ref=f9e1060]: Rs. 1399
+                        - generic [ref=f9e1061]: Rs. 3199
+                      - text: (56% OFF)
+              - listitem [ref=f9e1062]:
+                - generic [ref=f9e1063]:
+                  - generic [ref=f9e1064]: "4.4"
+                  - generic [ref=f9e1066]:
+                    - generic [ref=f9e1067]: "|"
+                    - text: 23k
+                - link "aayu V-Neck Georgette Maxi Dress Rs. 905Rs. 1999(55% OFF)" [ref=f9e1068] [cursor=pointer]:
+                  - /url: dresses/aayu/aayu-v-neck-sleeveless-georgette-maxi-dress/21778032/buy
+                  - generic [ref=f9e1073]:
+                    - heading "aayu" [level=3] [ref=f9e1074]
+                    - heading "V-Neck Georgette Maxi Dress" [level=4] [ref=f9e1075]
+                    - generic [ref=f9e1076]:
+                      - generic [ref=f9e1077]:
+                        - generic [ref=f9e1078]: Rs. 905
+                        - generic [ref=f9e1079]: Rs. 1999
+                      - text: (55% OFF)
+              - listitem [ref=f9e1080]:
+                - generic [ref=f9e1081]:
+                  - generic [ref=f9e1082]: "4.5"
+                  - generic [ref=f9e1084]:
+                    - generic [ref=f9e1085]: "|"
+                    - text: "366"
+                - link "MADHURAM Flared Printed Dress Rs. 1399Rs. 6999(80% OFF)" [ref=f9e1086] [cursor=pointer]:
+                  - /url: ethnic-dresses/madhuram/madhuram-floral-printed-flared-anarkali-gown-ethnic-dress/36779961/buy
+                  - generic [ref=f9e1091]:
+                    - heading "MADHURAM" [level=3] [ref=f9e1092]
+                    - heading "Flared Printed Dress" [level=4] [ref=f9e1093]
+                    - generic [ref=f9e1094]:
+                      - generic [ref=f9e1095]:
+                        - generic [ref=f9e1096]: Rs. 1399
+                        - generic [ref=f9e1097]: Rs. 6999
+                      - text: (80% OFF)
+              - listitem [ref=f9e1098]
+              - listitem [ref=f9e1099]
+              - listitem
+              - listitem
+              - listitem
+            - list [ref=f9e1101]:
+              - listitem: Page 1
+              - listitem: Previous
+              - listitem [ref=f9e1102]: Page 1 of 6978
+              - listitem [ref=f9e1103] [cursor=pointer]: Next
+            - generic [ref=f9e1107]:
+              - generic [ref=f9e1108]: Similar Products
+              - generic [ref=f9e1109] [cursor=pointer]: ✕
+    - paragraph [ref=f9e1114] [cursor=pointer]: UPTO ₹300 OFF
+  - contentinfo [ref=f9e1118]:
+    - generic [ref=f9e1119]:
+      - generic [ref=f9e1120]:
+        - generic [ref=f9e1121]:
+          - heading "Dresses price list" [level=2] [ref=f9e1122]
+          - table [ref=f9e1123]:
+            - rowgroup [ref=f9e1124]:
+              - row [ref=f9e1125]:
+                - columnheader "Dresses" [ref=f9e1126]
+                - columnheader "PRICE (RS)" [ref=f9e1127]
+            - rowgroup [ref=f9e1128]:
+              - row [ref=f9e1129]:
+                - cell [ref=f9e1130]:
+                  - link "Sangria Women Floral Embroidered Ethnic Dress" [ref=f9e1131] [cursor=pointer]:
+                    - /url: ethnic-dresses/sangria/sangria-women-floral-embroidered-ethnic-dress/36880462/buy
+                - cell "Rs. 1003" [ref=f9e1132]
+              - row [ref=f9e1133]:
+                - cell [ref=f9e1134]:
+                  - link "anayna Women Checked Cotton Fit & Flare Maxi Dresses" [ref=f9e1135] [cursor=pointer]:
+                    - /url: ethnic-dresses/anayna/anayna-women-checked-cotton-fit--flare-maxi-dresses/31067543/buy
+                - cell "Rs. 990" [ref=f9e1136]
+              - row [ref=f9e1137]:
+                - cell [ref=f9e1138]:
+                  - link "KALINI Embroidered Georgette Ethnic Gown" [ref=f9e1139] [cursor=pointer]:
+                    - /url: ethnic-dresses/kalini/kalini-embroidered-georgette-ethnic-gown/30861385/buy
+                - cell "Rs. 1199" [ref=f9e1140]
+              - row [ref=f9e1141]:
+                - cell [ref=f9e1142]:
+                  - link "KALAMIR Puff Sleeve Maxi Dress" [ref=f9e1143] [cursor=pointer]:
+                    - /url: dresses/kalamir/kalamir-puff-sleeve-maxi-dress/47536652/buy
+                - cell "Rs. 486" [ref=f9e1144]
+              - row [ref=f9e1145]:
+                - cell [ref=f9e1146]:
+                  - link "Babypattu Embroidered V-Neck Fit and Flare Ethnic Dresses" [ref=f9e1147] [cursor=pointer]:
+                    - /url: ethnic-dresses/babypattu/babypattu-embroidered-v-neck-fit-and-flare-ethnic-dresses/42294369/buy
+                - cell "Rs. 1233" [ref=f9e1148]
+              - row [ref=f9e1149]:
+                - cell [ref=f9e1150]:
+                  - link "Claura Women Floral Printed Silk Puff Sleeve Fit & Flare Midi Dress" [ref=f9e1151] [cursor=pointer]:
+                    - /url: dresses/claura/claura-women-floral-printed-silk-puff-sleeve-fit--flare-midi-dress/31375705/buy
+                - cell "Rs. 869" [ref=f9e1152]
+              - row [ref=f9e1153]:
+                - cell [ref=f9e1154]:
+                  - link "anayna Red Floral Ethnic A-Line Cotton Midi Ethnic Dress" [ref=f9e1155] [cursor=pointer]:
+                    - /url: ethnic-dresses/anayna/anayna-red-floral-ethnic-a-line-cotton-midi-ethnic-dress/21334304/buy
+                - cell "Rs. 881" [ref=f9e1156]
+              - row [ref=f9e1157]:
+                - cell [ref=f9e1158]:
+                  - link "S.TAJMINA DRESSES Puff Sleeve Ruffled Net Maxi Dress" [ref=f9e1159] [cursor=pointer]:
+                    - /url: dresses/s.tajmina+dresses/stajmina-dresses-puff-sleeve-ruffled-net-maxi-dress/47452777/buy
+                - cell "Rs. 679" [ref=f9e1160]
+              - row [ref=f9e1161]:
+                - cell [ref=f9e1162]:
+                  - link "Vishudh Blue Ethnic Motifs Printed V-Neck Tiered Empire Midi Ethnic Dress" [ref=f9e1163] [cursor=pointer]:
+                    - /url: ethnic-dresses/vishudh/vishudh-blue-ethnic-motifs-printed-v-neck-tiered-empire-midi-ethnic-dress/24201698/buy
+                - cell "Rs. 734" [ref=f9e1164]
+              - row [ref=f9e1165]:
+                - cell [ref=f9e1166]:
+                  - link "anayna Printed Cotton Fit & Flare Ethnic Dress" [ref=f9e1167] [cursor=pointer]:
+                    - /url: ethnic-dresses/anayna/anayna-printed-cotton-fit--flare-ethnic-dress/30560718/buy
+                - cell "Rs. 990" [ref=f9e1168]
+          - generic [ref=f9e1169]: Data last updated on 27/10/2026
+        - heading "buy Dresses" [level=2] [ref=f9e1170]
+        - generic [ref=f9e1171]:
+          - heading "Eternally Stylish Dresses" [level=2] [ref=f9e1172]
+          - paragraph [ref=f9e1173]: Whether you are 13 or 30, one thing all women can agree on is that dresses are an essential part of our wardrobe. Dresses have a unique appeal that can rarely be recreated by any other outfit. From vintage flower dresses to modern bodycon dresses, the styles have varied over the years.
+          - paragraph [ref=f9e1174]:
+            - text: The history of dresses dates back to centuries ago when they were designed with puffy sleeves with crinolines under the skirt. Now you can find a variety of dresses from pretty prom dresses to trendy club dresses. Myntra has choices galore when it comes to dress for girls and women. Explore the expansive range of women and
+            - link "girls dresses" [ref=f9e1175] [cursor=pointer]:
+              - /url: /girls-dresses
+            - text: on Myntra from premium brands.
+          - heading "Types of dresses" [level=3] [ref=f9e1176]
+          - paragraph [ref=f9e1177]: "There is a dress for every occasion and season. Listed below are some of the popular types of dresses categorised based on different occasions:"
+          - listitem [ref=f9e1178]:
+            - strong [ref=f9e1179]: Casual dresses-
+            - text: Want to feel chic and pretty without putting in too much effort? Then swap out your jeans and t-shirt for a casual dress. Dresses in cotton are perfect for everyday wear. For casual wear, choose from t-shirt style, shirt style, fit and flare, and blouson dresses.
+          - listitem [ref=f9e1180]:
+            - strong [ref=f9e1181]: Work dresses-
+            - text: More and more women are opting to wear dresses to work nowadays. Well-structured formal dresses make you look sharp and classy. A-line, peplum, and sheath dresses make for the perfect work-wear outfit. For winters, opt for sweater dresses with a pair of solid stockings or tights.
+          - listitem [ref=f9e1182]:
+            - strong [ref=f9e1183]: Party dresses-
+            - text: Nothing looks as glamorous as a shimmery bodycon dress for a night on the town with your friends. Party dresses come in a wide range of styles to suit different occasions. For formal parties and events, opt for cocktail dresses in full length made of satin, velvet, organza, or soft silk. Embellished maxi or
+            - link "Anarkali" [ref=f9e1184] [cursor=pointer]:
+              - /url: /anarkali
+            - text: dresses are perfect for ethnic parties.
+          - heading "Tips on Styling Dresses" [level=3] [ref=f9e1185]
+          - paragraph [ref=f9e1186]: "Picking the right dress and knowing how to style it for different occasions will change your fashion game. Listed below are some tips and tricks on styling dresses:"
+          - listitem [ref=f9e1187]:
+            - text: For summer, opt for light cotton dresses with floral and fun prints. Off-shoulder, halter-neck, and strappy dresses in pastel colours make for the perfect summer dresses. Opt for a strapless
+            - link "bra" [ref=f9e1188] [cursor=pointer]:
+              - /url: /bra
+            - text: when wearing off-shoulder and halter-neck dresses.
+          - listitem [ref=f9e1189]: Style your shirt dress with a wide belt at the waist for a chic look.
+          - listitem [ref=f9e1190]:
+            - text: When it comes to wedding dresses, opt for fabrics like organza, satin, crepe, taffeta, chiffon, and charmeuse. You can opt for a
+            - link "designer dress" [ref=f9e1191] [cursor=pointer]:
+              - /url: /designer-dresses
+            - text: or take your pick from one of the premium brands.
+          - listitem [ref=f9e1192]:
+            - link "Red dresses" [ref=f9e1193] [cursor=pointer]:
+              - /url: /red-dresses
+            - text: are perfect for date nights. Opt for a boatneck chiffon red dress and nude pumps for a perfect date night look.
+          - listitem [ref=f9e1194]: For a form-fitting look, opt for bodycon dresses. Shapewear can help you achieve a smooth silhouette with these dresses.
+          - listitem [ref=f9e1195]: Choose dresses that flatter your body type. If you are on the slimmer side, opt for wrap dresses to give the illusion of curves. If you are on the healthier side, opt for plus size dresses with a square or round neckline.
+          - heading "Buy Your Favourite Dress Online" [level=3] [ref=f9e1196]
+          - paragraph [ref=f9e1197]: No matter your style preference, we guarantee that you will find the perfect dress on Myntra. Check out the vast collection of casual, ethnic, formal, and party wear dresses on Myntra and avail exciting discounts when you shop from us.
+          - paragraph [ref=f9e1198]:
+            - strong [ref=f9e1199]: "SHOP BY BRAND:"
+          - paragraph [ref=f9e1200]:
+            - link "Biba" [ref=f9e1201] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Global Desi" [ref=f9e1202] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Urbanic" [ref=f9e1203] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Dressberry" [ref=f9e1204] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Sassafras" [ref=f9e1205] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Soch" [ref=f9e1206] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Libas" [ref=f9e1207] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "W" [ref=f9e1208] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Koskii" [ref=f9e1209] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Nalli" [ref=f9e1210] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Karagiri" [ref=f9e1211] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Pothys" [ref=f9e1212] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "H&M" [ref=f9e1213] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Vero Moda" [ref=f9e1214] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Calvin Klein" [ref=f9e1215] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Max" [ref=f9e1216] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Clovia" [ref=f9e1217] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Zivame" [ref=f9e1218] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Sonari" [ref=f9e1219] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Enamor" [ref=f9e1220] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Jockey" [ref=f9e1221] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Forever 21" [ref=f9e1222] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Nike" [ref=f9e1223] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Puma" [ref=f9e1224] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Adidas" [ref=f9e1225] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Campus" [ref=f9e1226] [cursor=pointer]:
+              - /url: ""
+            - text: "|"
+            - link "Red Tape" [ref=f9e1227] [cursor=pointer]:
+              - /url: ""
+          - generic [ref=f9e1228]:
+            - generic [ref=f9e1229]:
+              - paragraph:
+                - strong
+              - heading [level=3] [ref=f9e1230]:
+                - strong [ref=f9e1231]: Are dresses more comfortable during pregnancy?
+              - paragraph
+              - generic [ref=f9e1232]:
+                - paragraph
+                - generic [ref=f9e1233]: Maternity wear has become chic in recent years, and dresses are a welcome addition to the maternity wear range. These dresses are designed, keeping the expecting mother’s needs in mind and are very comfortable. Also, the designs are trendy, which makes them an excellent choice for different occasions
+                - paragraph
+            - generic [ref=f9e1234]:
+              - paragraph:
+                - strong
+              - heading [level=3] [ref=f9e1235]:
+                - strong [ref=f9e1236]: Can Formal dresses be worn for an office presentation/Interview?
+              - paragraph
+              - generic [ref=f9e1237]:
+                - paragraph
+                - generic [ref=f9e1238]: Formal dresses are styled for corporate wear and are very much in vogue. They display an understated elegance and are perfect for any formal event such as an interview, meeting with clients or an official presentation.
+                - paragraph
+            - generic [ref=f9e1239]:
+              - paragraph:
+                - strong
+              - heading [level=3] [ref=f9e1240]:
+                - strong [ref=f9e1241]: What type of dresses can be worn for receptions?
+              - paragraph
+              - generic [ref=f9e1242]:
+                - paragraph
+                - generic [ref=f9e1243]: Myntra has a curated range of dresses for the party as well as wedding receptions. The focus is to create the perfect balance between modern and traditional. Maxi dress, A-line, empire and kurti dress with embellishments, ethnic motifs or embroidery are popular choices in the reception wear range.
+                - paragraph
+            - generic [ref=f9e1244]:
+              - paragraph:
+                - strong
+              - heading [level=3] [ref=f9e1245]:
+                - strong [ref=f9e1246]: How can we style dresses?
+              - paragraph
+              - generic [ref=f9e1247]:
+                - paragraph
+                - generic [ref=f9e1248]:
+                  - text: Dress in itself makes a strong style statement which can be enhanced by pairing it with accessories, some amount of mix n match works really well.
+                  - listitem [ref=f9e1249]: A shirt dress can be styled with a broad belt at the waist.
+                  - listitem [ref=f9e1250]: A sleeveless plain maxi dress can be styled with an embellished jacket and some chunky jewellery.
+                  - listitem [ref=f9e1251]: A solid formal dress, peep toes and a delicate necklace create the perfect corporate look.
+                  - listitem [ref=f9e1252]: A denim dress with sneakers is ideal for a casual outing.
+                  - listitem [ref=f9e1253]: A scarf wrapped around a short printed dress with sandals is chic and comfortable attire.
+                - paragraph
+            - generic [ref=f9e1254]:
+              - paragraph:
+                - strong
+              - heading [level=3] [ref=f9e1255]:
+                - strong [ref=f9e1256]: What are the different dresses of brands available on Myntra?
+              - paragraph
+              - generic [ref=f9e1257]:
+                - paragraph
+                - generic [ref=f9e1258]: Myntra has an exquisite range of dresses by different brands, contemporary as well as ethnic. Some of the well-known brands that you can buy from are Dressberry, Aks, Vero Moda, Anouk, Dorothy Perkins, Chemistry, Here&Now, Indya, Meringue and Sztori.
+                - paragraph
+          - heading [level=2] [ref=f9e1259]:
+            - strong [ref=f9e1260]: Other Categories
+          - paragraph [ref=f9e1261]:
+            - link "Tops" [ref=f9e1262] [cursor=pointer]:
+              - /url: /tops
+            - text: ","
+            - link "Blouse Designs" [ref=f9e1263] [cursor=pointer]:
+              - /url: /saree-blouse
+            - text: ","
+            - link "Saree" [ref=f9e1264] [cursor=pointer]:
+              - /url: /saree
+            - text: ","
+            - link "Ethnic Wear" [ref=f9e1265] [cursor=pointer]:
+              - /url: /ethnic-wear
+            - text: ","
+            - link "Lehenga" [ref=f9e1266] [cursor=pointer]:
+              - /url: /lehenga-choli
+            - text: ","
+            - link "Kurtas" [ref=f9e1267] [cursor=pointer]:
+              - /url: /kurtas
+            - text: ","
+            - link "Women Jeans" [ref=f9e1268] [cursor=pointer]:
+              - /url: /women-jeans
+          - paragraph [ref=f9e1269]:
+            - strong [ref=f9e1270]: "Types Of Dresses:"
+          - paragraph [ref=f9e1271]:
+            - link "Long Dress" [ref=f9e1272] [cursor=pointer]:
+              - /url: https://www.myntra.com/long-dress
+            - text: "|"
+            - link "Prom Dresses" [ref=f9e1273] [cursor=pointer]:
+              - /url: https://www.myntra.com/prom-dresses
+            - text: "|"
+            - link "Net Dress" [ref=f9e1274] [cursor=pointer]:
+              - /url: https://www.myntra.com/net-dresses
+            - text: "|"
+            - link "Animal Dresses" [ref=f9e1275] [cursor=pointer]:
+              - /url: https://www.myntra.com/animal-dresses
+            - text: "|"
+            - link "Oversize Dress" [ref=f9e1276] [cursor=pointer]:
+              - /url: https://www.myntra.com/oversize-dress
+          - paragraph
+          - heading "Different Types of Dresses on Myntra" [level=2] [ref=f9e1277]
+          - paragraph
+          - table [ref=f9e1278]:
+            - rowgroup [ref=f9e1279]:
+              - row [ref=f9e1280]:
+                - cell [ref=f9e1281]:
+                  - link "Maxi Dresses" [ref=f9e1282] [cursor=pointer]:
+                    - /url: /maxi-dresses
+                - cell [ref=f9e1283]:
+                  - link "Short Dresses" [ref=f9e1284] [cursor=pointer]:
+                    - /url: /short-dresses
+                - cell [ref=f9e1285]:
+                  - link "Midi Dresses" [ref=f9e1286] [cursor=pointer]:
+                    - /url: /midi-dresses
+              - row [ref=f9e1287]:
+                - cell [ref=f9e1288]:
+                  - link "Lace Dresses" [ref=f9e1289] [cursor=pointer]:
+                    - /url: /lace-dresses
+                - cell [ref=f9e1290]:
+                  - link "Wrap Dresses" [ref=f9e1291] [cursor=pointer]:
+                    - /url: /wrap-dresses
+                - cell [ref=f9e1292]:
+                  - link "Tube Dresses" [ref=f9e1293] [cursor=pointer]:
+                    - /url: /tube-dresses
+              - row [ref=f9e1294]:
+                - cell [ref=f9e1295]:
+                  - link "Off Shoulder Dresses" [ref=f9e1296] [cursor=pointer]:
+                    - /url: /off-shoulder-dresses
+                - cell [ref=f9e1297]:
+                  - link "Designer Dresses" [ref=f9e1298] [cursor=pointer]:
+                    - /url: /designer-dresses
+                - cell [ref=f9e1299]:
+                  - link "Kaftan Dresses" [ref=f9e1300] [cursor=pointer]:
+                    - /url: /kaftan-dresses
+      - generic [ref=f9e1301]:
+        - generic [ref=f9e1302]:
+          - paragraph [ref=f9e1303]:
+            - link "ONLINE SHOPPING" [ref=f9e1304] [cursor=pointer]:
+              - /url: /?src=onlineShopping
+          - link "Men" [ref=f9e1305] [cursor=pointer]:
+            - /url: /shop/men
+          - link "Women" [ref=f9e1306] [cursor=pointer]:
+            - /url: /shop/women
+          - link "Kids" [ref=f9e1307] [cursor=pointer]:
+            - /url: /shop/kids
+          - link "Home" [ref=f9e1308] [cursor=pointer]:
+            - /url: /shop/home-living
+          - link "Beauty" [ref=f9e1309] [cursor=pointer]:
+            - /url: /personal-care
+          - link "Genz" [ref=f9e1310] [cursor=pointer]:
+            - /url: /shop/fwd-women
+          - link "Gift Cards" [ref=f9e1311] [cursor=pointer]:
+            - /url: /giftcard
+          - link "Myntra Insider" [ref=f9e1312] [cursor=pointer]:
+            - /url: /myntrainsider?cache=false
+          - paragraph [ref=f9e1313]: USEFUL LINKS
+          - link "Blog" [ref=f9e1314] [cursor=pointer]:
+            - /url: http://blog.myntra.com/
+          - link "Careers" [ref=f9e1315] [cursor=pointer]:
+            - /url: https://careers.myntra.com
+          - link "Site Map" [ref=f9e1316] [cursor=pointer]:
+            - /url: /sitemap
+          - link "Corporate Information" [ref=f9e1317] [cursor=pointer]:
+            - /url: /corp-info
+          - link "Whitehat" [ref=f9e1318] [cursor=pointer]:
+            - /url: /security/whitehat
+          - link "Cleartrip" [ref=f9e1319] [cursor=pointer]:
+            - /url: https://www.cleartrip.com/
+          - link "Myntra Global" [ref=f9e1320] [cursor=pointer]:
+            - /url: https://www.myntraglobal.com/
+        - generic [ref=f9e1321]:
+          - paragraph [ref=f9e1322]: CUSTOMER POLICIES
+          - link "Contact Us" [ref=f9e1323] [cursor=pointer]:
+            - /url: /contactus
+          - link "FAQ" [ref=f9e1324] [cursor=pointer]:
+            - /url: /faqs
+          - link "T&C" [ref=f9e1325] [cursor=pointer]:
+            - /url: /tac
+          - link "Terms Of Use" [ref=f9e1326] [cursor=pointer]:
+            - /url: /termsofuse
+          - link "Track Orders" [ref=f9e1327] [cursor=pointer]:
+            - /url: /my/orders
+          - link "Shipping" [ref=f9e1328] [cursor=pointer]:
+            - /url: /faqs#shipping
+          - link "Cancellation" [ref=f9e1329] [cursor=pointer]:
+            - /url: /faqs#cancel
+          - link "Privacy policy" [ref=f9e1330] [cursor=pointer]:
+            - /url: /privacypolicy
+          - link "Grievance Redressal" [ref=f9e1331] [cursor=pointer]:
+            - /url: /grievanceredressal
+          - link "FSSAI Food Safety Connect app" [ref=f9e1332] [cursor=pointer]:
+            - /url: https://fssai.gov.in/cms/food-safety-connect.php
+        - generic [ref=f9e1333]:
+          - paragraph [ref=f9e1334]: EXPERIENCE MYNTRA APP ON MOBILE
+          - generic:
+            - link:
+              - /url: https://play.google.com/store/apps/details?id=com.myntra.android
+            - link:
+              - /url: https://itunes.apple.com/in/app/myntra-indias-fashion-store/id907394059
+          - generic [ref=f9e1335]: KEEP IN TOUCH
+          - link [ref=f9e1336] [cursor=pointer]:
+            - /url: https://www.facebook.com/myntra
+          - link:
+            - /url: https://twitter.com/myntra
+          - link:
+            - /url: https://www.youtube.com/user/myntradotcom
+          - link:
+            - /url: https://www.instagram.com/myntra
+        - generic [ref=f9e1338]:
+          - generic [ref=f9e1342]:
+            - strong [ref=f9e1343]: 100% ORIGINAL
+            - text: guarantee for all products at myntra.com
+          - generic [ref=f9e1347]:
+            - strong [ref=f9e1348]: Return within 14days
+            - text: of receiving your order
+      - generic [ref=f9e1350]:
+        - separator [ref=f9e1351]
+        - generic [ref=f9e1352]: POPULAR SEARCHES
+        - generic [ref=f9e1353]:
+          - link "Girls |" [ref=f9e1354] [cursor=pointer]:
+            - /url: /girls
+          - link "Street Fashion |" [ref=f9e1355] [cursor=pointer]:
+            - /url: https://www.myntra.com/studio/feed/hashtag/streetfashion
+          - link "Fashion Hacks |" [ref=f9e1356] [cursor=pointer]:
+            - /url: /studio/feed/hashtag/fashionhacks
+          - link "Girls Tops |" [ref=f9e1357] [cursor=pointer]:
+            - /url: /girls-tops
+          - link "Biba Girls Dresses |" [ref=f9e1358] [cursor=pointer]:
+            - /url: /biba-kids
+          - link "Jeans For Girls |" [ref=f9e1359] [cursor=pointer]:
+            - /url: /girls-jeans
+          - link "Baby Dress |" [ref=f9e1360] [cursor=pointer]:
+            - /url: /baby-dresses
+          - link "Dresses For Kids |" [ref=f9e1361] [cursor=pointer]:
+            - /url: /kids-dresses
+          - link "Boys Shorts |" [ref=f9e1362] [cursor=pointer]:
+            - /url: /boys-shorts
+          - link "T Shirt For Girl |" [ref=f9e1363] [cursor=pointer]:
+            - /url: /women-tshirts
+          - link "Tshirts For Girls |" [ref=f9e1364] [cursor=pointer]:
+            - /url: /girls-shirts
+          - link "Girls Tshirts |" [ref=f9e1365] [cursor=pointer]:
+            - /url: /girls-tshirts
+          - link "Kids Wear |" [ref=f9e1366] [cursor=pointer]:
+            - /url: /kids-wear
+          - link "Blazer For Boys |" [ref=f9e1367] [cursor=pointer]:
+            - /url: /boys-blazers
+          - link "Girl Dress |" [ref=f9e1368] [cursor=pointer]:
+            - /url: /girls-dresses
+          - link "Jeans Top |" [ref=f9e1369] [cursor=pointer]:
+            - /url: /girls-top-jeans
+          - link "Girls Shrug |" [ref=f9e1370] [cursor=pointer]:
+            - /url: /girls-shrug
+          - link "Kids Suits |" [ref=f9e1371] [cursor=pointer]:
+            - /url: /kids-suit
+          - link "Shorts For Girls |" [ref=f9e1372] [cursor=pointer]:
+            - /url: /girls-shorts
+          - link "Girl Bra |" [ref=f9e1373] [cursor=pointer]:
+            - /url: /college-girls-bra
+          - link "Girls Bra |" [ref=f9e1374] [cursor=pointer]:
+            - /url: /girls-bra
+          - link "Sweaters For Girls |" [ref=f9e1375] [cursor=pointer]:
+            - /url: /girls-sweaters
+          - link "Girls Kurtis |" [ref=f9e1376] [cursor=pointer]:
+            - /url: /girls-kurtis
+          - link "Girls Swimming Costume |" [ref=f9e1377] [cursor=pointer]:
+            - /url: /girls-swimming-costume
+          - link "Girls Scarves |" [ref=f9e1378] [cursor=pointer]:
+            - /url: /girls-scarves
+          - link "Tights For Kids |" [ref=f9e1379] [cursor=pointer]:
+            - /url: /kids-tights
+          - link "Adidas White Shoes |" [ref=f9e1380] [cursor=pointer]:
+            - /url: /adidas-white-shoes
+          - link "Kids Ethnic Wear |" [ref=f9e1381] [cursor=pointer]:
+            - /url: /kids-ethnic-wear
+          - link "Boys Jackets |" [ref=f9e1382] [cursor=pointer]:
+            - /url: /boys-jackets
+          - link "Baby Frocks Design |" [ref=f9e1383] [cursor=pointer]:
+            - /url: /baby-frock
+          - link "Girls Blazer |" [ref=f9e1384] [cursor=pointer]:
+            - /url: /girls-blazer
+          - link "Blazer For Kids |" [ref=f9e1385] [cursor=pointer]:
+            - /url: /kids-blazers
+          - link "Kids Shrug |" [ref=f9e1386] [cursor=pointer]:
+            - /url: /kids-shrugs
+          - link "Kids Kurtis |" [ref=f9e1387] [cursor=pointer]:
+            - /url: /kids-kurtis
+          - link "Frock Design |" [ref=f9e1388] [cursor=pointer]:
+            - /url: /frocks
+          - link "Long Coats For Girls |" [ref=f9e1389] [cursor=pointer]:
+            - /url: /girls-coats
+          - link "Boys Denim Jacket |" [ref=f9e1390] [cursor=pointer]:
+            - /url: /boys-denim-jackets
+          - link "Jeggings For Girls |" [ref=f9e1391] [cursor=pointer]:
+            - /url: /girls-jeggings
+          - link "Kids |" [ref=f9e1392] [cursor=pointer]:
+            - /url: /shop/kids
+          - link "Party Wear Dress For Boys |" [ref=f9e1393] [cursor=pointer]:
+            - /url: /boys-party-wear-dresses
+          - link "Girls Jacket |" [ref=f9e1394] [cursor=pointer]:
+            - /url: /girls-jackets
+          - link "Kids Sweater |" [ref=f9e1395] [cursor=pointer]:
+            - /url: /kids-sweaters
+          - link "Baby Sweater |" [ref=f9e1396] [cursor=pointer]:
+            - /url: /baby-sweaters
+          - link "Boys Suits |" [ref=f9e1397] [cursor=pointer]:
+            - /url: /boys-suits
+          - link "Baby Rompers |" [ref=f9e1398] [cursor=pointer]:
+            - /url: /baby-rompers
+          - link "Denim Jacket For Girls |" [ref=f9e1399] [cursor=pointer]:
+            - /url: /girls-denim-jacket
+          - link "Newborn Baby Dresses |" [ref=f9e1400] [cursor=pointer]:
+            - /url: /infant-dresses
+          - link "Girls Vest |" [ref=f9e1401] [cursor=pointer]:
+            - /url: /girls-vest
+          - link "Girls Kids Wear |" [ref=f9e1402] [cursor=pointer]:
+            - /url: /girls-kids-wear
+          - link "Kids Party Wear" [ref=f9e1403] [cursor=pointer]:
+            - /url: /kids-party-wear
+      - generic [ref=f9e1404]:
+        - generic [ref=f9e1405]:
+          - text: In case of any concern,
+          - link "Contact Us" [ref=f9e1406] [cursor=pointer]:
+            - /url: /contactus
+        - generic [ref=f9e1407]: © 2026 www.myntra.com. All rights reserved.
+        - link "A Flipkart company" [ref=f9e1409] [cursor=pointer]:
+          - /url: https://www.flipkart.com/
+  - generic [ref=f9e1410]:
+    - generic [ref=f9e1412] [cursor=pointer]
+    - generic [ref=f9e1415] [cursor=pointer]:
+      - img "Icon" [ref=f9e1417]
+      - generic [ref=f9e1418]: "Big Fashion Festival: LIVE NOW 🟢"
+```
