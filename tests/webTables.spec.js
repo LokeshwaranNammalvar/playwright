@@ -30,7 +30,7 @@ test('web table', async({page})=> {
   // to print all the data present in the table
   for(let j=0; j<totalCount; j++)
   {
-    const row = counts.nth(i);
+    const row = counts.nth(j);
     const rowText = await row.innerText();
     console.log(rowText);
   }
