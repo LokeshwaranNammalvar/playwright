@@ -1,0 +1,2484 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: windowHandling.spec.js >> window handling
+- Location: tests\windowHandling.spec.js:3:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f4e2]:
+  - navigation "Shortcuts menu" [ref=f4e3]:
+    - heading "Skip to" [level=2] [ref=f4e4]
+    - list "Skip to" [ref=f4e5]:
+      - listitem [ref=f4e6]:
+        - link "main content" [ref=f4e7] [cursor=pointer]:
+          - /url: "#skippedLink"
+          - text: Main content
+      - listitem [ref=f4e8]:
+        - link "Results" [ref=f4e9] [cursor=pointer]:
+          - /url: .s-asin a:has(h2)
+    - separator [aria-hidden] [ref=f4e10]
+    - heading "Keyboard shortcuts" [level=2] [ref=f4e11]
+    - list "Keyboard shortcuts" [ref=f4e12]:
+      - listitem [ref=f4e13]:
+        - link "Search, alt, forward slash" [ref=f4e14] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [aria-hidden] [ref=f4e15]:
+            - generic [ref=f4e16]: Search
+            - generic [ref=f4e17]:
+              - generic [ref=f4e18]: alt
+              - generic [ref=f4e19]: +
+              - generic [ref=f4e20]: /
+      - listitem [ref=f4e21]:
+        - link "Cart, shift, alt, c" [ref=f4e22] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [aria-hidden] [ref=f4e23]:
+            - generic [ref=f4e24]: Cart
+            - generic [ref=f4e25]:
+              - generic [ref=f4e26]: shift
+              - generic [ref=f4e27]: +
+              - generic [ref=f4e28]: alt
+              - generic [ref=f4e29]: +
+              - generic [ref=f4e30]: C
+      - listitem [ref=f4e31]:
+        - link "Home, shift, alt, h" [ref=f4e32] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [aria-hidden] [ref=f4e33]:
+            - generic [ref=f4e34]: Home
+            - generic [ref=f4e35]:
+              - generic [ref=f4e36]: shift
+              - generic [ref=f4e37]: +
+              - generic [ref=f4e38]: alt
+              - generic [ref=f4e39]: +
+              - generic [ref=f4e40]: H
+      - listitem [ref=f4e41]:
+        - link "Your orders, shift, alt, o" [ref=f4e42] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [aria-hidden] [ref=f4e43]:
+            - generic [ref=f4e44]: Orders
+            - generic [ref=f4e45]:
+              - generic [ref=f4e46]: shift
+              - generic [ref=f4e47]: +
+              - generic [ref=f4e48]: alt
+              - generic [ref=f4e49]: +
+              - generic [ref=f4e50]: O
+      - listitem [ref=f4e51]:
+        - button "Show/hide shortcuts, shift, alt, z" [ref=f4e52] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f4e53]:
+            - generic [ref=f4e54]: Show/Hide shortcuts
+            - generic [ref=f4e55]:
+              - generic [ref=f4e56]: shift
+              - generic [ref=f4e57]: +
+              - generic [ref=f4e58]: alt
+              - generic [ref=f4e59]: +
+              - generic [ref=f4e60]: Z
+    - generic [ref=f4e61]: To move between items, use your keyboard's up or down arrows.
+  - banner [ref=f4e67]:
+    - navigation "Primary" [ref=f4e68]:
+      - generic [ref=f4e69]:
+        - generic [ref=f4e70]:
+          - link "Amazon.in" [ref=f4e72] [cursor=pointer]:
+            - /url: /ref=nav_logo
+            - generic: .in
+          - button "Delivering to Chennai 600001 Update location" [ref=f4e75] [cursor=pointer]:
+            - generic [ref=f4e77]:
+              - generic [ref=f4e78]: Delivering to Chennai 600001
+              - generic [ref=f4e79]: Update location
+        - search [ref=f4e82]:
+          - generic [ref=f4e85]:
+            - generic [ref=f4e86]: All
+            - combobox "Select the department you want to search in" [ref=f4e89] [cursor=pointer]:
+              - option "All Categories" [selected]
+              - option "Alexa Skills"
+              - option "Amazon Devices"
+              - option "Amazon Fashion"
+              - option "Amazon Fresh Meat"
+              - option "Amazon Pharmacy"
+              - option "Appliances"
+              - option "Apps & Games"
+              - option "Audible Audiobooks"
+              - option "Baby"
+              - option "Beauty"
+              - option "Books"
+              - option "Car & Motorbike"
+              - option "Clothing & Accessories"
+              - option "Collectibles"
+              - option "Computers & Accessories"
+              - option "Deals"
+              - option "Electronics"
+              - option "Furniture"
+              - option "Garden & Outdoors"
+              - option "Gift Cards"
+              - option "Grocery & Gourmet Foods"
+              - option "Health & Personal Care"
+              - option "Home & Kitchen"
+              - option "Industrial & Scientific"
+              - option "Jewellery"
+              - option "Kindle Store"
+              - option "Luggage & Bags"
+              - option "Luxury Beauty"
+              - option "Movies & TV Shows"
+              - option "MP3 Music"
+              - option "Music"
+              - option "Musical Instruments"
+              - option "Office Products"
+              - option "Pet Supplies"
+              - option "Prime Video"
+              - option "Shoes & Handbags"
+              - option "Software"
+              - option "Sports, Fitness & Outdoors"
+              - option "Subscribe & Save"
+              - option "Tools & Home Improvement"
+              - option "Toys & Games"
+              - option "Under ₹500"
+              - option "Video Games"
+              - option "Watches"
+          - searchbox "Search Amazon.in" [ref=f4e92]: Iphone 18 pro max
+          - generic "Go" [ref=f4e95] [cursor=pointer]:
+            - button "Go" [ref=f4e96]
+        - generic [ref=f4e98]:
+          - generic [ref=f4e99]:
+            - link "Choose a language for shopping in Amazon India. The current selection is English (EN)." [ref=f4e100] [cursor=pointer]:
+              - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang
+              - generic [ref=f4e103]:
+                - img "India" [ref=f4e104]
+                - generic [ref=f4e105]: EN
+            - button "Expand to Change Language or Country" [ref=f4e106] [cursor=pointer]
+          - generic [ref=f4e107]:
+            - link "Hello, sign in Account & Lists" [ref=f4e108] [cursor=pointer]:
+              - /url: https://www.amazon.in/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fs%3Fk%3DIphone%2B18%2Bpro%2Bmax%26crid%3D1CDQ2R5MPVJO6%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26ref%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+              - generic [ref=f4e109]: Hello, sign in
+              - generic [ref=f4e111]: Account & Lists
+            - button "Expand Account and Lists" [ref=f4e112] [cursor=pointer]
+          - link "Returns & Orders" [ref=f4e113] [cursor=pointer]:
+            - /url: /gp/css/order-history?ref_=nav_orders_first
+            - generic [ref=f4e114]: Returns
+            - generic [ref=f4e115]: "& Orders"
+          - link "0 items in cart" [ref=f4e116] [cursor=pointer]:
+            - /url: /gp/cart/view.html?ref_=nav_cart
+            - generic [aria-hidden] [ref=f4e118]: "0"
+            - generic [aria-hidden] [ref=f4e121]: Cart
+      - generic [ref=f4e122]:
+        - button "Open All Categories Menu" [ref=f4e124] [cursor=pointer]:
+          - generic [ref=f4e126]: All
+        - list [ref=f4e130]:
+          - listitem [ref=f4e131]:
+            - generic [ref=f4e132]:
+              - link "Fresh" [ref=f4e133] [cursor=pointer]:
+                - /url: /fresh?ref_=nav_cs_grocery
+              - button "Fresh Details" [ref=f4e134] [cursor=pointer]
+          - listitem [ref=f4e135]:
+            - link "Amazon Pay" [ref=f4e137] [cursor=pointer]:
+              - /url: /gp/sva/dashboard?ref_=nav_cs_apay
+          - listitem [ref=f4e138]:
+            - link "Mobiles" [ref=f4e140] [cursor=pointer]:
+              - /url: /mobile-phones/b/?ie=UTF8&node=1389401031&ref_=nav_cs_mobiles
+          - listitem [ref=f4e141]:
+            - link "Today's Deals" [ref=f4e143] [cursor=pointer]:
+              - /url: /deals?ref_=nav_cs_gb
+          - listitem [ref=f4e144]:
+            - link "Coupons" [ref=f4e146] [cursor=pointer]:
+              - /url: /coupons?ref_=nav_cs_coupons
+          - listitem [ref=f4e147]:
+            - link "Flights" [ref=f4e149] [cursor=pointer]:
+              - /url: /flights?ref_=nav_cs_apay_desktop_topnav_flights
+          - listitem [ref=f4e150]:
+            - link "Electronics" [ref=f4e152] [cursor=pointer]:
+              - /url: /electronics/b/?ie=UTF8&node=976419031&ref_=nav_cs_electronics
+          - listitem [ref=f4e153]:
+            - link "New Releases" [ref=f4e155] [cursor=pointer]:
+              - /url: /gp/new-releases/?ref_=nav_cs_newreleases
+          - listitem [ref=f4e156]:
+            - link "Bestsellers" [ref=f4e158] [cursor=pointer]:
+              - /url: /gp/bestsellers/?ref_=nav_cs_bestsellers
+          - listitem [ref=f4e159]:
+            - link "Fashion" [ref=f4e161] [cursor=pointer]:
+              - /url: /gp/browse.html?node=6648217031&ref_=nav_cs_fashion
+          - listitem [ref=f4e162]:
+            - link "Computers" [ref=f4e164] [cursor=pointer]:
+              - /url: /computers-and-accessories/b/?ie=UTF8&node=976392031&ref_=nav_cs_pc
+          - listitem [ref=f4e165]:
+            - link "Pet Supplies" [ref=f4e167] [cursor=pointer]:
+              - /url: /Pet-Supplies/b/?ie=UTF8&node=2454181031&ref_=nav_cs_pets
+          - listitem [ref=f4e168]:
+            - link "Home & Kitchen" [ref=f4e170] [cursor=pointer]:
+              - /url: /Home-Kitchen/b/?ie=UTF8&node=976442031&ref_=nav_cs_home
+          - listitem [ref=f4e171]:
+            - link "Sports, Fitness & Outdoors" [ref=f4e173] [cursor=pointer]:
+              - /url: /Sports/b/?ie=UTF8&node=1984443031&ref_=nav_cs_sports
+          - listitem [ref=f4e174]:
+            - link "Custom Products" [ref=f4e176] [cursor=pointer]:
+              - /url: /Amazon-Custom/b/?ie=UTF8&node=32615889031&ref_=nav_cs_custom
+          - listitem [ref=f4e177]:
+            - link "Grocery & Gourmet Foods" [ref=f4e179] [cursor=pointer]:
+              - /url: /Gourmet-Specialty-Foods/b/?ie=UTF8&node=2454178031&ref_=nav_cs_grocery
+          - listitem [ref=f4e180]:
+            - link "Baby" [ref=f4e182] [cursor=pointer]:
+              - /url: /Baby/b/?ie=UTF8&node=1571274031&ref_=nav_cs_baby
+          - listitem [ref=f4e183]:
+            - link "Video Games" [ref=f4e185] [cursor=pointer]:
+              - /url: /video-games/b/?ie=UTF8&node=976460031&ref_=nav_cs_video_games
+          - listitem [ref=f4e186]:
+            - link "Books" [ref=f4e188] [cursor=pointer]:
+              - /url: /Books/b/?ie=UTF8&node=976389031&ref_=nav_cs_books
+          - listitem [ref=f4e189]:
+            - link "Kindle eBooks" [ref=f4e191] [cursor=pointer]:
+              - /url: /Kindle-eBooks/b/?ie=UTF8&node=1634753031&ref_=nav_cs_kindle_books
+          - listitem [ref=f4e192]:
+            - link "Toys & Games" [ref=f4e194] [cursor=pointer]:
+              - /url: /Toys-Games/b/?ie=UTF8&node=1350380031&ref_=nav_cs_toys
+          - listitem [ref=f4e195]:
+            - link "Car & Motorbike" [ref=f4e197] [cursor=pointer]:
+              - /url: /Car-Motorbike-Store/b/?ie=UTF8&node=4772060031&ref_=nav_cs_automotive
+          - listitem [ref=f4e198]:
+            - link "Customer Service" [ref=f4e200] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=200507590&ref_=nav_cs_help
+          - listitem [ref=f4e201]:
+            - link "Home Improvement" [ref=f4e203] [cursor=pointer]:
+              - /url: /Home-Improvement/b/?ie=UTF8&node=4286640031&ref_=nav_cs_hi
+          - listitem [ref=f4e204]:
+            - link "Gift Cards" [ref=f4e206] [cursor=pointer]:
+              - /url: /gift-card-store/b/?ie=UTF8&node=3704982031&ref_=nav_cs_gc
+          - listitem [ref=f4e207]:
+            - generic [ref=f4e208]:
+              - link "Prime" [ref=f4e209] [cursor=pointer]:
+                - /url: /prime?ref_=nav_cs_primelink_nonmember
+              - button "Prime Details" [ref=f4e210] [cursor=pointer]
+          - listitem [ref=f4e211]:
+            - link "Beauty & Personal Care" [ref=f4e213] [cursor=pointer]:
+              - /url: /beauty/b/?ie=UTF8&node=1355016031&ref_=nav_cs_beauty
+          - listitem [ref=f4e214]:
+            - link "Audible" [ref=f4e216] [cursor=pointer]:
+              - /url: /Audible-Books-and-Originals/b/?ie=UTF8&node=17941593031&ref_=nav_cs_audible
+          - listitem [ref=f4e217]:
+            - link "AmazonBasics" [ref=f4e219] [cursor=pointer]:
+              - /url: /b/?node=6637738031&ref_=nav_cs_amazonbasics
+          - listitem [ref=f4e220]:
+            - link "Subscribe & Save" [ref=f4e222] [cursor=pointer]:
+              - /url: /auto-deliveries/landing?ref_=nav_cs_sns
+        - link "Jan26_Event" [ref=f4e226] [cursor=pointer]:
+          - /url: /events/greatindianfestival/?_encoding=UTF8&ref_=nav_swm_event&pf_rd_p=913c2c21-782e-4de5-909f-10ab3b6494e9&pf_rd_s=nav-sitewide-msg&pf_rd_t=4201&pf_rd_i=navbar-4201&pf_rd_m=A21TJRUUN4KGV&pf_rd_r=2P8VRH66DH04N62F4EA1
+          - img "Jan26_Event" [ref=f4e227]
+      - dialog [ref=f4e228]
+  - generic [ref=f4e230]:
+    - heading [level=1] [ref=f4e233]:
+      - generic [ref=f4e234]:
+        - heading "1-16 of over 20,000 results for \"Iphone 18 pro max\"" [level=2] [ref=f4e239]
+        - generic [ref=f4e244]:
+          - generic [aria-hidden] [ref=f4e245]: "Sort by:"
+          - combobox "Sort by:" [ref=f4e246]:
+            - option "Featured" [selected]
+            - 'option "Price: Low to High"'
+            - 'option "Price: High to Low"'
+            - option "Avg. Customer Review"
+            - option "Newest Arrivals"
+            - option "Best Sellers"
+          - generic [aria-hidden] [ref=f4e249] [cursor=pointer]: Sort by:Featured
+    - generic [ref=f4e251]:
+      - generic [ref=f4e253]:
+        - generic [ref=f4e255]:
+          - generic [ref=f4e257]:
+            - generic [ref=f4e260]:
+              - heading "Results" [level=2] [ref=f4e261]
+              - generic [ref=f4e262]: Check each product page for other buying options.
+            - generic:
+              - list:
+                - listitem [ref=f4e263]:
+                  - generic [ref=f4e271]:
+                    - link [aria-hidden] [ref=f4e277] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo0NzU2ODEwMzAxOTA0NDM4OjE3OTMxNTcwNDU6c3BfYXRmOjMwMTM1ODM3MTcyMTQzMjo6MDo6&url=%2FiPhone-Pro-Max-256-ProMotion%2Fdp%2FB0HJ9XZ74M%2Fref%3Dsr_1_1_sspa%3Fcrid%3D1CDQ2R5MPVJO6%26dib%3DeyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA%26dib_tag%3Dse%26keywords%3DIphone%2B18%2Bpro%2Bmax%26qid%3D1793157045%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D8-1-spons%26aref%3DnSgGulST1r%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=nSgGulST1r&sp_cr=ZAZ
+                    - generic [ref=f4e282]:
+                      - generic [ref=f4e283]:
+                        - button "View Sponsored information or leave ad feedback" [ref=f4e286] [cursor=pointer]:
+                          - generic [ref=f4e287]: Sponsored
+                        - link [active] [ref=f4e289] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo0NzU2ODEwMzAxOTA0NDM4OjE3OTMxNTcwNDU6c3BfYXRmOjMwMTM1ODM3MTcyMTQzMjo6MDo6&url=%2FiPhone-Pro-Max-256-ProMotion%2Fdp%2FB0HJ9XZ74M%2Fref%3Dsr_1_1_sspa%3Fcrid%3D1CDQ2R5MPVJO6%26dib%3DeyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA%26dib_tag%3Dse%26keywords%3DIphone%2B18%2Bpro%2Bmax%26qid%3D1793157045%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D8-1-spons%26aref%3DnSgGulST1r%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=nSgGulST1r&sp_cr=ZAZ
+                          - heading "Sponsored Ad - iPhone 18 Pro Max (256 GB) - Black" [level=2] [ref=f4e290]: iPhone 18 Pro Max (256 GB) - Black
+                        - generic "17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture" [ref=f4e292]
+                      - generic [ref=f4e293]:
+                        - generic [ref=f4e294]:
+                          - text: "4.7"
+                          - button "4.7 out of 5 stars, rating details" [ref=f4e296] [cursor=pointer]:
+                            - generic [ref=f4e298]: 4.7 out of 5 stars
+                          - link "47 ratings" [ref=f4e300] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo0NzU2ODEwMzAxOTA0NDM4OjE3OTMxNTcwNDU6c3BfYXRmOjMwMTM1ODM3MTcyMTQzMjo6MDo6&url=%2FiPhone-Pro-Max-256-ProMotion%2Fdp%2FB0HJ9XZ74M%2Fref%3Dsr_1_1_sspa%3Fcrid%3D1CDQ2R5MPVJO6%26dib%3DeyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA%26dib_tag%3Dse%26keywords%3DIphone%2B18%2Bpro%2Bmax%26qid%3D1793157045%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D8-1-spons%26aref%3DnSgGulST1r%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=nSgGulST1r&sp_cr=ZAZ#customerReviews
+                            - text: (47)
+                        - generic [ref=f4e301]: 100+ bought in past month
+                      - generic [ref=f4e304]:
+                        - generic [ref=f4e305]:
+                          - generic [ref=f4e307]:
+                            - generic [ref=f4e308]: Price, product page
+                            - link "₹1,79,900" [ref=f4e309] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo0NzU2ODEwMzAxOTA0NDM4OjE3OTMxNTcwNDU6c3BfYXRmOjMwMTM1ODM3MTcyMTQzMjo6MDo6&url=%2FiPhone-Pro-Max-256-ProMotion%2Fdp%2FB0HJ9XZ74M%2Fref%3Dsr_1_1_sspa%3Fcrid%3D1CDQ2R5MPVJO6%26dib%3DeyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA%26dib_tag%3Dse%26keywords%3DIphone%2B18%2Bpro%2Bmax%26qid%3D1793157045%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D8-1-spons%26aref%3DnSgGulST1r%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=nSgGulST1r&sp_cr=ZAZ
+                              - generic [ref=f4e310]:
+                                - generic [ref=f4e311]: ₹1,79,900
+                                - generic [aria-hidden] [ref=f4e312]: ₹1,79,900
+                          - generic [ref=f4e316]:
+                            - generic [ref=f4e317]: Up to 5% back with Amazon Pay ICICI card
+                            - generic [aria-hidden] [ref=f4e318]: Up to 5% back with Amazon Pay ICI...
+                        - generic [ref=f4e321]:
+                          - generic [ref=f4e322]: FREE delivery Fri, 30 Oct
+                          - generic [ref=f4e324]: Or fastest delivery Tomorrow, 29 Oct
+                          - generic [ref=f4e326]: Arrives before Diwali
+                        - generic [ref=f4e341] [cursor=pointer]:
+                          - button "Add to cart" [ref=f4e342]
+                          - generic [aria-hidden] [ref=f4e343]: Add to cart
+                        - group "colours available" [ref=f4e345]:
+                          - list
+                          - link "+3 other colors/patterns" [ref=f4e347] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo0NzU2ODEwMzAxOTA0NDM4OjE3OTMxNTcwNDU6c3BfYXRmOjMwMTM1ODM3MTcyMTQzMjo6MDo6&url=%2FiPhone-Pro-Max-256-ProMotion%2Fdp%2FB0HJ9XZ74M%2Fref%3Dsr_1_1_sspa%3Fcrid%3D1CDQ2R5MPVJO6%26dib%3DeyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA%26dib_tag%3Dse%26keywords%3DIphone%2B18%2Bpro%2Bmax%26qid%3D1793157045%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D8-1-spons%26aref%3DnSgGulST1r%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=nSgGulST1r&sp_cr=ZAZ
+                - listitem [ref=f4e350]:
+                  - generic [ref=f4e358]:
+                    - link [aria-hidden] [ref=f4e364] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo0NzU2ODEwMzAxOTA0NDM4OjE3OTMxNTcwNDU6c3BfYXRmOjMwMTM1ODM3MTcxODUzMjo6MDo6&url=%2FiPhone-18-Pro-TB-ProMotion%2Fdp%2FB0HJB696TW%2Fref%3Dsr_1_2_sspa%3Fcrid%3D1CDQ2R5MPVJO6%26dib%3DeyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA%26dib_tag%3Dse%26keywords%3DIphone%2B18%2Bpro%2Bmax%26qid%3D1793157045%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D8-2-spons%26aref%3DTWXA7LV0gS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=TWXA7LV0gS&sp_cr=ZAZ
+                    - generic [ref=f4e369]:
+                      - generic [ref=f4e370]:
+                        - button "View Sponsored information or leave ad feedback" [ref=f4e373] [cursor=pointer]:
+                          - generic [ref=f4e374]: Sponsored
+                        - link [ref=f4e376] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo0NzU2ODEwMzAxOTA0NDM4OjE3OTMxNTcwNDU6c3BfYXRmOjMwMTM1ODM3MTcxODUzMjo6MDo6&url=%2FiPhone-18-Pro-TB-ProMotion%2Fdp%2FB0HJB696TW%2Fref%3Dsr_1_2_sspa%3Fcrid%3D1CDQ2R5MPVJO6%26dib%3DeyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA%26dib_tag%3Dse%26keywords%3DIphone%2B18%2Bpro%2Bmax%26qid%3D1793157045%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D8-2-spons%26aref%3DTWXA7LV0gS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=TWXA7LV0gS&sp_cr=ZAZ
+                          - heading "Sponsored Ad - iPhone 18 Pro (1 TB) - Burgundy" [level=2] [ref=f4e377]: iPhone 18 Pro (1 TB) - Burgundy
+                        - generic "15.93 cm (6.3″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture" [ref=f4e379]
+                      - generic [ref=f4e381]:
+                        - text: "4.7"
+                        - button "4.7 out of 5 stars, rating details" [ref=f4e383] [cursor=pointer]:
+                          - generic [ref=f4e385]: 4.7 out of 5 stars
+                        - link "47 ratings" [ref=f4e387] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo0NzU2ODEwMzAxOTA0NDM4OjE3OTMxNTcwNDU6c3BfYXRmOjMwMTM1ODM3MTcxODUzMjo6MDo6&url=%2FiPhone-18-Pro-TB-ProMotion%2Fdp%2FB0HJB696TW%2Fref%3Dsr_1_2_sspa%3Fcrid%3D1CDQ2R5MPVJO6%26dib%3DeyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA%26dib_tag%3Dse%26keywords%3DIphone%2B18%2Bpro%2Bmax%26qid%3D1793157045%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D8-2-spons%26aref%3DTWXA7LV0gS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=TWXA7LV0gS&sp_cr=ZAZ#customerReviews
+                          - text: (47)
+                      - generic [ref=f4e390]:
+                        - generic [ref=f4e391]:
+                          - generic [ref=f4e393]:
+                            - generic [ref=f4e394]: Price, product page
+                            - link "₹2,39,900" [ref=f4e395] [cursor=pointer]:
+                              - /url: /sspa/click?ie=UTF8&spc=MTo0NzU2ODEwMzAxOTA0NDM4OjE3OTMxNTcwNDU6c3BfYXRmOjMwMTM1ODM3MTcxODUzMjo6MDo6&url=%2FiPhone-18-Pro-TB-ProMotion%2Fdp%2FB0HJB696TW%2Fref%3Dsr_1_2_sspa%3Fcrid%3D1CDQ2R5MPVJO6%26dib%3DeyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA%26dib_tag%3Dse%26keywords%3DIphone%2B18%2Bpro%2Bmax%26qid%3D1793157045%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D8-2-spons%26aref%3DTWXA7LV0gS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=TWXA7LV0gS&sp_cr=ZAZ
+                              - generic [ref=f4e396]:
+                                - generic [ref=f4e397]: ₹2,39,900
+                                - generic [aria-hidden] [ref=f4e398]: ₹2,39,900
+                          - generic [ref=f4e402]:
+                            - generic [ref=f4e403]: Up to 5% back with Amazon Pay ICICI card
+                            - generic [aria-hidden] [ref=f4e404]: Up to 5% back with Amazon Pay ICI...
+                        - generic [ref=f4e407]:
+                          - generic [ref=f4e408]: FREE delivery Fri, 30 Oct
+                          - generic [ref=f4e410]: Or fastest delivery Today
+                          - generic [ref=f4e412]: Arrives before Diwali
+                        - generic [ref=f4e427] [cursor=pointer]:
+                          - button "Add to cart" [ref=f4e428]
+                          - generic [aria-hidden] [ref=f4e429]: Add to cart
+                        - group "colours available" [ref=f4e431]:
+                          - list
+                          - link "+3 other colors/patterns" [ref=f4e433] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo0NzU2ODEwMzAxOTA0NDM4OjE3OTMxNTcwNDU6c3BfYXRmOjMwMTM1ODM3MTcxODUzMjo6MDo6&url=%2FiPhone-18-Pro-TB-ProMotion%2Fdp%2FB0HJB696TW%2Fref%3Dsr_1_2_sspa%3Fcrid%3D1CDQ2R5MPVJO6%26dib%3DeyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA%26dib_tag%3Dse%26keywords%3DIphone%2B18%2Bpro%2Bmax%26qid%3D1793157045%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D8-2-spons%26aref%3DTWXA7LV0gS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=TWXA7LV0gS&sp_cr=ZAZ
+                - listitem [ref=f4e436]:
+                  - generic [ref=f4e442]:
+                    - link [aria-hidden] [ref=f4e448] [cursor=pointer]:
+                      - /url: /iPhone-18-Pro-Max-ProMotion/dp/B0HJ9YRMZY/ref=sr_1_3?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-3
+                    - generic [ref=f4e453]:
+                      - generic [ref=f4e454]:
+                        - link [ref=f4e455] [cursor=pointer]:
+                          - /url: /iPhone-18-Pro-Max-ProMotion/dp/B0HJ9YRMZY/ref=sr_1_3?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-3
+                          - heading "iPhone 18 Pro Max (2 TB) - Burgundy" [level=2] [ref=f4e456]
+                        - generic "17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture" [ref=f4e458]
+                      - generic [ref=f4e460]:
+                        - text: "4.7"
+                        - button "4.7 out of 5 stars, rating details" [ref=f4e462] [cursor=pointer]:
+                          - generic [ref=f4e464]: 4.7 out of 5 stars
+                        - link "47 ratings" [ref=f4e466] [cursor=pointer]:
+                          - /url: /iPhone-18-Pro-Max-ProMotion/dp/B0HJ9YRMZY/ref=sr_1_3?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-3#customerReviews
+                          - text: (47)
+                      - generic [ref=f4e469]:
+                        - generic [ref=f4e470]:
+                          - generic [ref=f4e472]:
+                            - generic [ref=f4e473]: Price, product page
+                            - link "₹3,29,900" [ref=f4e474] [cursor=pointer]:
+                              - /url: /iPhone-18-Pro-Max-ProMotion/dp/B0HJ9YRMZY/ref=sr_1_3?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-3
+                              - generic [ref=f4e475]:
+                                - generic [ref=f4e476]: ₹3,29,900
+                                - generic [aria-hidden] [ref=f4e477]: ₹3,29,900
+                          - generic [ref=f4e481]:
+                            - generic [ref=f4e482]: Up to 5% back with Amazon Pay ICICI card
+                            - generic [aria-hidden] [ref=f4e483]: Up to 5% back with Amazon Pay ICI...
+                        - generic [ref=f4e486]:
+                          - generic [ref=f4e487]: FREE delivery Fri, 30 Oct
+                          - generic [ref=f4e489]: Arrives before Diwali
+                        - generic [ref=f4e504] [cursor=pointer]:
+                          - button "Add to cart" [ref=f4e505]
+                          - generic [aria-hidden] [ref=f4e506]: Add to cart
+                        - group "colours available" [ref=f4e508]:
+                          - list [ref=f4e509]:
+                            - generic [ref=f4e510]:
+                              - listitem:
+                                - link "Burgundy":
+                                  - /url: /iPhone-18-Pro-Max-ProMotion/dp/B0HJ9YRMZY/ref=cs_sr_dp_1?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-3
+                                  - generic [ref=f4e511] [cursor=pointer]
+                            - generic [ref=f4e513]:
+                              - listitem:
+                                - link "Black":
+                                  - /url: /iPhone-18-Pro-Max-ProMotion/dp/B0HJ9VKHDM/ref=cs_sr_dp_2?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-3
+                                  - generic [ref=f4e514] [cursor=pointer]
+                            - generic [ref=f4e516]:
+                              - listitem:
+                                - link "Glacier":
+                                  - /url: /iPhone-18-Pro-Max-ProMotion/dp/B0HJB6MC2S/ref=cs_sr_dp_3?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-3
+                                  - generic [ref=f4e517] [cursor=pointer]
+                            - generic [ref=f4e519]:
+                              - listitem:
+                                - link "Silver":
+                                  - /url: /iPhone-18-Pro-Max-ProMotion/dp/B0HJ9S6L5N/ref=cs_sr_dp_4?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-3
+                                  - generic [ref=f4e520] [cursor=pointer]
+                - listitem [ref=f4e524]:
+                  - generic [ref=f4e530]:
+                    - generic [ref=f4e532]:
+                      - generic "Amazon's Choice" [ref=f4e535]:
+                        - group "Amazon's Choice for \"Iphone 18 pro max\"" [ref=f4e538]:
+                          - generic [ref=f4e540]: Amazon's Choice
+                      - link [aria-hidden] [ref=f4e544] [cursor=pointer]:
+                        - /url: /iPhone-Pro-Max-256-ProMotion/dp/B0HJB6KG27/ref=sr_1_4?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-4
+                    - generic [ref=f4e549]:
+                      - generic [ref=f4e550]:
+                        - link [ref=f4e551] [cursor=pointer]:
+                          - /url: /iPhone-Pro-Max-256-ProMotion/dp/B0HJB6KG27/ref=sr_1_4?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-4
+                          - heading "iPhone 18 Pro Max (256 GB) - Silver" [level=2] [ref=f4e552]
+                        - generic "17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture" [ref=f4e554]
+                      - generic [ref=f4e555]:
+                        - generic [ref=f4e556]:
+                          - text: "4.7"
+                          - button "4.7 out of 5 stars, rating details" [ref=f4e558] [cursor=pointer]:
+                            - generic [ref=f4e560]: 4.7 out of 5 stars
+                          - link "47 ratings" [ref=f4e562] [cursor=pointer]:
+                            - /url: /iPhone-Pro-Max-256-ProMotion/dp/B0HJB6KG27/ref=sr_1_4?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-4#customerReviews
+                            - text: (47)
+                        - generic [ref=f4e563]: 100+ bought in past month
+                      - generic [ref=f4e566]:
+                        - generic [ref=f4e567]:
+                          - generic [ref=f4e569]:
+                            - generic [ref=f4e570]: Price, product page
+                            - link "₹1,79,900" [ref=f4e571] [cursor=pointer]:
+                              - /url: /iPhone-Pro-Max-256-ProMotion/dp/B0HJB6KG27/ref=sr_1_4?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-4
+                              - generic [ref=f4e572]:
+                                - generic [ref=f4e573]: ₹1,79,900
+                                - generic [aria-hidden] [ref=f4e574]: ₹1,79,900
+                          - generic [ref=f4e578]:
+                            - generic [ref=f4e579]: Up to 5% back with Amazon Pay ICICI card
+                            - generic [aria-hidden] [ref=f4e580]: Up to 5% back with Amazon Pay ICI...
+                        - generic [ref=f4e583]:
+                          - generic [ref=f4e584]: FREE delivery Mon, 2 Nov
+                          - generic [ref=f4e586]: Arrives before Diwali
+                        - generic [ref=f4e601] [cursor=pointer]:
+                          - button "Add to cart" [ref=f4e602]
+                          - generic [aria-hidden] [ref=f4e603]: Add to cart
+                        - group "colours available" [ref=f4e605]:
+                          - list [ref=f4e606]:
+                            - generic [ref=f4e607]:
+                              - listitem:
+                                - link "Silver":
+                                  - /url: /iPhone-Pro-Max-256-ProMotion/dp/B0HJB6KG27/ref=cs_sr_dp_1?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-4
+                                  - generic [ref=f4e608] [cursor=pointer]
+                            - generic [ref=f4e610]:
+                              - listitem:
+                                - link "Black":
+                                  - /url: /iPhone-Pro-Max-256-ProMotion/dp/B0HJ9XZ74M/ref=cs_sr_dp_2?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-4
+                                  - generic [ref=f4e611] [cursor=pointer]
+                            - generic [ref=f4e613]:
+                              - listitem:
+                                - link "Burgundy":
+                                  - /url: /iPhone-Pro-Max-256-ProMotion/dp/B0HJ9YRMZY/ref=cs_sr_dp_3?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-4
+                                  - generic [ref=f4e614] [cursor=pointer]
+                            - generic [ref=f4e616]:
+                              - listitem:
+                                - link "Glacier":
+                                  - /url: /iPhone-Pro-Max-256-ProMotion/dp/B0HJB87GVS/ref=cs_sr_dp_4?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-4
+                                  - generic [ref=f4e617] [cursor=pointer]
+                - listitem [ref=f4e621]:
+                  - generic [ref=f4e627]:
+                    - link [aria-hidden] [ref=f4e633] [cursor=pointer]:
+                      - /url: /iPhone-Pro-Max-256-Promotion/dp/B0FQFV2XKS/ref=sr_1_5?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-5
+                    - generic [ref=f4e638]:
+                      - generic [ref=f4e639]:
+                        - heading "Apple" [level=2] [ref=f4e642]
+                        - link [ref=f4e643] [cursor=pointer]:
+                          - /url: /iPhone-Pro-Max-256-Promotion/dp/B0FQFV2XKS/ref=sr_1_5?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-5
+                          - 'heading "iPhone 17 Pro Max 256 GB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue" [level=2] [ref=f4e644]'
+                      - generic [ref=f4e645]:
+                        - generic [ref=f4e646]:
+                          - text: "4.7"
+                          - button "4.7 out of 5 stars, rating details" [ref=f4e648] [cursor=pointer]:
+                            - generic [ref=f4e650]: 4.7 out of 5 stars
+                          - link "698 ratings" [ref=f4e652] [cursor=pointer]:
+                            - /url: /iPhone-Pro-Max-256-Promotion/dp/B0FQFV2XKS/ref=sr_1_5?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-5#customerReviews
+                            - text: (698)
+                        - generic [ref=f4e653]: 100+ bought in past month
+                      - generic [ref=f4e656]:
+                        - generic [ref=f4e657]:
+                          - generic [ref=f4e659]:
+                            - generic [ref=f4e660]: Price, product page
+                            - 'link "₹1,44,900 M.R.P: ₹1,49,900 M.R.P: ₹1,49,900" [ref=f4e661] [cursor=pointer]':
+                              - /url: /iPhone-Pro-Max-256-Promotion/dp/B0FQFV2XKS/ref=sr_1_5?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-5
+                              - generic [ref=f4e662]:
+                                - generic [ref=f4e663]: ₹1,44,900
+                                - generic [aria-hidden] [ref=f4e664]: ₹1,44,900
+                              - generic [ref=f4e665]: "M.R.P: ₹1,49,900"
+                              - generic [ref=f4e666]:
+                                - text: "M.R.P:"
+                                - generic [ref=f4e667]:
+                                  - generic [ref=f4e668]: ₹1,49,900
+                                  - text: ₹1,49,900
+                            - text: (3% off)
+                          - generic [ref=f4e672]:
+                            - generic [ref=f4e673]: Up to 5% back with Amazon Pay ICICI card
+                            - generic [aria-hidden] [ref=f4e674]: Up to 5% back with Amazon Pay ICI...
+                        - generic [ref=f4e677]:
+                          - generic [ref=f4e678]: FREE delivery Fri, 30 Oct
+                          - generic [ref=f4e680]: Or fastest delivery Today 2 pm - 6 pm
+                          - generic [ref=f4e682]: Arrives before Diwali
+                        - generic [ref=f4e697] [cursor=pointer]:
+                          - button "Add to cart" [ref=f4e698]
+                          - generic [aria-hidden] [ref=f4e699]: Add to cart
+                        - group "colours available" [ref=f4e701]:
+                          - list [ref=f4e702]:
+                            - generic [ref=f4e703]:
+                              - listitem:
+                                - link "Deep Blue":
+                                  - /url: /iPhone-Pro-Max-256-Promotion/dp/B0FQFV2XKS/ref=cs_sr_dp_1?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-5
+                                  - generic [ref=f4e704] [cursor=pointer]
+                            - generic [ref=f4e706]:
+                              - listitem:
+                                - link "Cosmic Orange":
+                                  - /url: /iPhone-Pro-Max-256-Promotion/dp/B0FQFNQ5LX/ref=cs_sr_dp_2?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-5
+                                  - generic [ref=f4e707] [cursor=pointer]
+                            - generic [ref=f4e709]:
+                              - listitem:
+                                - link "Silver":
+                                  - /url: /iPhone-Pro-Max-256-Promotion/dp/B0FQFW4MVJ/ref=cs_sr_dp_3?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-5
+                                  - generic [ref=f4e710] [cursor=pointer]
+                - listitem [ref=f4e714]:
+                  - generic [ref=f4e720]:
+                    - link [aria-hidden] [ref=f4e726] [cursor=pointer]:
+                      - /url: /iPhone-18-Pro-Max-ProMotion/dp/B0HJ9VKHDM/ref=sr_1_6?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-6
+                    - generic [ref=f4e731]:
+                      - generic [ref=f4e732]:
+                        - link [ref=f4e733] [cursor=pointer]:
+                          - /url: /iPhone-18-Pro-Max-ProMotion/dp/B0HJ9VKHDM/ref=sr_1_6?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-6
+                          - heading "iPhone 18 Pro Max (2 TB) - Black" [level=2] [ref=f4e734]
+                        - generic "17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture" [ref=f4e736]
+                      - generic [ref=f4e738]:
+                        - text: "4.7"
+                        - button "4.7 out of 5 stars, rating details" [ref=f4e740] [cursor=pointer]:
+                          - generic [ref=f4e742]: 4.7 out of 5 stars
+                        - link "47 ratings" [ref=f4e744] [cursor=pointer]:
+                          - /url: /iPhone-18-Pro-Max-ProMotion/dp/B0HJ9VKHDM/ref=sr_1_6?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-6#customerReviews
+                          - text: (47)
+                      - generic [ref=f4e747]:
+                        - generic [ref=f4e748]:
+                          - generic [ref=f4e750]:
+                            - generic [ref=f4e751]: Price, product page
+                            - link "₹3,29,900" [ref=f4e752] [cursor=pointer]:
+                              - /url: /iPhone-18-Pro-Max-ProMotion/dp/B0HJ9VKHDM/ref=sr_1_6?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-6
+                              - generic [ref=f4e753]:
+                                - generic [ref=f4e754]: ₹3,29,900
+                                - generic [aria-hidden] [ref=f4e755]: ₹3,29,900
+                          - generic [ref=f4e759]:
+                            - generic [ref=f4e760]: Up to 5% back with Amazon Pay ICICI card
+                            - generic [aria-hidden] [ref=f4e761]: Up to 5% back with Amazon Pay ICI...
+                        - generic [ref=f4e764]:
+                          - generic [ref=f4e765]: FREE delivery Fri, 30 Oct
+                          - generic [ref=f4e767]: Or fastest delivery Today
+                          - generic [ref=f4e769]: Arrives before Diwali
+                        - generic [ref=f4e784] [cursor=pointer]:
+                          - button "Add to cart" [ref=f4e785]
+                          - generic [aria-hidden] [ref=f4e786]: Add to cart
+                        - group "colours available" [ref=f4e788]:
+                          - list [ref=f4e789]:
+                            - generic [ref=f4e790]:
+                              - listitem:
+                                - link "Black":
+                                  - /url: /iPhone-18-Pro-Max-ProMotion/dp/B0HJ9VKHDM/ref=cs_sr_dp_1?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-6
+                                  - generic [ref=f4e791] [cursor=pointer]
+                            - generic [ref=f4e793]:
+                              - listitem:
+                                - link "Burgundy":
+                                  - /url: /iPhone-18-Pro-Max-ProMotion/dp/B0HJ9YRMZY/ref=cs_sr_dp_2?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-6
+                                  - generic [ref=f4e794] [cursor=pointer]
+                            - generic [ref=f4e796]:
+                              - listitem:
+                                - link "Glacier":
+                                  - /url: /iPhone-18-Pro-Max-ProMotion/dp/B0HJB6MC2S/ref=cs_sr_dp_3?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-6
+                                  - generic [ref=f4e797] [cursor=pointer]
+                            - generic [ref=f4e799]:
+                              - listitem:
+                                - link "Silver":
+                                  - /url: /iPhone-18-Pro-Max-ProMotion/dp/B0HJ9S6L5N/ref=cs_sr_dp_4?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-6
+                                  - generic [ref=f4e800] [cursor=pointer]
+                - listitem [ref=f4e804]:
+                  - generic [ref=f4e810]:
+                    - link [aria-hidden] [ref=f4e816] [cursor=pointer]:
+                      - /url: /iPhone-18-Pro-256-ProMotion/dp/B0HJBCGNFM/ref=sr_1_7?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-7
+                    - generic [ref=f4e821]:
+                      - generic [ref=f4e822]:
+                        - link [ref=f4e823] [cursor=pointer]:
+                          - /url: /iPhone-18-Pro-256-ProMotion/dp/B0HJBCGNFM/ref=sr_1_7?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-7
+                          - heading "iPhone 18 Pro (256 GB) - Silver" [level=2] [ref=f4e824]
+                        - generic "15.93 cm (6.3″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture" [ref=f4e826]
+                      - generic [ref=f4e827]:
+                        - generic [ref=f4e828]:
+                          - text: "4.7"
+                          - button "4.7 out of 5 stars, rating details" [ref=f4e830] [cursor=pointer]:
+                            - generic [ref=f4e832]: 4.7 out of 5 stars
+                          - link "47 ratings" [ref=f4e834] [cursor=pointer]:
+                            - /url: /iPhone-18-Pro-256-ProMotion/dp/B0HJBCGNFM/ref=sr_1_7?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-7#customerReviews
+                            - text: (47)
+                        - generic [ref=f4e835]: 200+ bought in past month
+                      - generic [ref=f4e838]:
+                        - generic [ref=f4e839]:
+                          - generic [ref=f4e841]:
+                            - generic [ref=f4e842]: Price, product page
+                            - link "₹1,64,900" [ref=f4e843] [cursor=pointer]:
+                              - /url: /iPhone-18-Pro-256-ProMotion/dp/B0HJBCGNFM/ref=sr_1_7?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-7
+                              - generic [ref=f4e844]:
+                                - generic [ref=f4e845]: ₹1,64,900
+                                - generic [aria-hidden] [ref=f4e846]: ₹1,64,900
+                          - generic [ref=f4e850]:
+                            - generic [ref=f4e851]: Up to 5% back with Amazon Pay ICICI card
+                            - generic [aria-hidden] [ref=f4e852]: Up to 5% back with Amazon Pay ICI...
+                        - generic [ref=f4e855]:
+                          - generic [ref=f4e856]: FREE delivery Fri, 30 Oct
+                          - generic [ref=f4e858]: Or fastest delivery Today 2 pm - 6 pm
+                          - generic [ref=f4e860]: Arrives before Diwali
+                        - generic [ref=f4e875] [cursor=pointer]:
+                          - button "Add to cart" [ref=f4e876]
+                          - generic [aria-hidden] [ref=f4e877]: Add to cart
+                        - group "colours available" [ref=f4e879]:
+                          - list [ref=f4e880]:
+                            - generic [ref=f4e881]:
+                              - listitem:
+                                - link "Silver":
+                                  - /url: /iPhone-18-Pro-256-ProMotion/dp/B0HJBCGNFM/ref=cs_sr_dp_1?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-7
+                                  - generic [ref=f4e882] [cursor=pointer]
+                            - generic [ref=f4e884]:
+                              - listitem:
+                                - link "Black":
+                                  - /url: /iPhone-18-Pro-256-ProMotion/dp/B0HJB7MQ97/ref=cs_sr_dp_2?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-7
+                                  - generic [ref=f4e885] [cursor=pointer]
+                            - generic [ref=f4e887]:
+                              - listitem:
+                                - link "Burgundy":
+                                  - /url: /iPhone-18-Pro-256-ProMotion/dp/B0HJ9W3ZND/ref=cs_sr_dp_3?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-7
+                                  - generic [ref=f4e888] [cursor=pointer]
+                            - generic [ref=f4e890]:
+                              - listitem:
+                                - link "Glacier":
+                                  - /url: /iPhone-18-Pro-256-ProMotion/dp/B0HJ9TY8LW/ref=cs_sr_dp_4?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-7
+                                  - generic [ref=f4e891] [cursor=pointer]
+                - listitem [ref=f4e895]:
+                  - generic [ref=f4e901]:
+                    - link [aria-hidden] [ref=f4e907] [cursor=pointer]:
+                      - /url: /iPhone-18-Pro-256-ProMotion/dp/B0HJB7MQ97/ref=sr_1_8?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-8
+                    - generic [ref=f4e912]:
+                      - generic [ref=f4e913]:
+                        - link [ref=f4e914] [cursor=pointer]:
+                          - /url: /iPhone-18-Pro-256-ProMotion/dp/B0HJB7MQ97/ref=sr_1_8?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-8
+                          - heading "iPhone 18 Pro (256 GB) - Black" [level=2] [ref=f4e915]
+                        - generic "15.93 cm (6.3″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture" [ref=f4e917]
+                      - generic [ref=f4e918]:
+                        - generic [ref=f4e919]:
+                          - text: "4.7"
+                          - button "4.7 out of 5 stars, rating details" [ref=f4e921] [cursor=pointer]:
+                            - generic [ref=f4e923]: 4.7 out of 5 stars
+                          - link "47 ratings" [ref=f4e925] [cursor=pointer]:
+                            - /url: /iPhone-18-Pro-256-ProMotion/dp/B0HJB7MQ97/ref=sr_1_8?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-8#customerReviews
+                            - text: (47)
+                        - generic [ref=f4e926]: 200+ bought in past month
+                      - generic [ref=f4e929]:
+                        - generic [ref=f4e930]:
+                          - generic [ref=f4e932]:
+                            - generic [ref=f4e933]: Price, product page
+                            - link "₹1,64,900" [ref=f4e934] [cursor=pointer]:
+                              - /url: /iPhone-18-Pro-256-ProMotion/dp/B0HJB7MQ97/ref=sr_1_8?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-8
+                              - generic [ref=f4e935]:
+                                - generic [ref=f4e936]: ₹1,64,900
+                                - generic [aria-hidden] [ref=f4e937]: ₹1,64,900
+                          - generic [ref=f4e941]:
+                            - generic [ref=f4e942]: Up to 5% back with Amazon Pay ICICI card
+                            - generic [aria-hidden] [ref=f4e943]: Up to 5% back with Amazon Pay ICI...
+                        - generic [ref=f4e946]:
+                          - generic [ref=f4e947]: FREE delivery Fri, 30 Oct
+                          - generic [ref=f4e949]: Or fastest delivery Today 2 pm - 6 pm
+                          - generic [ref=f4e951]: Arrives before Diwali
+                        - generic [ref=f4e966] [cursor=pointer]:
+                          - button "Add to cart" [ref=f4e967]
+                          - generic [aria-hidden] [ref=f4e968]: Add to cart
+                        - group "colours available" [ref=f4e970]:
+                          - list [ref=f4e971]:
+                            - generic [ref=f4e972]:
+                              - listitem:
+                                - link "Black":
+                                  - /url: /iPhone-18-Pro-256-ProMotion/dp/B0HJB7MQ97/ref=cs_sr_dp_1?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-8
+                                  - generic [ref=f4e973] [cursor=pointer]
+                            - generic [ref=f4e975]:
+                              - listitem:
+                                - link "Burgundy":
+                                  - /url: /iPhone-18-Pro-256-ProMotion/dp/B0HJ9W3ZND/ref=cs_sr_dp_2?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-8
+                                  - generic [ref=f4e976] [cursor=pointer]
+                            - generic [ref=f4e978]:
+                              - listitem:
+                                - link "Glacier":
+                                  - /url: /iPhone-18-Pro-256-ProMotion/dp/B0HJ9TY8LW/ref=cs_sr_dp_3?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-8
+                                  - generic [ref=f4e979] [cursor=pointer]
+                            - generic [ref=f4e981]:
+                              - listitem:
+                                - link "Silver":
+                                  - /url: /iPhone-18-Pro-256-ProMotion/dp/B0HJBCGNFM/ref=cs_sr_dp_4?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-8
+                                  - generic [ref=f4e982] [cursor=pointer]
+                - listitem [ref=f4e986]:
+                  - generic [ref=f4e992]:
+                    - link [aria-hidden] [ref=f4e998] [cursor=pointer]:
+                      - /url: /iPhone-Pro-512-Promotion-Breakthrough/dp/B0FQFQF6D1/ref=sr_1_9?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-9
+                    - generic [ref=f4e1003]:
+                      - generic [ref=f4e1004]:
+                        - heading "Apple" [level=2] [ref=f4e1007]
+                        - link [ref=f4e1008] [cursor=pointer]:
+                          - /url: /iPhone-Pro-512-Promotion-Breakthrough/dp/B0FQFQF6D1/ref=sr_1_9?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-9
+                          - 'heading "iPhone 17 Pro 512 GB: 15.93 cm (6.3″) Display with Promotion up to 120Hz, A19 Pro Chip, Breakthrough Battery Life, Pro Fusion Camera System with Center Stage Front Camera; Cosmic Orange" [level=2] [ref=f4e1009]'
+                      - generic [ref=f4e1010]:
+                        - generic [ref=f4e1011]:
+                          - text: "4.5"
+                          - button "4.5 out of 5 stars, rating details" [ref=f4e1013] [cursor=pointer]:
+                            - generic [ref=f4e1015]: 4.5 out of 5 stars
+                          - link "719 ratings" [ref=f4e1017] [cursor=pointer]:
+                            - /url: /iPhone-Pro-512-Promotion-Breakthrough/dp/B0FQFQF6D1/ref=sr_1_9?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-9#customerReviews
+                            - text: (719)
+                        - generic [ref=f4e1018]: 100+ bought in past month
+                      - generic [ref=f4e1021]:
+                        - generic [ref=f4e1022]:
+                          - generic [ref=f4e1024]:
+                            - generic [ref=f4e1025]: Price, product page
+                            - 'link "₹1,50,900 M.R.P: ₹1,54,900 M.R.P: ₹1,54,900" [ref=f4e1026] [cursor=pointer]':
+                              - /url: /iPhone-Pro-512-Promotion-Breakthrough/dp/B0FQFQF6D1/ref=sr_1_9?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-9
+                              - generic [ref=f4e1027]:
+                                - generic [ref=f4e1028]: ₹1,50,900
+                                - generic [aria-hidden] [ref=f4e1029]: ₹1,50,900
+                              - generic [ref=f4e1030]: "M.R.P: ₹1,54,900"
+                              - generic [ref=f4e1031]:
+                                - text: "M.R.P:"
+                                - generic [ref=f4e1032]:
+                                  - generic [ref=f4e1033]: ₹1,54,900
+                                  - text: ₹1,54,900
+                            - text: (3% off)
+                          - generic [ref=f4e1037]:
+                            - generic [ref=f4e1038]: Up to 5% back with Amazon Pay ICICI card
+                            - generic [aria-hidden] [ref=f4e1039]: Up to 5% back with Amazon Pay ICI...
+                        - generic [ref=f4e1042]:
+                          - generic [ref=f4e1043]: FREE delivery Fri, 30 Oct
+                          - generic [ref=f4e1045]: Or fastest delivery Today 2 pm - 6 pm
+                          - generic [ref=f4e1047]: Arrives before Diwali
+                        - generic [ref=f4e1062] [cursor=pointer]:
+                          - button "Add to cart" [ref=f4e1063]
+                          - generic [aria-hidden] [ref=f4e1064]: Add to cart
+                        - group "colours available" [ref=f4e1066]:
+                          - list [ref=f4e1067]:
+                            - generic [ref=f4e1068]:
+                              - listitem:
+                                - link "Cosmic Orange":
+                                  - /url: /iPhone-Pro-512-Promotion-Breakthrough/dp/B0FQFQF6D1/ref=cs_sr_dp_1?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-9
+                                  - generic [ref=f4e1069] [cursor=pointer]
+                            - generic [ref=f4e1071]:
+                              - listitem:
+                                - link "Deep Blue":
+                                  - /url: /iPhone-Pro-512-Promotion-Breakthrough/dp/B0FQF5DG3P/ref=cs_sr_dp_2?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-9
+                                  - generic [ref=f4e1072] [cursor=pointer]
+                - listitem [ref=f4e1076]:
+                  - generic [ref=f4e1082]:
+                    - link [aria-hidden] [ref=f4e1088] [cursor=pointer]:
+                      - /url: /Samsung-Smartphone-Titanium-Snapdragon-ProVisual/dp/B0DSKMV3ZC/ref=sr_1_10?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-10
+                    - generic [ref=f4e1093]:
+                      - generic [ref=f4e1094]:
+                        - heading "Samsung" [level=2] [ref=f4e1097]
+                        - link [ref=f4e1098] [cursor=pointer]:
+                          - /url: /Samsung-Smartphone-Titanium-Snapdragon-ProVisual/dp/B0DSKMV3ZC/ref=sr_1_10?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-10
+                          - heading "Galaxy S25 Ultra 5G AI Smartphone (Titanium Gray, 12GB RAM, 256GB Storage), 200MP Camera, 5000mAh Ultra Long Battery, QHD+ Dynamic AMOLED 2X, Galaxy AI, Knox Security, S Pen Included" [level=2] [ref=f4e1099]
+                      - generic [ref=f4e1100]:
+                        - generic [ref=f4e1101]:
+                          - text: "4.4"
+                          - button "4.4 out of 5 stars, rating details" [ref=f4e1103] [cursor=pointer]:
+                            - generic [ref=f4e1105]: 4.4 out of 5 stars
+                          - link "3,985 ratings" [ref=f4e1107] [cursor=pointer]:
+                            - /url: /Samsung-Smartphone-Titanium-Snapdragon-ProVisual/dp/B0DSKMV3ZC/ref=sr_1_10?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-10#customerReviews
+                            - text: (3.9K)
+                        - generic [ref=f4e1108]: 5K+ bought in past month
+                      - generic [ref=f4e1111]:
+                        - generic [ref=f4e1112]:
+                          - generic [ref=f4e1114]:
+                            - generic [ref=f4e1115]: Price, product page
+                            - 'link "₹94,999 M.R.P: ₹1,29,999 M.R.P: ₹1,29,999" [ref=f4e1116] [cursor=pointer]':
+                              - /url: /Samsung-Smartphone-Titanium-Snapdragon-ProVisual/dp/B0DSKMV3ZC/ref=sr_1_10?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-10
+                              - generic [ref=f4e1117]:
+                                - generic [ref=f4e1118]: ₹94,999
+                                - generic [aria-hidden] [ref=f4e1119]: ₹94,999
+                              - generic [ref=f4e1120]: "M.R.P: ₹1,29,999"
+                              - generic [ref=f4e1121]:
+                                - text: "M.R.P:"
+                                - generic [ref=f4e1122]:
+                                  - generic [ref=f4e1123]: ₹1,29,999
+                                  - text: ₹1,29,999
+                            - text: (27% off)
+                          - generic [ref=f4e1127]:
+                            - generic [ref=f4e1128]: Save extra with No Cost EMI
+                            - generic [aria-hidden] [ref=f4e1129]: Save extra with No Cost EMI
+                        - generic [ref=f4e1132]:
+                          - generic [ref=f4e1133]: FREE delivery Fri, 30 Oct
+                          - generic [ref=f4e1135]: Or fastest delivery Today 2 pm - 6 pm
+                          - generic [ref=f4e1137]: Arrives before Diwali
+                        - generic [ref=f4e1152] [cursor=pointer]:
+                          - button "Add to cart" [ref=f4e1153]
+                          - generic [aria-hidden] [ref=f4e1154]: Add to cart
+                        - group "colours available" [ref=f4e1156]:
+                          - list [ref=f4e1157]:
+                            - generic [ref=f4e1158]:
+                              - listitem:
+                                - link "Titanium Gray":
+                                  - /url: /Samsung-Smartphone-Titanium-Snapdragon-ProVisual/dp/B0DSKMV3ZC/ref=cs_sr_dp_1?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-10
+                                  - generic [ref=f4e1159] [cursor=pointer]
+                            - generic [ref=f4e1161]:
+                              - listitem:
+                                - link "Titanium Whitesilver":
+                                  - /url: /Samsung-Smartphone-Titanium-Snapdragon-ProVisual/dp/B0DVC6RV6P/ref=cs_sr_dp_2?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-10
+                                  - generic [ref=f4e1162] [cursor=pointer]
+                            - generic [ref=f4e1164]:
+                              - listitem:
+                                - link "Titanium Black":
+                                  - /url: /Samsung-Smartphone-Titanium-Snapdragon-ProVisual/dp/B0DSKNQW8F/ref=cs_sr_dp_3?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-10
+                                  - generic [ref=f4e1165] [cursor=pointer]
+                            - generic [ref=f4e1167]:
+                              - listitem:
+                                - link "Titanium Silverblue":
+                                  - /url: /Samsung-Smartphone-Titanium-Snapdragon-ProVisual/dp/B0DSKNKCYX/ref=cs_sr_dp_4?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-10
+                                  - generic [ref=f4e1168] [cursor=pointer]
+          - generic [ref=f4e1175]:
+            - generic [ref=f4e1180]:
+              - heading "Trending now" [level=2] [ref=f4e1182]
+              - button "View Sponsored information or leave ad feedback" [ref=f4e1185] [cursor=pointer]: Sponsored
+            - region "Trending now" [ref=f4e1187]:
+              - list [ref=f4e1193]:
+                - listitem "1 of 5" [ref=f4e1194]:
+                  - generic [ref=f4e1200]:
+                    - link [aria-hidden] [ref=f4e1203] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTM1ODM3MTcyMDgzMjo6MDo6&url=%2FiPhone-18-Pro-Max-ProMotion%2Fdp%2FB0HJ9YRMZY%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0HJ9YRMZY%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-1-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3Duqd6BsnJqE%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=uqd6BsnJqE&sp_cr=ZAZ
+                    - generic [ref=f4e1206]:
+                      - group "colours available" [ref=f4e1208]:
+                        - list
+                        - link "+3 other colors/patterns" [ref=f4e1210] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTM1ODM3MTcyMDgzMjo6MDo6&url=%2FiPhone-18-Pro-Max-ProMotion%2Fdp%2FB0HJ9YRMZY%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0HJ9YRMZY%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-1-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3Duqd6BsnJqE%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=uqd6BsnJqE&sp_cr=ZAZ
+                      - generic [ref=f4e1211]:
+                        - link [ref=f4e1212] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTM1ODM3MTcyMDgzMjo6MDo6&url=%2FiPhone-18-Pro-Max-ProMotion%2Fdp%2FB0HJ9YRMZY%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0HJ9YRMZY%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-1-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3Duqd6BsnJqE%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=uqd6BsnJqE&sp_cr=ZAZ
+                          - heading "Sponsored Ad - iPhone 18 Pro Max (2 TB) - Burgundy" [level=2] [ref=f4e1213]: iPhone 18 Pro Max (2 TB) - Burgundy
+                        - generic "17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture" [ref=f4e1215]
+                      - generic [ref=f4e1217]:
+                        - text: "4.7"
+                        - button "4.7 out of 5 stars, rating details" [ref=f4e1219] [cursor=pointer]:
+                          - generic [ref=f4e1221]: 4.7 out of 5 stars
+                        - link "47 ratings" [ref=f4e1223] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTM1ODM3MTcyMDgzMjo6MDo6&url=%2FiPhone-18-Pro-Max-ProMotion%2Fdp%2FB0HJ9YRMZY%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0HJ9YRMZY%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-1-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3Duqd6BsnJqE%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=uqd6BsnJqE&sp_cr=ZAZ#customerReviews
+                          - text: (47)
+                      - generic [ref=f4e1224]:
+                        - generic [ref=f4e1226]:
+                          - generic [ref=f4e1227]: Price, product page
+                          - link "₹3,29,900" [ref=f4e1228] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTM1ODM3MTcyMDgzMjo6MDo6&url=%2FiPhone-18-Pro-Max-ProMotion%2Fdp%2FB0HJ9YRMZY%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0HJ9YRMZY%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-1-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3Duqd6BsnJqE%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=uqd6BsnJqE&sp_cr=ZAZ
+                            - generic [ref=f4e1229]:
+                              - generic [ref=f4e1230]: ₹3,29,900
+                              - generic [aria-hidden] [ref=f4e1231]: ₹3,29,900
+                        - generic [ref=f4e1235]:
+                          - generic [ref=f4e1236]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [aria-hidden] [ref=f4e1237]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=f4e1241]:
+                        - generic [ref=f4e1242]: FREE delivery Fri, 30 Oct
+                        - generic [ref=f4e1244]: Arrives before Diwali
+                      - generic [ref=f4e1259] [cursor=pointer]:
+                        - button "Add to cart" [ref=f4e1260]
+                        - generic [aria-hidden] [ref=f4e1261]: Add to cart
+                - listitem "2 of 5" [ref=f4e1262]:
+                  - generic [ref=f4e1268]:
+                    - link [aria-hidden] [ref=f4e1271] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTM1ODM3MTcxODUzMjo6MTo6&url=%2FiPhone-18-Pro-TB-ProMotion%2Fdp%2FB0HJB696TW%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0HJB696TW%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-2-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DTWXA7LV0gS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=TWXA7LV0gS&sp_cr=ZAZ
+                    - generic [ref=f4e1274]:
+                      - group "colours available" [ref=f4e1276]:
+                        - list
+                        - link "+3 other colors/patterns" [ref=f4e1278] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTM1ODM3MTcxODUzMjo6MTo6&url=%2FiPhone-18-Pro-TB-ProMotion%2Fdp%2FB0HJB696TW%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0HJB696TW%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-2-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DTWXA7LV0gS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=TWXA7LV0gS&sp_cr=ZAZ
+                      - generic [ref=f4e1279]:
+                        - link [ref=f4e1280] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTM1ODM3MTcxODUzMjo6MTo6&url=%2FiPhone-18-Pro-TB-ProMotion%2Fdp%2FB0HJB696TW%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0HJB696TW%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-2-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DTWXA7LV0gS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=TWXA7LV0gS&sp_cr=ZAZ
+                          - heading "Sponsored Ad - iPhone 18 Pro (1 TB) - Burgundy" [level=2] [ref=f4e1281]: iPhone 18 Pro (1 TB) - Burgundy
+                        - generic "15.93 cm (6.3″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture" [ref=f4e1283]
+                      - generic [ref=f4e1285]:
+                        - text: "4.7"
+                        - button "4.7 out of 5 stars, rating details" [ref=f4e1287] [cursor=pointer]:
+                          - generic [ref=f4e1289]: 4.7 out of 5 stars
+                        - link "47 ratings" [ref=f4e1291] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTM1ODM3MTcxODUzMjo6MTo6&url=%2FiPhone-18-Pro-TB-ProMotion%2Fdp%2FB0HJB696TW%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0HJB696TW%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-2-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DTWXA7LV0gS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=TWXA7LV0gS&sp_cr=ZAZ#customerReviews
+                          - text: (47)
+                      - generic [ref=f4e1292]:
+                        - generic [ref=f4e1294]:
+                          - generic [ref=f4e1295]: Price, product page
+                          - link "₹2,39,900" [ref=f4e1296] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTM1ODM3MTcxODUzMjo6MTo6&url=%2FiPhone-18-Pro-TB-ProMotion%2Fdp%2FB0HJB696TW%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0HJB696TW%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-2-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DTWXA7LV0gS%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=TWXA7LV0gS&sp_cr=ZAZ
+                            - generic [ref=f4e1297]:
+                              - generic [ref=f4e1298]: ₹2,39,900
+                              - generic [aria-hidden] [ref=f4e1299]: ₹2,39,900
+                        - generic [ref=f4e1303]:
+                          - generic [ref=f4e1304]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [aria-hidden] [ref=f4e1305]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=f4e1309]:
+                        - generic [ref=f4e1310]: FREE delivery Fri, 30 Oct
+                        - generic [ref=f4e1312]: Or fastest delivery Today
+                        - generic [ref=f4e1314]: Arrives before Diwali
+                      - generic [ref=f4e1329] [cursor=pointer]:
+                        - button "Add to cart" [ref=f4e1330]
+                        - generic [aria-hidden] [ref=f4e1331]: Add to cart
+                - listitem "3 of 5" [ref=f4e1332]:
+                  - generic [ref=f4e1338]:
+                    - link [aria-hidden] [ref=f4e1341] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDcxNDEyOTAyMzQzMjo6Mjo6&url=%2FiPhone-Pro-Max-256-Promotion%2Fdp%2FB0FQFW4MVJ%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0FQFW4MVJ%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-3-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3D0lBADb3nlQ%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=0lBADb3nlQ&sp_cr=ZAZ
+                    - generic [ref=f4e1344]:
+                      - group "colours available" [ref=f4e1346]:
+                        - list
+                        - link "+2 other colors/patterns" [ref=f4e1348] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDcxNDEyOTAyMzQzMjo6Mjo6&url=%2FiPhone-Pro-Max-256-Promotion%2Fdp%2FB0FQFW4MVJ%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0FQFW4MVJ%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-3-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3D0lBADb3nlQ%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=0lBADb3nlQ&sp_cr=ZAZ
+                      - link [ref=f4e1350] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDcxNDEyOTAyMzQzMjo6Mjo6&url=%2FiPhone-Pro-Max-256-Promotion%2Fdp%2FB0FQFW4MVJ%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0FQFW4MVJ%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-3-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3D0lBADb3nlQ%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=0lBADb3nlQ&sp_cr=ZAZ
+                        - 'heading "Sponsored Ad - Apple iPhone 17 Pro Max 256 GB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Silver" [level=2] [ref=f4e1351]': "Apple iPhone 17 Pro Max 256 GB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Silver"
+                      - generic [ref=f4e1352]:
+                        - generic [ref=f4e1353]:
+                          - text: "4.7"
+                          - button "4.7 out of 5 stars, rating details" [ref=f4e1355] [cursor=pointer]:
+                            - generic [ref=f4e1357]: 4.7 out of 5 stars
+                          - link "698 ratings" [ref=f4e1359] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDcxNDEyOTAyMzQzMjo6Mjo6&url=%2FiPhone-Pro-Max-256-Promotion%2Fdp%2FB0FQFW4MVJ%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0FQFW4MVJ%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-3-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3D0lBADb3nlQ%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=0lBADb3nlQ&sp_cr=ZAZ#customerReviews
+                            - text: (698)
+                        - generic [ref=f4e1360]: 300+ bought in past month
+                      - generic [ref=f4e1361]:
+                        - generic [ref=f4e1363]:
+                          - generic [ref=f4e1364]: Price, product page
+                          - 'link "₹1,44,900 M.R.P: ₹1,49,900 M.R.P: ₹1,49,900" [ref=f4e1365] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDcxNDEyOTAyMzQzMjo6Mjo6&url=%2FiPhone-Pro-Max-256-Promotion%2Fdp%2FB0FQFW4MVJ%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0FQFW4MVJ%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-3-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3D0lBADb3nlQ%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=0lBADb3nlQ&sp_cr=ZAZ
+                            - generic [ref=f4e1366]:
+                              - generic [ref=f4e1367]: ₹1,44,900
+                              - generic [aria-hidden] [ref=f4e1368]: ₹1,44,900
+                            - generic [ref=f4e1369]: "M.R.P: ₹1,49,900"
+                            - generic [ref=f4e1370]:
+                              - text: "M.R.P:"
+                              - generic [ref=f4e1371]:
+                                - generic [ref=f4e1372]: ₹1,49,900
+                                - text: ₹1,49,900
+                          - text: (3% off)
+                        - generic [ref=f4e1376]:
+                          - generic [ref=f4e1377]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [aria-hidden] [ref=f4e1378]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=f4e1382]:
+                        - generic [ref=f4e1383]: FREE delivery Fri, 30 Oct
+                        - generic [ref=f4e1385]: Or fastest delivery Today 2 pm - 6 pm
+                        - generic [ref=f4e1387]: Arrives before Diwali
+                      - generic [ref=f4e1402] [cursor=pointer]:
+                        - button "Add to cart" [ref=f4e1403]
+                        - generic [aria-hidden] [ref=f4e1404]: Add to cart
+                - listitem "4 of 5" [ref=f4e1405]:
+                  - generic [ref=f4e1411]:
+                    - link [aria-hidden] [ref=f4e1414] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDcxNDEyOTAyMzkzMjo6Mzo6&url=%2FiPhone-Pro-512-Promotion-Breakthrough%2Fdp%2FB0FQFQF6D1%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0FQFQF6D1%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-4-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3D8n6sAEilCq%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=8n6sAEilCq&sp_cr=ZAZ
+                    - generic [ref=f4e1417]:
+                      - group "colours available" [ref=f4e1419]:
+                        - list
+                        - link "+1 other color/pattern" [ref=f4e1421] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDcxNDEyOTAyMzkzMjo6Mzo6&url=%2FiPhone-Pro-512-Promotion-Breakthrough%2Fdp%2FB0FQFQF6D1%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0FQFQF6D1%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-4-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3D8n6sAEilCq%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=8n6sAEilCq&sp_cr=ZAZ
+                      - link [ref=f4e1423] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDcxNDEyOTAyMzkzMjo6Mzo6&url=%2FiPhone-Pro-512-Promotion-Breakthrough%2Fdp%2FB0FQFQF6D1%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0FQFQF6D1%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-4-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3D8n6sAEilCq%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=8n6sAEilCq&sp_cr=ZAZ
+                        - 'heading "Sponsored Ad - Apple iPhone 17 Pro 512 GB: 15.93 cm (6.3″) Display with Promotion up to 120Hz, A19 Pro Chip, Breakthrough Battery Life, Pro Fusion Camera System with Center Stage Front Camera; Cosmic Orange" [level=2] [ref=f4e1424]': "Apple iPhone 17 Pro 512 GB: 15.93 cm (6.3″) Display with Promotion up to 120Hz, A19 Pro Chip, Breakthrough Battery Life, Pro Fusion Camera System with Center Stage Front Camera; Cosmic Orange"
+                      - generic [ref=f4e1425]:
+                        - generic [ref=f4e1426]:
+                          - text: "4.5"
+                          - button "4.5 out of 5 stars, rating details" [ref=f4e1428] [cursor=pointer]:
+                            - generic [ref=f4e1430]: 4.5 out of 5 stars
+                          - link "719 ratings" [ref=f4e1432] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDcxNDEyOTAyMzkzMjo6Mzo6&url=%2FiPhone-Pro-512-Promotion-Breakthrough%2Fdp%2FB0FQFQF6D1%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0FQFQF6D1%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-4-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3D8n6sAEilCq%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=8n6sAEilCq&sp_cr=ZAZ#customerReviews
+                            - text: (719)
+                        - generic [ref=f4e1433]: 100+ bought in past month
+                      - generic [ref=f4e1434]:
+                        - generic [ref=f4e1436]:
+                          - generic [ref=f4e1437]: Price, product page
+                          - 'link "₹1,50,900 M.R.P: ₹1,54,900 M.R.P: ₹1,54,900" [ref=f4e1438] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDcxNDEyOTAyMzkzMjo6Mzo6&url=%2FiPhone-Pro-512-Promotion-Breakthrough%2Fdp%2FB0FQFQF6D1%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0FQFQF6D1%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-4-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3D8n6sAEilCq%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=8n6sAEilCq&sp_cr=ZAZ
+                            - generic [ref=f4e1439]:
+                              - generic [ref=f4e1440]: ₹1,50,900
+                              - generic [aria-hidden] [ref=f4e1441]: ₹1,50,900
+                            - generic [ref=f4e1442]: "M.R.P: ₹1,54,900"
+                            - generic [ref=f4e1443]:
+                              - text: "M.R.P:"
+                              - generic [ref=f4e1444]:
+                                - generic [ref=f4e1445]: ₹1,54,900
+                                - text: ₹1,54,900
+                          - text: (3% off)
+                        - generic [ref=f4e1449]:
+                          - generic [ref=f4e1450]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [aria-hidden] [ref=f4e1451]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=f4e1455]:
+                        - generic [ref=f4e1456]: FREE delivery Fri, 30 Oct
+                        - generic [ref=f4e1458]: Or fastest delivery Today 2 pm - 6 pm
+                        - generic [ref=f4e1460]: Arrives before Diwali
+                      - generic [ref=f4e1475] [cursor=pointer]:
+                        - button "Add to cart" [ref=f4e1476]
+                        - generic [aria-hidden] [ref=f4e1477]: Add to cart
+                - listitem "5 of 5" [ref=f4e1478]:
+                  - generic [ref=f4e1484]:
+                    - group "Best sellerin Smartphones" [ref=f4e1489]:
+                      - generic "Best seller" [ref=f4e1491]
+                    - link [aria-hidden] [ref=f4e1494] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDMzNDI1MjYyMzkzMjo6NDo6&url=%2FiPhone-16-128-GB-Control%2Fdp%2FB0DGJ8YZDF%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0DGJ8YZDF%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-5-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DNbn6luYbCd%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=Nbn6luYbCd&sp_cr=ZAZ
+                    - generic [ref=f4e1497]:
+                      - group "colours available" [ref=f4e1499]:
+                        - list
+                        - link "+4 other colors/patterns" [ref=f4e1501] [cursor=pointer]:
+                          - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDMzNDI1MjYyMzkzMjo6NDo6&url=%2FiPhone-16-128-GB-Control%2Fdp%2FB0DGJ8YZDF%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0DGJ8YZDF%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-5-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DNbn6luYbCd%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=Nbn6luYbCd&sp_cr=ZAZ
+                      - link [ref=f4e1503] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDMzNDI1MjYyMzkzMjo6NDo6&url=%2FiPhone-16-128-GB-Control%2Fdp%2FB0DGJ8YZDF%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0DGJ8YZDF%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-5-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DNbn6luYbCd%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=Nbn6luYbCd&sp_cr=ZAZ
+                        - 'heading "Sponsored Ad - Apple iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Pink" [level=2] [ref=f4e1504]': "Apple iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Pink"
+                      - generic [ref=f4e1505]:
+                        - generic [ref=f4e1506]:
+                          - text: "4.5"
+                          - button "4.5 out of 5 stars, rating details" [ref=f4e1508] [cursor=pointer]:
+                            - generic [ref=f4e1510]: 4.5 out of 5 stars
+                          - link "2,823 ratings" [ref=f4e1512] [cursor=pointer]:
+                            - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDMzNDI1MjYyMzkzMjo6NDo6&url=%2FiPhone-16-128-GB-Control%2Fdp%2FB0DGJ8YZDF%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0DGJ8YZDF%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-5-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DNbn6luYbCd%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=Nbn6luYbCd&sp_cr=ZAZ#customerReviews
+                            - text: (2.8K)
+                        - generic [ref=f4e1513]: 5K+ bought in past month
+                      - generic [ref=f4e1514]:
+                        - link "Mega Festival Deal" [ref=f4e1516] [cursor=pointer]:
+                          - /url: /deals
+                        - generic [ref=f4e1522]:
+                          - generic [ref=f4e1523]: Price, product page
+                          - 'link "₹76,999 M.R.P: ₹89,900 M.R.P: ₹89,900" [ref=f4e1524] [cursor=pointer]':
+                            - /url: /sspa/click?ie=UTF8&spc=MTo4MzcyMzg5MTE3ODYxODE2OjE3OTMxNTcwNDU6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDMzNDI1MjYyMzkzMjo6NDo6&url=%2FiPhone-16-128-GB-Control%2Fdp%2FB0DGJ8YZDF%2Fref%3Dsxin_21_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%253Aamzn1.sym.6e35d58e-d276-4d9c-918a-3d084949b530%26crid%3D1CDQ2R5MPVJO6%26cv_ct_cx%3DIphone%2B18%2Bpro%2Bmax%26keywords%3DIphone%2B18%2Bpro%2Bmax%26pd_rd_i%3DB0DGJ8YZDF%26pd_rd_r%3D8abc352d-344b-489c-b74d-9528a15fbf35%26pd_rd_w%3DM3j0S%26pd_rd_wg%3DxHena%26pf_rd_p%3D6e35d58e-d276-4d9c-918a-3d084949b530%26pf_rd_r%3D2P8VRH66DH04N62F4EA1%26qid%3D1793157045%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sprefix%3Diphone%2B18%2Bpro%2Bmax%252Caps%252C2126%26sr%3D1-5-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons%26aref%3DNbn6luYbCd%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=Nbn6luYbCd&sp_cr=ZAZ
+                            - generic [ref=f4e1525]:
+                              - generic [ref=f4e1526]: ₹76,999
+                              - generic [aria-hidden] [ref=f4e1527]: ₹76,999
+                            - generic [ref=f4e1528]: "M.R.P: ₹89,900"
+                            - generic [ref=f4e1529]:
+                              - text: "M.R.P:"
+                              - generic [ref=f4e1530]:
+                                - generic [ref=f4e1531]: ₹89,900
+                                - text: ₹89,900
+                          - text: (14% off)
+                        - generic [ref=f4e1535]:
+                          - generic [ref=f4e1536]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [aria-hidden] [ref=f4e1537]: Up to 5% back with Amazon Pay I...
+                      - generic [ref=f4e1541]:
+                        - generic [ref=f4e1542]: FREE delivery Fri, 30 Oct
+                        - generic [ref=f4e1544]: Or fastest delivery Today 2 pm - 6 pm
+                        - generic [ref=f4e1546]: Arrives before Diwali
+                      - generic [ref=f4e1561] [cursor=pointer]:
+                        - button "Add to cart" [ref=f4e1562]
+                        - generic [aria-hidden] [ref=f4e1563]: Add to cart
+          - generic [ref=f4e1565]:
+            - heading "More results" [level=2] [ref=f4e1569]
+            - generic:
+              - list:
+                - listitem [ref=f4e1570]:
+                  - generic [ref=f4e1576]:
+                    - generic [ref=f4e1578]:
+                      - group "Best sellerin Smartphones" [ref=f4e1584]:
+                        - generic "Best seller" [ref=f4e1586]
+                      - link [aria-hidden] [ref=f4e1590] [cursor=pointer]:
+                        - /url: /iPhone-16-128-GB-Control/dp/B0DGJ8YZDF/ref=sr_1_11?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-11
+                    - generic [ref=f4e1595]:
+                      - generic [ref=f4e1596]:
+                        - heading "Apple" [level=2] [ref=f4e1599]
+                        - link [ref=f4e1600] [cursor=pointer]:
+                          - /url: /iPhone-16-128-GB-Control/dp/B0DGJ8YZDF/ref=sr_1_11?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-11
+                          - 'heading "iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Pink" [level=2] [ref=f4e1601]'
+                      - generic [ref=f4e1602]:
+                        - generic [ref=f4e1603]:
+                          - text: "4.5"
+                          - button "4.5 out of 5 stars, rating details" [ref=f4e1605] [cursor=pointer]:
+                            - generic [ref=f4e1607]: 4.5 out of 5 stars
+                          - link "2,823 ratings" [ref=f4e1609] [cursor=pointer]:
+                            - /url: /iPhone-16-128-GB-Control/dp/B0DGJ8YZDF/ref=sr_1_11?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-11#customerReviews
+                            - text: (2.8K)
+                        - generic [ref=f4e1610]: 5K+ bought in past month
+                      - generic [ref=f4e1613]:
+                        - generic [ref=f4e1614]:
+                          - link "Mega Festival Deal" [ref=f4e1616] [cursor=pointer]:
+                            - /url: /deals
+                          - generic [ref=f4e1622]:
+                            - generic [ref=f4e1623]: Price, product page
+                            - 'link "₹76,999 M.R.P: ₹89,900 M.R.P: ₹89,900" [ref=f4e1624] [cursor=pointer]':
+                              - /url: /iPhone-16-128-GB-Control/dp/B0DGJ8YZDF/ref=sr_1_11?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-11
+                              - generic [ref=f4e1625]:
+                                - generic [ref=f4e1626]: ₹76,999
+                                - generic [aria-hidden] [ref=f4e1627]: ₹76,999
+                              - generic [ref=f4e1628]: "M.R.P: ₹89,900"
+                              - generic [ref=f4e1629]:
+                                - text: "M.R.P:"
+                                - generic [ref=f4e1630]:
+                                  - generic [ref=f4e1631]: ₹89,900
+                                  - text: ₹89,900
+                            - text: (14% off)
+                          - generic [ref=f4e1635]:
+                            - generic [ref=f4e1636]: Up to 5% back with Amazon Pay ICICI card
+                            - generic [aria-hidden] [ref=f4e1637]: Up to 5% back with Amazon Pay ICI...
+                        - generic [ref=f4e1640]:
+                          - generic [ref=f4e1641]: FREE delivery Fri, 30 Oct
+                          - generic [ref=f4e1643]: Or fastest delivery Today 2 pm - 6 pm
+                          - generic [ref=f4e1645]: Arrives before Diwali
+                        - generic [ref=f4e1660] [cursor=pointer]:
+                          - button "Add to cart" [ref=f4e1661]
+                          - generic [aria-hidden] [ref=f4e1662]: Add to cart
+                        - group "colours available" [ref=f4e1664]:
+                          - list [ref=f4e1665]:
+                            - generic [ref=f4e1666]:
+                              - listitem:
+                                - link "Pink":
+                                  - /url: /iPhone-16-128-GB-Control/dp/B0DGJ8YZDF/ref=cs_sr_dp_1?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-11
+                                  - generic [ref=f4e1667] [cursor=pointer]
+                            - generic [ref=f4e1669]:
+                              - listitem:
+                                - link "Black":
+                                  - /url: /iPhone-16-128-GB-Control/dp/B0HLX4GZPG/ref=cs_sr_dp_2?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-11
+                                  - generic [ref=f4e1670] [cursor=pointer]
+                            - generic [ref=f4e1672]:
+                              - listitem:
+                                - link "Teal":
+                                  - /url: /iPhone-16-128-GB-Control/dp/B0HLX94V75/ref=cs_sr_dp_3?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-11
+                                  - generic [ref=f4e1673] [cursor=pointer]
+                            - generic [ref=f4e1675]:
+                              - listitem:
+                                - link "Ultramarine":
+                                  - /url: /iPhone-16-128-GB-Control/dp/B0HLX6Z6XD/ref=cs_sr_dp_4?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-11
+                                  - generic [ref=f4e1676] [cursor=pointer]
+                            - generic [ref=f4e1678]:
+                              - listitem:
+                                - link "White":
+                                  - /url: /iPhone-16-128-GB-Control/dp/B0HLWZXZ31/ref=cs_sr_dp_5?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-11
+                                  - generic [ref=f4e1679] [cursor=pointer]
+                - listitem [ref=f4e1683]:
+                  - generic [ref=f4e1689]:
+                    - link [aria-hidden] [ref=f4e1695] [cursor=pointer]:
+                      - /url: /Apple-iPhone-Protect-AppleCare-Services/dp/B0HCZZ7616/ref=sr_1_12?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-12
+                    - generic [ref=f4e1700]:
+                      - generic [ref=f4e1701]:
+                        - heading "Apple" [level=2] [ref=f4e1704]
+                        - link [ref=f4e1705] [cursor=pointer]:
+                          - /url: /Apple-iPhone-Protect-AppleCare-Services/dp/B0HCZZ7616/ref=sr_1_12?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-12
+                          - heading "iPhone 17 Pro Max 256 GB with Protect+ with AppleCare Services" [level=2] [ref=f4e1706]
+                      - generic [ref=f4e1708]:
+                        - text: "5.0"
+                        - button "5.0 out of 5 stars, rating details" [ref=f4e1710] [cursor=pointer]:
+                          - generic [ref=f4e1712]: 5.0 out of 5 stars
+                        - link "1 ratings" [ref=f4e1714] [cursor=pointer]:
+                          - /url: /Apple-iPhone-Protect-AppleCare-Services/dp/B0HCZZ7616/ref=sr_1_12?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-12#customerReviews
+                          - text: (1)
+                      - generic [ref=f4e1717]:
+                        - generic [ref=f4e1718]:
+                          - generic [ref=f4e1720]:
+                            - generic [ref=f4e1721]: Price, product page
+                            - 'link "₹1,59,399 List: ₹1,66,899 List: ₹1,66,899" [ref=f4e1722] [cursor=pointer]':
+                              - /url: /Apple-iPhone-Protect-AppleCare-Services/dp/B0HCZZ7616/ref=sr_1_12?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-12
+                              - generic [ref=f4e1723]:
+                                - generic [ref=f4e1724]: ₹1,59,399
+                                - generic [aria-hidden] [ref=f4e1725]: ₹1,59,399
+                              - generic [ref=f4e1726]: "List: ₹1,66,899"
+                              - generic [ref=f4e1727]:
+                                - text: "List:"
+                                - generic [ref=f4e1728]:
+                                  - generic [ref=f4e1729]: ₹1,66,899
+                                  - text: ₹1,66,899
+                            - text: (4% off)
+                          - generic [ref=f4e1733]:
+                            - generic [ref=f4e1734]: Up to 5% back with Amazon Pay ICICI card
+                            - generic [aria-hidden] [ref=f4e1735]: Up to 5% back with Amazon Pay ICI...
+                        - generic [ref=f4e1738]:
+                          - generic [ref=f4e1741]: Delivery Today
+                          - generic [ref=f4e1743]: Arrives before Diwali
+                        - generic [ref=f4e1758] [cursor=pointer]:
+                          - button "Add to cart" [ref=f4e1759]
+                          - generic [aria-hidden] [ref=f4e1760]: Add to cart
+                - listitem [ref=f4e1763]:
+                  - generic [ref=f4e1769]:
+                    - link [aria-hidden] [ref=f4e1775] [cursor=pointer]:
+                      - /url: /iPhone-Air-256-GB-Promotion/dp/B0FQFBDQJ1/ref=sr_1_13?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-13
+                    - generic [ref=f4e1780]:
+                      - generic [ref=f4e1781]:
+                        - heading "Apple" [level=2] [ref=f4e1784]
+                        - link [ref=f4e1785] [cursor=pointer]:
+                          - /url: /iPhone-Air-256-GB-Promotion/dp/B0FQFBDQJ1/ref=sr_1_13?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-13
+                          - heading "iPhone Air (256 GB) - Space Black" [level=2] [ref=f4e1786]
+                        - generic "16.63 cm (6.5″) Display with ProMotion up to 120Hz, Powerful A19 Pro Chip, Center Stage Front Camera, All-Day Battery Life" [ref=f4e1788]
+                      - generic [ref=f4e1789]:
+                        - generic [ref=f4e1790]:
+                          - text: "4.6"
+                          - button "4.6 out of 5 stars, rating details" [ref=f4e1792] [cursor=pointer]:
+                            - generic [ref=f4e1794]: 4.6 out of 5 stars
+                          - link "436 ratings" [ref=f4e1796] [cursor=pointer]:
+                            - /url: /iPhone-Air-256-GB-Promotion/dp/B0FQFBDQJ1/ref=sr_1_13?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-13#customerReviews
+                            - text: (436)
+                        - generic [ref=f4e1797]: 50+ bought in past month
+                      - generic [ref=f4e1800]:
+                        - generic [ref=f4e1801]:
+                          - generic [ref=f4e1803]:
+                            - generic [ref=f4e1804]: Price, product page
+                            - 'link "₹1,19,900 M.R.P: ₹1,49,900 M.R.P: ₹1,49,900" [ref=f4e1805] [cursor=pointer]':
+                              - /url: /iPhone-Air-256-GB-Promotion/dp/B0FQFBDQJ1/ref=sr_1_13?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-13
+                              - generic [ref=f4e1806]:
+                                - generic [ref=f4e1807]: ₹1,19,900
+                                - generic [aria-hidden] [ref=f4e1808]: ₹1,19,900
+                              - generic [ref=f4e1809]: "M.R.P: ₹1,49,900"
+                              - generic [ref=f4e1810]:
+                                - text: "M.R.P:"
+                                - generic [ref=f4e1811]:
+                                  - generic [ref=f4e1812]: ₹1,49,900
+                                  - text: ₹1,49,900
+                            - text: (20% off)
+                          - generic [ref=f4e1816]:
+                            - generic [ref=f4e1817]: Up to 5% back with Amazon Pay ICICI card
+                            - generic [aria-hidden] [ref=f4e1818]: Up to 5% back with Amazon Pay ICI...
+                        - generic [ref=f4e1821]:
+                          - generic [ref=f4e1822]: FREE delivery Fri, 30 Oct
+                          - generic [ref=f4e1824]: Or fastest delivery Today 2 pm - 6 pm
+                          - generic [ref=f4e1826]: Arrives before Diwali
+                        - generic [ref=f4e1841] [cursor=pointer]:
+                          - button "Add to cart" [ref=f4e1842]
+                          - generic [aria-hidden] [ref=f4e1843]: Add to cart
+                        - group "colours available" [ref=f4e1845]:
+                          - list [ref=f4e1846]:
+                            - generic [ref=f4e1847]:
+                              - listitem:
+                                - link "Space Black":
+                                  - /url: /iPhone-Air-256-GB-Promotion/dp/B0FQFBDQJ1/ref=cs_sr_dp_1?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-13
+                                  - generic [ref=f4e1848] [cursor=pointer]
+                            - generic [ref=f4e1850]:
+                              - listitem:
+                                - link "Cloud White":
+                                  - /url: /iPhone-Air-256-GB-Promotion/dp/B0GTYZ4RW6/ref=cs_sr_dp_2?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-13
+                                  - generic [ref=f4e1851] [cursor=pointer]
+                            - generic [ref=f4e1853]:
+                              - listitem:
+                                - link "Light Gold":
+                                  - /url: /iPhone-Air-256-GB-Promotion/dp/B0GTYZ4CBH/ref=cs_sr_dp_3?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-13
+                                  - generic [ref=f4e1854] [cursor=pointer]
+                - listitem [ref=f4e1858]:
+                  - generic [ref=f4e1864]:
+                    - link [aria-hidden] [ref=f4e1870] [cursor=pointer]:
+                      - /url: /Spigen-iPhone-16-Pro-Max/dp/B0D84R9HYW/ref=sr_1_14?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-14
+                    - generic [ref=f4e1875]:
+                      - generic [ref=f4e1876]:
+                        - heading "Spigen" [level=2] [ref=f4e1879]
+                        - link [ref=f4e1880] [cursor=pointer]:
+                          - /url: /Spigen-iPhone-16-Pro-Max/dp/B0D84R9HYW/ref=sr_1_14?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-14
+                          - heading "EZ Fit Tempered glass for iPhone 18 Pro Max/17 Pro Max/16 Pro Max" [level=2] [ref=f4e1881]
+                        - generic "[2Pack] Screen Protector Guard" [ref=f4e1883]
+                      - generic [ref=f4e1884]:
+                        - generic [ref=f4e1885]:
+                          - text: "4.3"
+                          - button "4.3 out of 5 stars, rating details" [ref=f4e1887] [cursor=pointer]:
+                            - generic [ref=f4e1889]: 4.3 out of 5 stars
+                          - link "129,068 ratings" [ref=f4e1891] [cursor=pointer]:
+                            - /url: /Spigen-iPhone-16-Pro-Max/dp/B0D84R9HYW/ref=sr_1_14?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-14#customerReviews
+                            - text: (1.2L)
+                        - generic [ref=f4e1892]: 2K+ bought in past month
+                      - generic [ref=f4e1895]:
+                        - generic [ref=f4e1896]:
+                          - link "Mega Festival Deal" [ref=f4e1898] [cursor=pointer]:
+                            - /url: /deals
+                          - generic [ref=f4e1904]:
+                            - generic [ref=f4e1905]: Price, product page
+                            - 'link "₹1,325 ( ₹662.50 /count) M.R.P: ₹2,899 M.R.P: ₹2,899" [ref=f4e1906] [cursor=pointer]':
+                              - /url: /Spigen-iPhone-16-Pro-Max/dp/B0D84R9HYW/ref=sr_1_14?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-14
+                              - generic [ref=f4e1907]:
+                                - generic [ref=f4e1908]: ₹1,325
+                                - generic [aria-hidden] [ref=f4e1909]: ₹1,325
+                              - generic [ref=f4e1910]:
+                                - text: (
+                                - generic [ref=f4e1911]:
+                                  - generic [ref=f4e1912]: ₹662.50
+                                  - text: ₹662.50
+                                - text: /count)
+                              - generic [ref=f4e1913]: "M.R.P: ₹2,899"
+                              - generic [ref=f4e1914]:
+                                - text: "M.R.P:"
+                                - generic [ref=f4e1915]:
+                                  - generic [ref=f4e1916]: ₹2,899
+                                  - text: ₹2,899
+                            - text: (54% off)
+                          - generic [ref=f4e1920]:
+                            - generic [ref=f4e1921]: Up to 5% back with Amazon Pay ICICI card
+                            - generic [aria-hidden] [ref=f4e1922]: Up to 5% back with Amazon Pay ICI...
+                        - generic [ref=f4e1925]:
+                          - generic [ref=f4e1926]: FREE delivery Fri, 30 Oct
+                          - generic [ref=f4e1928]: Or fastest delivery Today 2 pm - 6 pm
+                          - generic [ref=f4e1930]: Arrives before Diwali
+                        - generic [ref=f4e1945] [cursor=pointer]:
+                          - button "Add to cart" [ref=f4e1946]
+                          - generic [aria-hidden] [ref=f4e1947]: Add to cart
+                - listitem [ref=f4e1950]:
+                  - generic [ref=f4e1956]:
+                    - link [aria-hidden] [ref=f4e1962] [cursor=pointer]:
+                      - /url: /Spigen-AlignMaster-Tempered-Anti-Reflection-Protector/dp/B0H9LSTJX3/ref=sr_1_15?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-15
+                    - generic [ref=f4e1967]:
+                      - generic [ref=f4e1968]:
+                        - heading "Spigen" [level=2] [ref=f4e1971]
+                        - link [ref=f4e1972] [cursor=pointer]:
+                          - /url: /Spigen-AlignMaster-Tempered-Anti-Reflection-Protector/dp/B0H9LSTJX3/ref=sr_1_15?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-15
+                          - heading "AlignMaster S AR Tempered glass for iPhone 18 Pro Max / 17 Pro Max" [level=2] [ref=f4e1973]
+                        - generic "[2Pack] Anti-Reflection Screen Protector Guard" [ref=f4e1975]
+                      - generic [ref=f4e1976]:
+                        - generic [ref=f4e1977]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=f4e1979] [cursor=pointer]:
+                            - generic [ref=f4e1981]: 4.2 out of 5 stars
+                          - link "7 ratings" [ref=f4e1983] [cursor=pointer]:
+                            - /url: /Spigen-AlignMaster-Tempered-Anti-Reflection-Protector/dp/B0H9LSTJX3/ref=sr_1_15?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-15#customerReviews
+                            - text: (7)
+                        - generic [ref=f4e1984]: 300+ bought in past month
+                      - generic [ref=f4e1987]:
+                        - generic [ref=f4e1988]:
+                          - link "Mega Festival Deal" [ref=f4e1990] [cursor=pointer]:
+                            - /url: /deals
+                          - generic [ref=f4e1996]:
+                            - generic [ref=f4e1997]: Price, product page
+                            - 'link "₹1,499 ( ₹749.50 /count) M.R.P: ₹3,099 M.R.P: ₹3,099" [ref=f4e1998] [cursor=pointer]':
+                              - /url: /Spigen-AlignMaster-Tempered-Anti-Reflection-Protector/dp/B0H9LSTJX3/ref=sr_1_15?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-15
+                              - generic [ref=f4e1999]:
+                                - generic [ref=f4e2000]: ₹1,499
+                                - generic [aria-hidden] [ref=f4e2001]: ₹1,499
+                              - generic [ref=f4e2002]:
+                                - text: (
+                                - generic [ref=f4e2003]:
+                                  - generic [ref=f4e2004]: ₹749.50
+                                  - text: ₹749.50
+                                - text: /count)
+                              - generic [ref=f4e2005]: "M.R.P: ₹3,099"
+                              - generic [ref=f4e2006]:
+                                - text: "M.R.P:"
+                                - generic [ref=f4e2007]:
+                                  - generic [ref=f4e2008]: ₹3,099
+                                  - text: ₹3,099
+                            - text: (52% off)
+                          - generic [ref=f4e2012]:
+                            - generic [ref=f4e2013]: Up to 5% back with Amazon Pay ICICI card
+                            - generic [aria-hidden] [ref=f4e2014]: Up to 5% back with Amazon Pay ICI...
+                        - generic [ref=f4e2017]:
+                          - generic [ref=f4e2018]: FREE delivery Fri, 30 Oct
+                          - generic [ref=f4e2020]: Or fastest delivery Today 2 pm - 6 pm
+                          - generic [ref=f4e2022]: Arrives before Diwali
+                        - generic [ref=f4e2037] [cursor=pointer]:
+                          - button "Add to cart" [ref=f4e2038]
+                          - generic [aria-hidden] [ref=f4e2039]: Add to cart
+                - listitem [ref=f4e2042]:
+                  - generic [ref=f4e2048]:
+                    - link [aria-hidden] [ref=f4e2054] [cursor=pointer]:
+                      - /url: /Spigen-Privacy-Tempered-iPhone-Protector/dp/B0HCY6FZ5Q/ref=sr_1_16?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-16
+                    - generic [ref=f4e2059]:
+                      - generic [ref=f4e2060]:
+                        - heading "Spigen" [level=2] [ref=f4e2063]
+                        - link [ref=f4e2064] [cursor=pointer]:
+                          - /url: /Spigen-Privacy-Tempered-iPhone-Protector/dp/B0HCY6FZ5Q/ref=sr_1_16?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-16
+                          - heading "EZ Fit Pro Privacy Tempered glass for iPhone 18 Pro Max" [level=2] [ref=f4e2065]
+                        - generic "[2Pack] Privacy Screen Protector Guard" [ref=f4e2067]
+                      - generic [ref=f4e2068]:
+                        - generic [ref=f4e2069]:
+                          - text: "3.4"
+                          - button "3.4 out of 5 stars, rating details" [ref=f4e2071] [cursor=pointer]:
+                            - generic [ref=f4e2073]: 3.4 out of 5 stars
+                          - link "41 ratings" [ref=f4e2075] [cursor=pointer]:
+                            - /url: /Spigen-Privacy-Tempered-iPhone-Protector/dp/B0HCY6FZ5Q/ref=sr_1_16?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-16#customerReviews
+                            - text: (41)
+                        - generic [ref=f4e2076]: 500+ bought in past month
+                      - generic [ref=f4e2079]:
+                        - generic [ref=f4e2080]:
+                          - link "Mega Festival Deal" [ref=f4e2082] [cursor=pointer]:
+                            - /url: /deals
+                          - generic [ref=f4e2088]:
+                            - generic [ref=f4e2089]: Price, product page
+                            - 'link "₹1,699 ( ₹849.50 /count) M.R.P: ₹3,099 M.R.P: ₹3,099" [ref=f4e2090] [cursor=pointer]':
+                              - /url: /Spigen-Privacy-Tempered-iPhone-Protector/dp/B0HCY6FZ5Q/ref=sr_1_16?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-16
+                              - generic [ref=f4e2091]:
+                                - generic [ref=f4e2092]: ₹1,699
+                                - generic [aria-hidden] [ref=f4e2093]: ₹1,699
+                              - generic [ref=f4e2094]:
+                                - text: (
+                                - generic [ref=f4e2095]:
+                                  - generic [ref=f4e2096]: ₹849.50
+                                  - text: ₹849.50
+                                - text: /count)
+                              - generic [ref=f4e2097]: "M.R.P: ₹3,099"
+                              - generic [ref=f4e2098]:
+                                - text: "M.R.P:"
+                                - generic [ref=f4e2099]:
+                                  - generic [ref=f4e2100]: ₹3,099
+                                  - text: ₹3,099
+                            - text: (45% off)
+                          - generic [ref=f4e2104]:
+                            - generic [ref=f4e2105]: Up to 5% back with Amazon Pay ICICI card
+                            - generic [aria-hidden] [ref=f4e2106]: Up to 5% back with Amazon Pay ICI...
+                        - generic [ref=f4e2109]:
+                          - generic [ref=f4e2110]: FREE delivery Fri, 30 Oct
+                          - generic [ref=f4e2112]: Or fastest delivery Today 2 pm - 6 pm
+                          - generic [ref=f4e2114]: Arrives before Diwali
+                        - generic [ref=f4e2129] [cursor=pointer]:
+                          - button "Add to cart" [ref=f4e2130]
+                          - generic [aria-hidden] [ref=f4e2131]: Add to cart
+                - listitem [ref=f4e2134]:
+                  - generic [ref=f4e2140]:
+                    - link [aria-hidden] [ref=f4e2146] [cursor=pointer]:
+                      - /url: /Spigen-AlignMaster-Tempered-Screen-Protector/dp/B0FJF82QPB/ref=sr_1_17?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-17
+                    - generic [ref=f4e2151]:
+                      - generic [ref=f4e2152]:
+                        - heading "Spigen" [level=2] [ref=f4e2155]
+                        - link [ref=f4e2156] [cursor=pointer]:
+                          - /url: /Spigen-AlignMaster-Tempered-Screen-Protector/dp/B0FJF82QPB/ref=sr_1_17?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-17
+                          - heading "AlignMaster S Tempered glass for iPhone 18 Pro Max / 17 Pro Max" [level=2] [ref=f4e2157]
+                        - generic "[3Pack] Screen Protector Guard" [ref=f4e2159]
+                      - generic [ref=f4e2160]:
+                        - generic [ref=f4e2161]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=f4e2163] [cursor=pointer]:
+                            - generic [ref=f4e2165]: 4.2 out of 5 stars
+                          - link "42,869 ratings" [ref=f4e2167] [cursor=pointer]:
+                            - /url: /Spigen-AlignMaster-Tempered-Screen-Protector/dp/B0FJF82QPB/ref=sr_1_17?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-17#customerReviews
+                            - text: (42.8K)
+                        - generic [ref=f4e2168]: 1K+ bought in past month
+                      - generic [ref=f4e2171]:
+                        - generic [ref=f4e2172]:
+                          - link "Mega Festival Deal" [ref=f4e2174] [cursor=pointer]:
+                            - /url: /deals
+                          - generic [ref=f4e2180]:
+                            - generic [ref=f4e2181]: Price, product page
+                            - 'link "₹949 ( ₹316.33 /count) M.R.P: ₹1,999 M.R.P: ₹1,999" [ref=f4e2182] [cursor=pointer]':
+                              - /url: /Spigen-AlignMaster-Tempered-Screen-Protector/dp/B0FJF82QPB/ref=sr_1_17?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-17
+                              - generic [ref=f4e2183]:
+                                - generic [ref=f4e2184]: ₹949
+                                - generic [aria-hidden] [ref=f4e2185]: ₹949
+                              - generic [ref=f4e2186]:
+                                - text: (
+                                - generic [ref=f4e2187]:
+                                  - generic [ref=f4e2188]: ₹316.33
+                                  - text: ₹316.33
+                                - text: /count)
+                              - generic [ref=f4e2189]: "M.R.P: ₹1,999"
+                              - generic [ref=f4e2190]:
+                                - text: "M.R.P:"
+                                - generic [ref=f4e2191]:
+                                  - generic [ref=f4e2192]: ₹1,999
+                                  - text: ₹1,999
+                            - text: (53% off)
+                          - generic [ref=f4e2196]:
+                            - generic [ref=f4e2197]: Up to 5% back with Amazon Pay ICICI card
+                            - generic [aria-hidden] [ref=f4e2198]: Up to 5% back with Amazon Pay ICI...
+                        - generic [ref=f4e2201]:
+                          - generic [ref=f4e2202]: FREE delivery Fri, 30 Oct
+                          - generic [ref=f4e2204]: Or fastest delivery Today 2 pm - 6 pm
+                          - generic [ref=f4e2206]: Arrives before Diwali
+                        - generic [ref=f4e2221] [cursor=pointer]:
+                          - button "Add to cart" [ref=f4e2222]
+                          - generic [aria-hidden] [ref=f4e2223]: Add to cart
+                - listitem [ref=f4e2226]:
+                  - generic [ref=f4e2232]:
+                    - link [aria-hidden] [ref=f4e2238] [cursor=pointer]:
+                      - /url: /TORRAS-Stronger-Compatible-Shockproof-Protective/dp/B0H5QSDJX3/ref=sr_1_18?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-18
+                    - generic [ref=f4e2243]:
+                      - generic [ref=f4e2244]:
+                        - heading "TORRAS" [level=2] [ref=f4e2247]
+                        - link [ref=f4e2248] [cursor=pointer]:
+                          - /url: /TORRAS-Stronger-Compatible-Shockproof-Protective/dp/B0H5QSDJX3/ref=sr_1_18?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-18
+                          - heading "Stronger Magnetic for iPhone 18 Pro Max Case Cover, Magnetic Charging Compatible Back Cover, Military Grade Shockproof, Camera Control, DIY Buttons, Slim Grip Protective Case, Matte Black" [level=2] [ref=f4e2249]
+                      - generic [ref=f4e2250]:
+                        - generic [ref=f4e2251]:
+                          - text: "4.6"
+                          - button "4.6 out of 5 stars, rating details" [ref=f4e2253] [cursor=pointer]:
+                            - generic [ref=f4e2255]: 4.6 out of 5 stars
+                          - link "1,516 ratings" [ref=f4e2257] [cursor=pointer]:
+                            - /url: /TORRAS-Stronger-Compatible-Shockproof-Protective/dp/B0H5QSDJX3/ref=sr_1_18?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-18#customerReviews
+                            - text: (1.5K)
+                        - generic [ref=f4e2258]: 100+ bought in past month
+                      - generic [ref=f4e2261]:
+                        - generic [ref=f4e2262]:
+                          - link "Great Indian Festival" [ref=f4e2264] [cursor=pointer]:
+                            - /url: /deals
+                          - generic [ref=f4e2270]:
+                            - generic [ref=f4e2271]: Price, product page
+                            - 'link "₹2,857 M.R.P: ₹5,499 M.R.P: ₹5,499" [ref=f4e2272] [cursor=pointer]':
+                              - /url: /TORRAS-Stronger-Compatible-Shockproof-Protective/dp/B0H5QSDJX3/ref=sr_1_18?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-18
+                              - generic [ref=f4e2273]:
+                                - generic [ref=f4e2274]: ₹2,857
+                                - generic [aria-hidden] [ref=f4e2275]: ₹2,857
+                              - generic [ref=f4e2276]: "M.R.P: ₹5,499"
+                              - generic [ref=f4e2277]:
+                                - text: "M.R.P:"
+                                - generic [ref=f4e2278]:
+                                  - generic [ref=f4e2279]: ₹5,499
+                                  - text: ₹5,499
+                            - text: (48% off)
+                          - generic [ref=f4e2283]:
+                            - generic [ref=f4e2284]: Up to 5% back with Amazon Pay ICICI card
+                            - generic [aria-hidden] [ref=f4e2285]: Up to 5% back with Amazon Pay ICI...
+                        - generic [ref=f4e2288]:
+                          - generic [ref=f4e2289]: FREE delivery Sun, 1 Nov
+                          - generic [ref=f4e2291]: Or fastest delivery Today 2 pm - 6 pm
+                          - generic [ref=f4e2293]: Arrives before Diwali
+                        - generic [ref=f4e2308] [cursor=pointer]:
+                          - button "Add to cart" [ref=f4e2309]
+                          - generic [aria-hidden] [ref=f4e2310]: Add to cart
+                        - group "colours available" [ref=f4e2312]:
+                          - list [ref=f4e2313]:
+                            - generic [ref=f4e2314]:
+                              - listitem:
+                                - link "Black":
+                                  - /url: /TORRAS-Stronger-Compatible-Shockproof-Protective/dp/B0H5QSDJX3/ref=cs_sr_dp_1?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-18
+                                  - generic [ref=f4e2315] [cursor=pointer]
+                            - generic [ref=f4e2317]:
+                              - listitem:
+                                - link "Clear":
+                                  - /url: /TORRAS-Stronger-Compatible-Shockproof-Protective/dp/B0H5QDVWZQ/ref=cs_sr_dp_2?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-18
+                                  - generic [ref=f4e2318] [cursor=pointer]
+                            - generic [ref=f4e2320]:
+                              - listitem:
+                                - link "Dusk Purple":
+                                  - /url: /TORRAS-Stronger-Compatible-Shockproof-Protective/dp/B0H5QSZH55/ref=cs_sr_dp_3?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-18
+                                  - generic [ref=f4e2321] [cursor=pointer]
+                            - generic [ref=f4e2323]:
+                              - listitem:
+                                - link "Horizon Blue":
+                                  - /url: /TORRAS-Stronger-Compatible-Shockproof-Protective/dp/B0H5QJYT4Q/ref=cs_sr_dp_4?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-18
+                                  - generic [ref=f4e2324] [cursor=pointer]
+                            - generic [ref=f4e2326]:
+                              - listitem:
+                                - link "Purple":
+                                  - /url: /TORRAS-Stronger-Compatible-Shockproof-Protective/dp/B0B61WYNDB/ref=cs_sr_dp_5?crid=1CDQ2R5MPVJO6&dib=eyJ2IjoiMSJ9.65hagohixDvvhzULS4ygBbwbYuYKEADpW85Tke_Gm1auyTza3St2gRJkSQA7DwZ8Rx_O0BoCSL733bnRXeIe1iwaEjeRUWuuSI3uTxJL0VJiLTuuD8j7lnT-SWBdgOvp_NNSzf9s0LbC5Qz1ggZjaIY5PP63F551s_MArYAOXnt89kaxFYgwVkI0na_ebHSOr35G_loThbqL29Mc9vNjlmlklw1Eilll4F31Zgsu1go.stgHwWg9A5o-COOuprNMf-uWsCgamF5m28U6JQLV3RA&dib_tag=se&keywords=Iphone+18+pro+max&qid=1793157045&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=8-18
+                                  - generic [ref=f4e2327] [cursor=pointer]
+          - generic [ref=f4e2333]:
+            - link "Sponsored ad from Apple. \"iPhone 18 Pro Max. Pro further.\" Shop Apple." [ref=f4e2334] [cursor=pointer]:
+              - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVkMtu00AUhtVWQAm3KosihU0VRBYVk4wvsZ0iC41viXNxUjsNNJuRY09jC9eeepw2dJEdr8KKFbcHYMuCBQteB7UpSP1Xn3TOfy5_Kdj-9uvDn7vlR4jnxl336MgRe-1JdYPb3z0habzEghS26cCLIkvIo-hN-2CXG8jjwhgvzhcTqd9hzKy7AkTuA16U6qJUF5Q6nG562mwbmeOO6dpe-WnpXkjYuyKj5YdHjmvqw7ZjT02j8nmj9Pymghnx8yDClORBlvgFwXGaxCnBs-KkfN8_9S-ztB6nlWdsBoLEZywOwNoC1o2ActU7JMW2s99kM1BE5JSEIMiShARFnKXgnAc3u0Dg5yED1I_TguQgyNKCpAX_QnORY2B92O-b-tgeOh62nb7tmLhvT0xsmF5vPBxVpdIG3Pn689PH3z-MyuN_I9dHVJ_wEMKWokhNXoCiyPFbtuMebOkjfX9YfmVoSKeWDWS00s7WmqOVdsgu59BDt7XS5ivtcKWha5hXdvS5uWx3zwMU65dsKar8983Sl82oKCg7aDQuLi7q_1NqsCLLCWtQf04aosXplmUgwLd4A4iGLAKtZSHQFHQFNWVZsXjl9bUB5-RE9TSMoCQJrZbMTzvDkSBN7Z6DZICgIrU4XhIEWdYtND6G7emwRkOch5gmUZirRS1iPg5yHIcqrCUU-yxOmarBTrd17A6mxy-vcdLrGIM1vp3K4ho1aaDz3pXpbEHy96pNoywle5yyR_Ns79RfXpVYkhXq7cRrLKTYD_E8zxZUFSDkOUkSechJkiDWYtWnrOZf_TVSurStkJ7j_gXM7O6Y&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fstores%2Fpage%2F4F1CFFDA-292D-4D74-B9FA-53C8A5778F28%3Fstore_ref%3DSB_A06639972ZHOP36ZIKNA7-A08691263377CFATY0GZO%26pd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26lp_asins%3DB0HJ9YRMZY%2CB0HJ9VKHDM%2CB0HJ9XZ74M%2CB0HJB6MC2S%26lp_query%3DIphone%2018%20pro%20max%26lp_slot%3Ddesktop-inline%26sdp_ad_group%3D300216642016634%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_bkgd&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+            - generic [ref=f4e2335]:
+              - generic [ref=f4e2337]:
+                - link "Apple" [ref=f4e2339] [cursor=pointer]:
+                  - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVkMtu00AUhtVWQAm3KosihU0VRBYVk4wvsZ0iC41viXNxUjsNNJuRY09jC9eeepw2dJEdr8KKFbcHYMuCBQteB7UpSP1Xn3TOfy5_Kdj-9uvDn7vlR4jnxl336MgRe-1JdYPb3z0habzEghS26cCLIkvIo-hN-2CXG8jjwhgvzhcTqd9hzKy7AkTuA16U6qJUF5Q6nG562mwbmeOO6dpe-WnpXkjYuyKj5YdHjmvqw7ZjT02j8nmj9Pymghnx8yDClORBlvgFwXGaxCnBs-KkfN8_9S-ztB6nlWdsBoLEZywOwNoC1o2ActU7JMW2s99kM1BE5JSEIMiShARFnKXgnAc3u0Dg5yED1I_TguQgyNKCpAX_QnORY2B92O-b-tgeOh62nb7tmLhvT0xsmF5vPBxVpdIG3Pn689PH3z-MyuN_I9dHVJ_wEMKWokhNXoCiyPFbtuMebOkjfX9YfmVoSKeWDWS00s7WmqOVdsgu59BDt7XS5ivtcKWha5hXdvS5uWx3zwMU65dsKar8983Sl82oKCg7aDQuLi7q_1NqsCLLCWtQf04aosXplmUgwLd4A4iGLAKtZSHQFHQFNWVZsXjl9bUB5-RE9TSMoCQJrZbMTzvDkSBN7Z6DZICgIrU4XhIEWdYtND6G7emwRkOch5gmUZirRS1iPg5yHIcqrCUU-yxOmarBTrd17A6mxy-vcdLrGIM1vp3K4ho1aaDz3pXpbEHy96pNoywle5yyR_Ns79RfXpVYkhXq7cRrLKTYD_E8zxZUFSDkOUkSechJkiDWYtWnrOZf_TVSurStkJ7j_gXM7O6Y&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fstores%2Fpage%2F4F1CFFDA-292D-4D74-B9FA-53C8A5778F28%3Fstore_ref%3DSB_A06639972ZHOP36ZIKNA7-A08691263377CFATY0GZO%26pd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26lp_asins%3DB0HJ9YRMZY%2CB0HJ9VKHDM%2CB0HJ9XZ74M%2CB0HJB6MC2S%26lp_query%3DIphone%2018%20pro%20max%26lp_slot%3Ddesktop-inline%26sdp_ad_group%3D300216642016634%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_logo&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                  - img "Apple" [ref=f4e2341]
+                - generic [ref=f4e2343]:
+                  - link "iPhone 18 Pro Max. Pro further." [ref=f4e2344] [cursor=pointer]:
+                    - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVkMtu00AUhtVWQAm3KosihU0VRBYVk4wvsZ0iC41viXNxUjsNNJuRY09jC9eeepw2dJEdr8KKFbcHYMuCBQteB7UpSP1Xn3TOfy5_Kdj-9uvDn7vlR4jnxl336MgRe-1JdYPb3z0habzEghS26cCLIkvIo-hN-2CXG8jjwhgvzhcTqd9hzKy7AkTuA16U6qJUF5Q6nG562mwbmeOO6dpe-WnpXkjYuyKj5YdHjmvqw7ZjT02j8nmj9Pymghnx8yDClORBlvgFwXGaxCnBs-KkfN8_9S-ztB6nlWdsBoLEZywOwNoC1o2ActU7JMW2s99kM1BE5JSEIMiShARFnKXgnAc3u0Dg5yED1I_TguQgyNKCpAX_QnORY2B92O-b-tgeOh62nb7tmLhvT0xsmF5vPBxVpdIG3Pn689PH3z-MyuN_I9dHVJ_wEMKWokhNXoCiyPFbtuMebOkjfX9YfmVoSKeWDWS00s7WmqOVdsgu59BDt7XS5ivtcKWha5hXdvS5uWx3zwMU65dsKar8983Sl82oKCg7aDQuLi7q_1NqsCLLCWtQf04aosXplmUgwLd4A4iGLAKtZSHQFHQFNWVZsXjl9bUB5-RE9TSMoCQJrZbMTzvDkSBN7Z6DZICgIrU4XhIEWdYtND6G7emwRkOch5gmUZirRS1iPg5yHIcqrCUU-yxOmarBTrd17A6mxy-vcdLrGIM1vp3K4ho1aaDz3pXpbEHy96pNoywle5yyR_Ns79RfXpVYkhXq7cRrLKTYD_E8zxZUFSDkOUkSechJkiDWYtWnrOZf_TVSurStkJ7j_gXM7O6Y&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fstores%2Fpage%2F4F1CFFDA-292D-4D74-B9FA-53C8A5778F28%3Fstore_ref%3DSB_A06639972ZHOP36ZIKNA7-A08691263377CFATY0GZO%26pd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26lp_asins%3DB0HJ9YRMZY%2CB0HJ9VKHDM%2CB0HJ9XZ74M%2CB0HJB6MC2S%26lp_query%3DIphone%2018%20pro%20max%26lp_slot%3Ddesktop-inline%26sdp_ad_group%3D300216642016634%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_hl&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                    - generic [ref=f4e2345]:
+                      - generic [ref=f4e2346]: iPhone 18 Pro Max. Pro further.
+                      - generic [aria-hidden] [ref=f4e2347]: iPhone 18 Pro Max. Pro further.
+                  - generic [ref=f4e2348]:
+                    - button "Leave feedback on Sponsored ad" [ref=f4e2352] [cursor=pointer]: Sponsored
+                    - generic [ref=f4e2354]: "|"
+                    - link "Shop Apple" [ref=f4e2356] [cursor=pointer]:
+                      - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVkMtu00AUhtVWQAm3KosihU0VRBYVk4wvsZ0iC41viXNxUjsNNJuRY09jC9eeepw2dJEdr8KKFbcHYMuCBQteB7UpSP1Xn3TOfy5_Kdj-9uvDn7vlR4jnxl336MgRe-1JdYPb3z0habzEghS26cCLIkvIo-hN-2CXG8jjwhgvzhcTqd9hzKy7AkTuA16U6qJUF5Q6nG562mwbmeOO6dpe-WnpXkjYuyKj5YdHjmvqw7ZjT02j8nmj9Pymghnx8yDClORBlvgFwXGaxCnBs-KkfN8_9S-ztB6nlWdsBoLEZywOwNoC1o2ActU7JMW2s99kM1BE5JSEIMiShARFnKXgnAc3u0Dg5yED1I_TguQgyNKCpAX_QnORY2B92O-b-tgeOh62nb7tmLhvT0xsmF5vPBxVpdIG3Pn689PH3z-MyuN_I9dHVJ_wEMKWokhNXoCiyPFbtuMebOkjfX9YfmVoSKeWDWS00s7WmqOVdsgu59BDt7XS5ivtcKWha5hXdvS5uWx3zwMU65dsKar8983Sl82oKCg7aDQuLi7q_1NqsCLLCWtQf04aosXplmUgwLd4A4iGLAKtZSHQFHQFNWVZsXjl9bUB5-RE9TSMoCQJrZbMTzvDkSBN7Z6DZICgIrU4XhIEWdYtND6G7emwRkOch5gmUZirRS1iPg5yHIcqrCUU-yxOmarBTrd17A6mxy-vcdLrGIM1vp3K4ho1aaDz3pXpbEHy96pNoywle5yyR_Ns79RfXpVYkhXq7cRrLKTYD_E8zxZUFSDkOUkSechJkiDWYtWnrOZf_TVSurStkJ7j_gXM7O6Y&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fstores%2Fpage%2F4F1CFFDA-292D-4D74-B9FA-53C8A5778F28%3Fstore_ref%3DSB_A06639972ZHOP36ZIKNA7-A08691263377CFATY0GZO%26pd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26lp_asins%3DB0HJ9YRMZY%2CB0HJ9VKHDM%2CB0HJ9XZ74M%2CB0HJB6MC2S%26lp_query%3DIphone%2018%20pro%20max%26lp_slot%3Ddesktop-inline%26sdp_ad_group%3D300216642016634%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_cta&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                      - generic [ref=f4e2359]:
+                        - text: Shop
+                        - generic [ref=f4e2360]: Apple
+              - group [ref=f4e2364]:
+                - group [ref=f4e2368]:
+                  - list [ref=f4e2369]:
+                    - listitem [ref=f4e2370]:
+                      - generic [ref=f4e2372]:
+                        - link [aria-hidden] [ref=f4e2373] [cursor=pointer]:
+                          - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVULuO00AUVVgBS3itUixS6IJIEWni8SPOA1nIdryO83CydjZo04zGMxPbIut4Pd4kSpGOL0DiE6ioEPwALQUFBb-DRBYkTnWk87hXp0iOv_549-te6bEuidO-d3HhKgN7VimItdMFS-ItklVqpyM_is7kLIre2J1TcdSc5t3pzfpmpg57nFt1T4a691BS1Lqi1uVWHc7v-EZwrFvTnuU5fulZ8T5l_G2-SkuPLlzPMse268ytbvlzofjiVkGc4YxEKGUZWS1xzlCcLOOEoSBflB7gK7xbJfU4KT_nASBLzHlMwCECDkaQipW7LEGOW2vwAOQRu2IUkNVyyUgerxKwlsDtLUBwRjlIcZzkLANkleQsyaWXhqe7XWSOh0PLnDpj10eOO3RcCw2dmYW6lj-YjicVtViAJ1--f_r481u3_ORv5eGJylMJQthutdSGJENFEaUjx_U6R-bErI1Lr7qGbqZnDmjqe-P6gFDfG-d8F0Jf_x97I9wb53tD_0PC8okZWlu7vyZ6bO74VtGkD4Xi-0KU5ynvCMJms6n_W0kIUwFvBCoYsNdvX3qj-eXrlKKMonQZ0UzLqxHHiGQophqsXsdUE5ttWWw0odKo8kwTgQjaC6owlagALmQJKKIYgDYOCKAL2m5SCgmmtBprOOVVnLGFNmn1U7vFBq73G2xsvaE&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJ9YRMZY%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-1-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_0_bkgd&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                        - link [ref=f4e2375] [cursor=pointer]:
+                          - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVULuO00AUVVgBS3itUixS6IJIEWni8SPOA1nIdryO83CydjZo04zGMxPbIut4Pd4kSpGOL0DiE6ioEPwALQUFBb-DRBYkTnWk87hXp0iOv_549-te6bEuidO-d3HhKgN7VimItdMFS-ItklVqpyM_is7kLIre2J1TcdSc5t3pzfpmpg57nFt1T4a691BS1Lqi1uVWHc7v-EZwrFvTnuU5fulZ8T5l_G2-SkuPLlzPMse268ytbvlzofjiVkGc4YxEKGUZWS1xzlCcLOOEoSBflB7gK7xbJfU4KT_nASBLzHlMwCECDkaQipW7LEGOW2vwAOQRu2IUkNVyyUgerxKwlsDtLUBwRjlIcZzkLANkleQsyaWXhqe7XWSOh0PLnDpj10eOO3RcCw2dmYW6lj-YjicVtViAJ1--f_r481u3_ORv5eGJylMJQthutdSGJENFEaUjx_U6R-bErI1Lr7qGbqZnDmjqe-P6gFDfG-d8F0Jf_x97I9wb53tD_0PC8okZWlu7vyZ6bO74VtGkD4Xi-0KU5ynvCMJms6n_W0kIUwFvBCoYsNdvX3qj-eXrlKKMonQZ0UzLqxHHiGQophqsXsdUE5ttWWw0odKo8kwTgQjaC6owlagALmQJKKIYgDYOCKAL2m5SCgmmtBprOOVVnLGFNmn1U7vFBq73G2xsvaE&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJ9YRMZY%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-1-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_0_img&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                          - img "iPhone 18 Pro Max (2 TB) - Burgundy | 17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture" [ref=f4e2378]
+                        - generic [ref=f4e2379]:
+                          - link [aria-hidden] [ref=f4e2380] [cursor=pointer]:
+                            - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVULuO00AUVVgBS3itUixS6IJIEWni8SPOA1nIdryO83CydjZo04zGMxPbIut4Pd4kSpGOL0DiE6ioEPwALQUFBb-DRBYkTnWk87hXp0iOv_549-te6bEuidO-d3HhKgN7VimItdMFS-ItklVqpyM_is7kLIre2J1TcdSc5t3pzfpmpg57nFt1T4a691BS1Lqi1uVWHc7v-EZwrFvTnuU5fulZ8T5l_G2-SkuPLlzPMse268ytbvlzofjiVkGc4YxEKGUZWS1xzlCcLOOEoSBflB7gK7xbJfU4KT_nASBLzHlMwCECDkaQipW7LEGOW2vwAOQRu2IUkNVyyUgerxKwlsDtLUBwRjlIcZzkLANkleQsyaWXhqe7XWSOh0PLnDpj10eOO3RcCw2dmYW6lj-YjicVtViAJ1--f_r481u3_ORv5eGJylMJQthutdSGJENFEaUjx_U6R-bErI1Lr7qGbqZnDmjqe-P6gFDfG-d8F0Jf_x97I9wb53tD_0PC8okZWlu7vyZ6bO74VtGkD4Xi-0KU5ynvCMJms6n_W0kIUwFvBCoYsNdvX3qj-eXrlKKMonQZ0UzLqxHHiGQophqsXsdUE5ttWWw0odKo8kwTgQjaC6owlagALmQJKKIYgDYOCKAL2m5SCgmmtBprOOVVnLGFNmn1U7vFBq73G2xsvaE&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJ9YRMZY%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-1-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_0_bkgd&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                          - link "iPhone 18 Pro Max (2 TB) - Burgundy | 17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture" [ref=f4e2382] [cursor=pointer]:
+                            - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVULuO00AUVVgBS3itUixS6IJIEWni8SPOA1nIdryO83CydjZo04zGMxPbIut4Pd4kSpGOL0DiE6ioEPwALQUFBb-DRBYkTnWk87hXp0iOv_549-te6bEuidO-d3HhKgN7VimItdMFS-ItklVqpyM_is7kLIre2J1TcdSc5t3pzfpmpg57nFt1T4a691BS1Lqi1uVWHc7v-EZwrFvTnuU5fulZ8T5l_G2-SkuPLlzPMse268ytbvlzofjiVkGc4YxEKGUZWS1xzlCcLOOEoSBflB7gK7xbJfU4KT_nASBLzHlMwCECDkaQipW7LEGOW2vwAOQRu2IUkNVyyUgerxKwlsDtLUBwRjlIcZzkLANkleQsyaWXhqe7XWSOh0PLnDpj10eOO3RcCw2dmYW6lj-YjicVtViAJ1--f_r481u3_ORv5eGJylMJQthutdSGJENFEaUjx_U6R-bErI1Lr7qGbqZnDmjqe-P6gFDfG-d8F0Jf_x97I9wb53tD_0PC8okZWlu7vyZ6bO74VtGkD4Xi-0KU5ynvCMJms6n_W0kIUwFvBCoYsNdvX3qj-eXrlKKMonQZ0UzLqxHHiGQophqsXsdUE5ttWWw0odKo8kwTgQjaC6owlagALmQJKKIYgDYOCKAL2m5SCgmmtBprOOVVnLGFNmn1U7vFBq73G2xsvaE&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJ9YRMZY%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-1-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_0_title&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                            - generic [ref=f4e2383]:
+                              - generic [ref=f4e2384]: iPhone 18 Pro Max (2 TB) - Burgundy | 17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture
+                              - generic [aria-hidden] [ref=f4e2385]: iPhone 18 Pro Max (2 TB) - Burgundy | 17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48…
+                          - link "Rated 4.7 out of 5 stars by 47 reviews. Go to review section." [ref=f4e2386] [cursor=pointer]:
+                            - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVULuO00AUVVgBS3itUixS6IJIEWni8SPOA1nIdryO83CydjZo04zGMxPbIut4Pd4kSpGOL0DiE6ioEPwALQUFBb-DRBYkTnWk87hXp0iOv_549-te6bEuidO-d3HhKgN7VimItdMFS-ItklVqpyM_is7kLIre2J1TcdSc5t3pzfpmpg57nFt1T4a691BS1Lqi1uVWHc7v-EZwrFvTnuU5fulZ8T5l_G2-SkuPLlzPMse268ytbvlzofjiVkGc4YxEKGUZWS1xzlCcLOOEoSBflB7gK7xbJfU4KT_nASBLzHlMwCECDkaQipW7LEGOW2vwAOQRu2IUkNVyyUgerxKwlsDtLUBwRjlIcZzkLANkleQsyaWXhqe7XWSOh0PLnDpj10eOO3RcCw2dmYW6lj-YjicVtViAJ1--f_r481u3_ORv5eGJylMJQthutdSGJENFEaUjx_U6R-bErI1Lr7qGbqZnDmjqe-P6gFDfG-d8F0Jf_x97I9wb53tD_0PC8okZWlu7vyZ6bO74VtGkD4Xi-0KU5ynvCMJms6n_W0kIUwFvBCoYsNdvX3qj-eXrlKKMonQZ0UzLqxHHiGQophqsXsdUE5ttWWw0odKo8kwTgQjaC6owlagALmQJKKIYgDYOCKAL2m5SCgmmtBprOOVVnLGFNmn1U7vFBq73G2xsvaE&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJ9YRMZY%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-1-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_0_rating&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35#customerReviews
+                            - generic [ref=f4e2387]:
+                              - generic [ref=f4e2388]: "4.7"
+                              - generic [ref=f4e2389]: 4.7 out of 5 stars.
+                              - generic [ref=f4e2391]: "47"
+                          - link "₹3,29,900.00" [ref=f4e2393] [cursor=pointer]:
+                            - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVULuO00AUVVgBS3itUixS6IJIEWni8SPOA1nIdryO83CydjZo04zGMxPbIut4Pd4kSpGOL0DiE6ioEPwALQUFBb-DRBYkTnWk87hXp0iOv_549-te6bEuidO-d3HhKgN7VimItdMFS-ItklVqpyM_is7kLIre2J1TcdSc5t3pzfpmpg57nFt1T4a691BS1Lqi1uVWHc7v-EZwrFvTnuU5fulZ8T5l_G2-SkuPLlzPMse268ytbvlzofjiVkGc4YxEKGUZWS1xzlCcLOOEoSBflB7gK7xbJfU4KT_nASBLzHlMwCECDkaQipW7LEGOW2vwAOQRu2IUkNVyyUgerxKwlsDtLUBwRjlIcZzkLANkleQsyaWXhqe7XWSOh0PLnDpj10eOO3RcCw2dmYW6lj-YjicVtViAJ1--f_r481u3_ORv5eGJylMJQthutdSGJENFEaUjx_U6R-bErI1Lr7qGbqZnDmjqe-P6gFDfG-d8F0Jf_x97I9wb53tD_0PC8okZWlu7vyZ6bO74VtGkD4Xi-0KU5ynvCMJms6n_W0kIUwFvBCoYsNdvX3qj-eXrlKKMonQZ0UzLqxHHiGQophqsXsdUE5ttWWw0odKo8kwTgQjaC6owlagALmQJKKIYgDYOCKAL2m5SCgmmtBprOOVVnLGFNmn1U7vFBq73G2xsvaE&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJ9YRMZY%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-1-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_0_price&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                            - generic [ref=f4e2395]:
+                              - generic [ref=f4e2396]: ₹3,29,900.00
+                              - generic [aria-hidden] [ref=f4e2397]:
+                                - text: ₹
+                                - generic [ref=f4e2398]:
+                                  - text: 3,29,900
+                                  - generic [ref=f4e2399]: .
+                                - text: "00"
+                    - listitem [ref=f4e2400]:
+                      - generic [ref=f4e2402]:
+                        - link [aria-hidden] [ref=f4e2403] [cursor=pointer]:
+                          - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVULmO00AYVlgBS7hWKRYpdEGkiDT2-IhzIAv52sQ5nKyTDdI2o_HM-BBZx-vxJlGKdDwBEo9ARYXgBWgpKCh4HSSyIPFVn_Qd_6-vTI6__nj3617lsSFL84F_ceGpw96iVpIapyFLky1SNNrLxrM4PlPyOH7T655K49a8sOc365uFNupz7gi-Ag3_oaxqgqoJSluAl3dmZnBsOPO-47uzyrPyfcr422KVVR5deL5jTXqee-nY1c-l8otbBXGGcxKjjOVktcQFQ0m6TFKGgiKsPMBXeLdKhSStPucBIEvMeULAIQIORpBJtbssRa7XaPIAFDG7YhSQ1XLJSJGsUrCWwe0tQHBOOchwkhYsB2SVFiwt5Jemb3g2siajkWPN3Yk3Q643cj0HjdyFg2xnNpxPpjWtXIInX75_-vjzm1198rfy8ETtqQwh7LTbWlNWoKpK8pHr-d0ja2o1JpVXtmlY2ZkLWsbevD4gMvbmOd9FcGb8j70Z7c3zvWn8IVH1xIqcbW-wJkZi7fhW1eUPpfL7UlwUGe-K4mazEf6tJEaZiDciFU3YH3QWw749fp1RlFOULWOa60U95hiRHCVUh_XrhOpSq6NIzRZUm3We6xKQQSekKtOIBmCoyECVpAB0cEAADWmnRSkkmNJ6ouOM13HOQn3aHmS9Nht6_m9Xu71x&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJ9VKHDM%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-2-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_1_bkgd&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                        - link [ref=f4e2405] [cursor=pointer]:
+                          - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVULmO00AYVlgBS7hWKRYpdEGkiDT2-IhzIAv52sQ5nKyTDdI2o_HM-BBZx-vxJlGKdDwBEo9ARYXgBWgpKCh4HSSyIPFVn_Qd_6-vTI6__nj3617lsSFL84F_ceGpw96iVpIapyFLky1SNNrLxrM4PlPyOH7T655K49a8sOc365uFNupz7gi-Ag3_oaxqgqoJSluAl3dmZnBsOPO-47uzyrPyfcr422KVVR5deL5jTXqee-nY1c-l8otbBXGGcxKjjOVktcQFQ0m6TFKGgiKsPMBXeLdKhSStPucBIEvMeULAIQIORpBJtbssRa7XaPIAFDG7YhSQ1XLJSJGsUrCWwe0tQHBOOchwkhYsB2SVFiwt5Jemb3g2siajkWPN3Yk3Q643cj0HjdyFg2xnNpxPpjWtXIInX75_-vjzm1198rfy8ETtqQwh7LTbWlNWoKpK8pHr-d0ja2o1JpVXtmlY2ZkLWsbevD4gMvbmOd9FcGb8j70Z7c3zvWn8IVH1xIqcbW-wJkZi7fhW1eUPpfL7UlwUGe-K4mazEf6tJEaZiDciFU3YH3QWw749fp1RlFOULWOa60U95hiRHCVUh_XrhOpSq6NIzRZUm3We6xKQQSekKtOIBmCoyECVpAB0cEAADWmnRSkkmNJ6ouOM13HOQn3aHmS9Nht6_m9Xu71x&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJ9VKHDM%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-2-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_1_img&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                          - img "iPhone 18 Pro Max (2 TB) - Black | 17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture" [ref=f4e2408]
+                        - generic [ref=f4e2409]:
+                          - link [aria-hidden] [ref=f4e2410] [cursor=pointer]:
+                            - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVULmO00AYVlgBS7hWKRYpdEGkiDT2-IhzIAv52sQ5nKyTDdI2o_HM-BBZx-vxJlGKdDwBEo9ARYXgBWgpKCh4HSSyIPFVn_Qd_6-vTI6__nj3617lsSFL84F_ceGpw96iVpIapyFLky1SNNrLxrM4PlPyOH7T655K49a8sOc365uFNupz7gi-Ag3_oaxqgqoJSluAl3dmZnBsOPO-47uzyrPyfcr422KVVR5deL5jTXqee-nY1c-l8otbBXGGcxKjjOVktcQFQ0m6TFKGgiKsPMBXeLdKhSStPucBIEvMeULAIQIORpBJtbssRa7XaPIAFDG7YhSQ1XLJSJGsUrCWwe0tQHBOOchwkhYsB2SVFiwt5Jemb3g2siajkWPN3Yk3Q643cj0HjdyFg2xnNpxPpjWtXIInX75_-vjzm1198rfy8ETtqQwh7LTbWlNWoKpK8pHr-d0ja2o1JpVXtmlY2ZkLWsbevD4gMvbmOd9FcGb8j70Z7c3zvWn8IVH1xIqcbW-wJkZi7fhW1eUPpfL7UlwUGe-K4mazEf6tJEaZiDciFU3YH3QWw749fp1RlFOULWOa60U95hiRHCVUh_XrhOpSq6NIzRZUm3We6xKQQSekKtOIBmCoyECVpAB0cEAADWmnRSkkmNJ6ouOM13HOQn3aHmS9Nht6_m9Xu71x&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJ9VKHDM%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-2-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_1_bkgd&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                          - link "iPhone 18 Pro Max (2 TB) - Black | 17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture" [ref=f4e2412] [cursor=pointer]:
+                            - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVULmO00AYVlgBS7hWKRYpdEGkiDT2-IhzIAv52sQ5nKyTDdI2o_HM-BBZx-vxJlGKdDwBEo9ARYXgBWgpKCh4HSSyIPFVn_Qd_6-vTI6__nj3617lsSFL84F_ceGpw96iVpIapyFLky1SNNrLxrM4PlPyOH7T655K49a8sOc365uFNupz7gi-Ag3_oaxqgqoJSluAl3dmZnBsOPO-47uzyrPyfcr422KVVR5deL5jTXqee-nY1c-l8otbBXGGcxKjjOVktcQFQ0m6TFKGgiKsPMBXeLdKhSStPucBIEvMeULAIQIORpBJtbssRa7XaPIAFDG7YhSQ1XLJSJGsUrCWwe0tQHBOOchwkhYsB2SVFiwt5Jemb3g2siajkWPN3Yk3Q643cj0HjdyFg2xnNpxPpjWtXIInX75_-vjzm1198rfy8ETtqQwh7LTbWlNWoKpK8pHr-d0ja2o1JpVXtmlY2ZkLWsbevD4gMvbmOd9FcGb8j70Z7c3zvWn8IVH1xIqcbW-wJkZi7fhW1eUPpfL7UlwUGe-K4mazEf6tJEaZiDciFU3YH3QWw749fp1RlFOULWOa60U95hiRHCVUh_XrhOpSq6NIzRZUm3We6xKQQSekKtOIBmCoyECVpAB0cEAADWmnRSkkmNJ6ouOM13HOQn3aHmS9Nht6_m9Xu71x&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJ9VKHDM%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-2-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_1_title&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                            - generic [ref=f4e2413]:
+                              - generic [ref=f4e2414]: iPhone 18 Pro Max (2 TB) - Black | 17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture
+                              - generic [aria-hidden] [ref=f4e2415]: iPhone 18 Pro Max (2 TB) - Black | 17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48…
+                          - link "Rated 4.7 out of 5 stars by 47 reviews. Go to review section." [ref=f4e2416] [cursor=pointer]:
+                            - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVULmO00AYVlgBS7hWKRYpdEGkiDT2-IhzIAv52sQ5nKyTDdI2o_HM-BBZx-vxJlGKdDwBEo9ARYXgBWgpKCh4HSSyIPFVn_Qd_6-vTI6__nj3617lsSFL84F_ceGpw96iVpIapyFLky1SNNrLxrM4PlPyOH7T655K49a8sOc365uFNupz7gi-Ag3_oaxqgqoJSluAl3dmZnBsOPO-47uzyrPyfcr422KVVR5deL5jTXqee-nY1c-l8otbBXGGcxKjjOVktcQFQ0m6TFKGgiKsPMBXeLdKhSStPucBIEvMeULAIQIORpBJtbssRa7XaPIAFDG7YhSQ1XLJSJGsUrCWwe0tQHBOOchwkhYsB2SVFiwt5Jemb3g2siajkWPN3Yk3Q643cj0HjdyFg2xnNpxPpjWtXIInX75_-vjzm1198rfy8ETtqQwh7LTbWlNWoKpK8pHr-d0ja2o1JpVXtmlY2ZkLWsbevD4gMvbmOd9FcGb8j70Z7c3zvWn8IVH1xIqcbW-wJkZi7fhW1eUPpfL7UlwUGe-K4mazEf6tJEaZiDciFU3YH3QWw749fp1RlFOULWOa60U95hiRHCVUh_XrhOpSq6NIzRZUm3We6xKQQSekKtOIBmCoyECVpAB0cEAADWmnRSkkmNJ6ouOM13HOQn3aHmS9Nht6_m9Xu71x&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJ9VKHDM%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-2-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_1_rating&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35#customerReviews
+                            - generic [ref=f4e2417]:
+                              - generic [ref=f4e2418]: "4.7"
+                              - generic [ref=f4e2419]: 4.7 out of 5 stars.
+                              - generic [ref=f4e2421]: "47"
+                          - link "₹3,29,900.00" [ref=f4e2423] [cursor=pointer]:
+                            - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVULmO00AYVlgBS7hWKRYpdEGkiDT2-IhzIAv52sQ5nKyTDdI2o_HM-BBZx-vxJlGKdDwBEo9ARYXgBWgpKCh4HSSyIPFVn_Qd_6-vTI6__nj3617lsSFL84F_ceGpw96iVpIapyFLky1SNNrLxrM4PlPyOH7T655K49a8sOc365uFNupz7gi-Ag3_oaxqgqoJSluAl3dmZnBsOPO-47uzyrPyfcr422KVVR5deL5jTXqee-nY1c-l8otbBXGGcxKjjOVktcQFQ0m6TFKGgiKsPMBXeLdKhSStPucBIEvMeULAIQIORpBJtbssRa7XaPIAFDG7YhSQ1XLJSJGsUrCWwe0tQHBOOchwkhYsB2SVFiwt5Jemb3g2siajkWPN3Yk3Q643cj0HjdyFg2xnNpxPpjWtXIInX75_-vjzm1198rfy8ETtqQwh7LTbWlNWoKpK8pHr-d0ja2o1JpVXtmlY2ZkLWsbevD4gMvbmOd9FcGb8j70Z7c3zvWn8IVH1xIqcbW-wJkZi7fhW1eUPpfL7UlwUGe-K4mazEf6tJEaZiDciFU3YH3QWw749fp1RlFOULWOa60U95hiRHCVUh_XrhOpSq6NIzRZUm3We6xKQQSekKtOIBmCoyECVpAB0cEAADWmnRSkkmNJ6ouOM13HOQn3aHmS9Nht6_m9Xu71x&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJ9VKHDM%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-2-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_1_price&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                            - generic [ref=f4e2425]:
+                              - generic [ref=f4e2426]: ₹3,29,900.00
+                              - generic [aria-hidden] [ref=f4e2427]:
+                                - text: ₹
+                                - generic [ref=f4e2428]:
+                                  - text: 3,29,900
+                                  - generic [ref=f4e2429]: .
+                                - text: "00"
+                    - listitem [ref=f4e2430]:
+                      - generic [ref=f4e2432]:
+                        - link [aria-hidden] [ref=f4e2433] [cursor=pointer]:
+                          - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVUMuO0lAYDk7UEW8TFmOCO4wsSE45vdACpjFt6ZRyKUxhGMPm5PScU9rIlE5PBwgLdj6BiY_gypXRF3DrwoULX8dERhO_1Zd8l__PVyTHX3-8-3Wv9NiQxGnPv7jwlL4zqxTE2mnIkniLZJU66XASRWdyFkWXTvtUHGrTvDO9Wd_M1EGXc1vwZWj4DyVFFRRVkJsCnN-ZmMGxYU-7tu9OSs-K9ynjb_NVWnp04fm2NXI8d253yp8LxRe3CuIMZyRCKcvIaolzhuJkGScMBXlYeoCv8G6VCHFSfs4DQJaY85iAQwQcjCAVK3dZglyv1uAByCN2xSggq-WSkTxeJWAtgdtbgOCMcpDiOMlZBsgqyVmSSy9N3_A6yBoNBrY1dUfeBLnewPVsNHBnNurYk_50NK6oxQI8-fL908ef3zrlJ38rD09UnkoQwlazqTYkGSqKKB25nt8-ssZWbVR61TENKz1zgWbszesDFsbePOe7BZwY_2NvLvbm-d40_pBF-cRa2FuntyZGbO34VtGlD4Xi-0KU5ylv1-ubzUb4t1J9kdbxpk7rJuz2Wm_mmjJ8nVKUUZQuI5rpeTXiGJEMxVSH1euY6qLWksWGBpVGlWe6CGTQCqnCVKICGMoSUEQxAC0cEEBD2tIohQRTWo11nPIqzlioj5u91Gmyvuf_BlE6vWI&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJ9XZ74M%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-3-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_2_bkgd&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                        - link [ref=f4e2435] [cursor=pointer]:
+                          - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVUMuO0lAYDk7UEW8TFmOCO4wsSE45vdACpjFt6ZRyKUxhGMPm5PScU9rIlE5PBwgLdj6BiY_gypXRF3DrwoULX8dERhO_1Zd8l__PVyTHX3-8-3Wv9NiQxGnPv7jwlL4zqxTE2mnIkniLZJU66XASRWdyFkWXTvtUHGrTvDO9Wd_M1EGXc1vwZWj4DyVFFRRVkJsCnN-ZmMGxYU-7tu9OSs-K9ynjb_NVWnp04fm2NXI8d253yp8LxRe3CuIMZyRCKcvIaolzhuJkGScMBXlYeoCv8G6VCHFSfs4DQJaY85iAQwQcjCAVK3dZglyv1uAByCN2xSggq-WSkTxeJWAtgdtbgOCMcpDiOMlZBsgqyVmSSy9N3_A6yBoNBrY1dUfeBLnewPVsNHBnNurYk_50NK6oxQI8-fL908ef3zrlJ38rD09UnkoQwlazqTYkGSqKKB25nt8-ssZWbVR61TENKz1zgWbszesDFsbePOe7BZwY_2NvLvbm-d40_pBF-cRa2FuntyZGbO34VtGlD4Xi-0KU5ylv1-ubzUb4t1J9kdbxpk7rJuz2Wm_mmjJ8nVKUUZQuI5rpeTXiGJEMxVSH1euY6qLWksWGBpVGlWe6CGTQCqnCVKICGMoSUEQxAC0cEEBD2tIohQRTWo11nPIqzlioj5u91Gmyvuf_BlE6vWI&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJ9XZ74M%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-3-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_2_img&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                          - img "iPhone 18 Pro Max (256 GB) - Black | 17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture" [ref=f4e2438]
+                        - generic [ref=f4e2439]:
+                          - link [aria-hidden] [ref=f4e2440] [cursor=pointer]:
+                            - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVUMuO0lAYDk7UEW8TFmOCO4wsSE45vdACpjFt6ZRyKUxhGMPm5PScU9rIlE5PBwgLdj6BiY_gypXRF3DrwoULX8dERhO_1Zd8l__PVyTHX3-8-3Wv9NiQxGnPv7jwlL4zqxTE2mnIkniLZJU66XASRWdyFkWXTvtUHGrTvDO9Wd_M1EGXc1vwZWj4DyVFFRRVkJsCnN-ZmMGxYU-7tu9OSs-K9ynjb_NVWnp04fm2NXI8d253yp8LxRe3CuIMZyRCKcvIaolzhuJkGScMBXlYeoCv8G6VCHFSfs4DQJaY85iAQwQcjCAVK3dZglyv1uAByCN2xSggq-WSkTxeJWAtgdtbgOCMcpDiOMlZBsgqyVmSSy9N3_A6yBoNBrY1dUfeBLnewPVsNHBnNurYk_50NK6oxQI8-fL908ef3zrlJ38rD09UnkoQwlazqTYkGSqKKB25nt8-ssZWbVR61TENKz1zgWbszesDFsbePOe7BZwY_2NvLvbm-d40_pBF-cRa2FuntyZGbO34VtGlD4Xi-0KU5ylv1-ubzUb4t1J9kdbxpk7rJuz2Wm_mmjJ8nVKUUZQuI5rpeTXiGJEMxVSH1euY6qLWksWGBpVGlWe6CGTQCqnCVKICGMoSUEQxAC0cEEBD2tIohQRTWo11nPIqzlioj5u91Gmyvuf_BlE6vWI&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJ9XZ74M%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-3-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_2_bkgd&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                          - link "iPhone 18 Pro Max (256 GB) - Black | 17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture" [ref=f4e2442] [cursor=pointer]:
+                            - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVUMuO0lAYDk7UEW8TFmOCO4wsSE45vdACpjFt6ZRyKUxhGMPm5PScU9rIlE5PBwgLdj6BiY_gypXRF3DrwoULX8dERhO_1Zd8l__PVyTHX3-8-3Wv9NiQxGnPv7jwlL4zqxTE2mnIkniLZJU66XASRWdyFkWXTvtUHGrTvDO9Wd_M1EGXc1vwZWj4DyVFFRRVkJsCnN-ZmMGxYU-7tu9OSs-K9ynjb_NVWnp04fm2NXI8d253yp8LxRe3CuIMZyRCKcvIaolzhuJkGScMBXlYeoCv8G6VCHFSfs4DQJaY85iAQwQcjCAVK3dZglyv1uAByCN2xSggq-WSkTxeJWAtgdtbgOCMcpDiOMlZBsgqyVmSSy9N3_A6yBoNBrY1dUfeBLnewPVsNHBnNurYk_50NK6oxQI8-fL908ef3zrlJ38rD09UnkoQwlazqTYkGSqKKB25nt8-ssZWbVR61TENKz1zgWbszesDFsbePOe7BZwY_2NvLvbm-d40_pBF-cRa2FuntyZGbO34VtGlD4Xi-0KU5ylv1-ubzUb4t1J9kdbxpk7rJuz2Wm_mmjJ8nVKUUZQuI5rpeTXiGJEMxVSH1euY6qLWksWGBpVGlWe6CGTQCqnCVKICGMoSUEQxAC0cEEBD2tIohQRTWo11nPIqzlioj5u91Gmyvuf_BlE6vWI&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJ9XZ74M%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-3-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_2_title&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                            - generic [ref=f4e2443]:
+                              - generic [ref=f4e2444]: iPhone 18 Pro Max (256 GB) - Black | 17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture
+                              - generic [aria-hidden] [ref=f4e2445]: iPhone 18 Pro Max (256 GB) - Black | 17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48…
+                          - link "Rated 4.7 out of 5 stars by 47 reviews. Go to review section." [ref=f4e2446] [cursor=pointer]:
+                            - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVUMuO0lAYDk7UEW8TFmOCO4wsSE45vdACpjFt6ZRyKUxhGMPm5PScU9rIlE5PBwgLdj6BiY_gypXRF3DrwoULX8dERhO_1Zd8l__PVyTHX3-8-3Wv9NiQxGnPv7jwlL4zqxTE2mnIkniLZJU66XASRWdyFkWXTvtUHGrTvDO9Wd_M1EGXc1vwZWj4DyVFFRRVkJsCnN-ZmMGxYU-7tu9OSs-K9ynjb_NVWnp04fm2NXI8d253yp8LxRe3CuIMZyRCKcvIaolzhuJkGScMBXlYeoCv8G6VCHFSfs4DQJaY85iAQwQcjCAVK3dZglyv1uAByCN2xSggq-WSkTxeJWAtgdtbgOCMcpDiOMlZBsgqyVmSSy9N3_A6yBoNBrY1dUfeBLnewPVsNHBnNurYk_50NK6oxQI8-fL908ef3zrlJ38rD09UnkoQwlazqTYkGSqKKB25nt8-ssZWbVR61TENKz1zgWbszesDFsbePOe7BZwY_2NvLvbm-d40_pBF-cRa2FuntyZGbO34VtGlD4Xi-0KU5ylv1-ubzUb4t1J9kdbxpk7rJuz2Wm_mmjJ8nVKUUZQuI5rpeTXiGJEMxVSH1euY6qLWksWGBpVGlWe6CGTQCqnCVKICGMoSUEQxAC0cEEBD2tIohQRTWo11nPIqzlioj5u91Gmyvuf_BlE6vWI&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJ9XZ74M%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-3-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_2_rating&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35#customerReviews
+                            - generic [ref=f4e2447]:
+                              - generic [ref=f4e2448]: "4.7"
+                              - generic [ref=f4e2449]: 4.7 out of 5 stars.
+                              - generic [ref=f4e2451]: "47"
+                          - link "₹1,79,900.00" [ref=f4e2453] [cursor=pointer]:
+                            - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVUMuO0lAYDk7UEW8TFmOCO4wsSE45vdACpjFt6ZRyKUxhGMPm5PScU9rIlE5PBwgLdj6BiY_gypXRF3DrwoULX8dERhO_1Zd8l__PVyTHX3-8-3Wv9NiQxGnPv7jwlL4zqxTE2mnIkniLZJU66XASRWdyFkWXTvtUHGrTvDO9Wd_M1EGXc1vwZWj4DyVFFRRVkJsCnN-ZmMGxYU-7tu9OSs-K9ynjb_NVWnp04fm2NXI8d253yp8LxRe3CuIMZyRCKcvIaolzhuJkGScMBXlYeoCv8G6VCHFSfs4DQJaY85iAQwQcjCAVK3dZglyv1uAByCN2xSggq-WSkTxeJWAtgdtbgOCMcpDiOMlZBsgqyVmSSy9N3_A6yBoNBrY1dUfeBLnewPVsNHBnNurYk_50NK6oxQI8-fL908ef3zrlJ38rD09UnkoQwlazqTYkGSqKKB25nt8-ssZWbVR61TENKz1zgWbszesDFsbePOe7BZwY_2NvLvbm-d40_pBF-cRa2FuntyZGbO34VtGlD4Xi-0KU5ylv1-ubzUb4t1J9kdbxpk7rJuz2Wm_mmjJ8nVKUUZQuI5rpeTXiGJEMxVSH1euY6qLWksWGBpVGlWe6CGTQCqnCVKICGMoSUEQxAC0cEEBD2tIohQRTWo11nPIqzlioj5u91Gmyvuf_BlE6vWI&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJ9XZ74M%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-3-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_2_price&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                            - generic [ref=f4e2455]:
+                              - generic [ref=f4e2456]: ₹1,79,900.00
+                              - generic [aria-hidden] [ref=f4e2457]:
+                                - text: ₹
+                                - generic [ref=f4e2458]:
+                                  - text: 1,79,900
+                                  - generic [ref=f4e2459]: .
+                                - text: "00"
+                    - listitem [ref=f4e2460]:
+                      - generic [ref=f4e2462]:
+                        - link [aria-hidden] [ref=f4e2463] [cursor=pointer]:
+                          - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVULuO00AUVVgBS3itUixS6IJIEWmS8SPOA1nIdryJ83CydjZI24zGM-OH8NpejzeJUqTjC5D4BCoqBD9AS0FBwe8gkQWJUx3pPO7VKZPjrz_e_bpXeayJwnLsXFzY8mS4qpWExqnPkmiLJIUOs5kbhmdSHoZvhv1TYdZZFoPlzfpmpUxHnJtNR4Ka81CUlaasNKVuE17ecXXvWDOXI9Ox3Mqz8n3K-NsizSqPLmzHNOZD27o0B9XPpfKLWwVxhnMSoozlJI1xwVCUxFHCkFf4lQf4Cu_SpBkl1efcAyTGnEcEHCLgYASZULvLEmTZjTb3QBGyK0YBSeOYkSJKE7AWwe0tQHBOOchwlBQsByRNCpYU4kvd0ewBMubTqWksrbntIsueWraJptbKRAPTnSzni5pSLsGTL98_ffz5bVB98rfy8ETtqQgh7HW7SluUoCwL4pFlO_0jY2E05pVXA10zsjMLdLS9fn1AoO31c74LoKv9j70e7PXzva79IUH1xAjM7XC8Jlpk7PhWVsUPpfL7UlgUGe-3WpvNpvlvpVaQtfCmRVs6HI11ZWaI7uuMopyiLA5prhb1kGNEchRRFdavI6oKnZ4ktDtQbtd5rgpABj2fykwhCoC-JAJZEDzQwx4B1Ke9DqWQYErrkYozXsc589VFd5wNu2xiO78BR8K9TQ&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJB6MC2S%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-4-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_3_bkgd&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                        - link [ref=f4e2465] [cursor=pointer]:
+                          - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVULuO00AUVVgBS3itUixS6IJIEWmS8SPOA1nIdryJ83CydjZI24zGM-OH8NpejzeJUqTjC5D4BCoqBD9AS0FBwe8gkQWJUx3pPO7VKZPjrz_e_bpXeayJwnLsXFzY8mS4qpWExqnPkmiLJIUOs5kbhmdSHoZvhv1TYdZZFoPlzfpmpUxHnJtNR4Ka81CUlaasNKVuE17ecXXvWDOXI9Ox3Mqz8n3K-NsizSqPLmzHNOZD27o0B9XPpfKLWwVxhnMSoozlJI1xwVCUxFHCkFf4lQf4Cu_SpBkl1efcAyTGnEcEHCLgYASZULvLEmTZjTb3QBGyK0YBSeOYkSJKE7AWwe0tQHBOOchwlBQsByRNCpYU4kvd0ewBMubTqWksrbntIsueWraJptbKRAPTnSzni5pSLsGTL98_ffz5bVB98rfy8ETtqQgh7HW7SluUoCwL4pFlO_0jY2E05pVXA10zsjMLdLS9fn1AoO31c74LoKv9j70e7PXzva79IUH1xAjM7XC8Jlpk7PhWVsUPpfL7UlgUGe-3WpvNpvlvpVaQtfCmRVs6HI11ZWaI7uuMopyiLA5prhb1kGNEchRRFdavI6oKnZ4ktDtQbtd5rgpABj2fykwhCoC-JAJZEDzQwx4B1Ke9DqWQYErrkYozXsc589VFd5wNu2xiO78BR8K9TQ&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJB6MC2S%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-4-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_3_img&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                          - img "iPhone 18 Pro Max (2 TB) - Glacier | 17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture" [ref=f4e2468]
+                        - generic [ref=f4e2469]:
+                          - link [aria-hidden] [ref=f4e2470] [cursor=pointer]:
+                            - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVULuO00AUVVgBS3itUixS6IJIEWmS8SPOA1nIdryJ83CydjZI24zGM-OH8NpejzeJUqTjC5D4BCoqBD9AS0FBwe8gkQWJUx3pPO7VKZPjrz_e_bpXeayJwnLsXFzY8mS4qpWExqnPkmiLJIUOs5kbhmdSHoZvhv1TYdZZFoPlzfpmpUxHnJtNR4Ka81CUlaasNKVuE17ecXXvWDOXI9Ox3Mqz8n3K-NsizSqPLmzHNOZD27o0B9XPpfKLWwVxhnMSoozlJI1xwVCUxFHCkFf4lQf4Cu_SpBkl1efcAyTGnEcEHCLgYASZULvLEmTZjTb3QBGyK0YBSeOYkSJKE7AWwe0tQHBOOchwlBQsByRNCpYU4kvd0ewBMubTqWksrbntIsueWraJptbKRAPTnSzni5pSLsGTL98_ffz5bVB98rfy8ETtqQgh7HW7SluUoCwL4pFlO_0jY2E05pVXA10zsjMLdLS9fn1AoO31c74LoKv9j70e7PXzva79IUH1xAjM7XC8Jlpk7PhWVsUPpfL7UlgUGe-3WpvNpvlvpVaQtfCmRVs6HI11ZWaI7uuMopyiLA5prhb1kGNEchRRFdavI6oKnZ4ktDtQbtd5rgpABj2fykwhCoC-JAJZEDzQwx4B1Ke9DqWQYErrkYozXsc589VFd5wNu2xiO78BR8K9TQ&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJB6MC2S%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-4-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_3_bkgd&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                          - link "iPhone 18 Pro Max (2 TB) - Glacier | 17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture" [ref=f4e2472] [cursor=pointer]:
+                            - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVULuO00AUVVgBS3itUixS6IJIEWmS8SPOA1nIdryJ83CydjZI24zGM-OH8NpejzeJUqTjC5D4BCoqBD9AS0FBwe8gkQWJUx3pPO7VKZPjrz_e_bpXeayJwnLsXFzY8mS4qpWExqnPkmiLJIUOs5kbhmdSHoZvhv1TYdZZFoPlzfpmpUxHnJtNR4Ka81CUlaasNKVuE17ecXXvWDOXI9Ox3Mqz8n3K-NsizSqPLmzHNOZD27o0B9XPpfKLWwVxhnMSoozlJI1xwVCUxFHCkFf4lQf4Cu_SpBkl1efcAyTGnEcEHCLgYASZULvLEmTZjTb3QBGyK0YBSeOYkSJKE7AWwe0tQHBOOchwlBQsByRNCpYU4kvd0ewBMubTqWksrbntIsueWraJptbKRAPTnSzni5pSLsGTL98_ffz5bVB98rfy8ETtqQgh7HW7SluUoCwL4pFlO_0jY2E05pVXA10zsjMLdLS9fn1AoO31c74LoKv9j70e7PXzva79IUH1xAjM7XC8Jlpk7PhWVsUPpfL7UlgUGe-3WpvNpvlvpVaQtfCmRVs6HI11ZWaI7uuMopyiLA5prhb1kGNEchRRFdavI6oKnZ4ktDtQbtd5rgpABj2fykwhCoC-JAJZEDzQwx4B1Ke9DqWQYErrkYozXsc589VFd5wNu2xiO78BR8K9TQ&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJB6MC2S%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-4-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_3_title&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                            - generic [ref=f4e2473]:
+                              - generic [ref=f4e2474]: iPhone 18 Pro Max (2 TB) - Glacier | 17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48MP Fusion Main Camera with Variable Aperture
+                              - generic [aria-hidden] [ref=f4e2475]: iPhone 18 Pro Max (2 TB) - Glacier | 17.42 cm (6.9″) Super Retina XDR Display with ProMotion, A20 Pro Chip, 48…
+                          - link "Rated 4.7 out of 5 stars by 47 reviews. Go to review section." [ref=f4e2476] [cursor=pointer]:
+                            - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVULuO00AUVVgBS3itUixS6IJIEWmS8SPOA1nIdryJ83CydjZI24zGM-OH8NpejzeJUqTjC5D4BCoqBD9AS0FBwe8gkQWJUx3pPO7VKZPjrz_e_bpXeayJwnLsXFzY8mS4qpWExqnPkmiLJIUOs5kbhmdSHoZvhv1TYdZZFoPlzfpmpUxHnJtNR4Ka81CUlaasNKVuE17ecXXvWDOXI9Ox3Mqz8n3K-NsizSqPLmzHNOZD27o0B9XPpfKLWwVxhnMSoozlJI1xwVCUxFHCkFf4lQf4Cu_SpBkl1efcAyTGnEcEHCLgYASZULvLEmTZjTb3QBGyK0YBSeOYkSJKE7AWwe0tQHBOOchwlBQsByRNCpYU4kvd0ewBMubTqWksrbntIsueWraJptbKRAPTnSzni5pSLsGTL98_ffz5bVB98rfy8ETtqQgh7HW7SluUoCwL4pFlO_0jY2E05pVXA10zsjMLdLS9fn1AoO31c74LoKv9j70e7PXzva79IUH1xAjM7XC8Jlpk7PhWVsUPpfL7UlgUGe-3WpvNpvlvpVaQtfCmRVs6HI11ZWaI7uuMopyiLA5prhb1kGNEchRRFdavI6oKnZ4ktDtQbtd5rgpABj2fykwhCoC-JAJZEDzQwx4B1Ke9DqWQYErrkYozXsc589VFd5wNu2xiO78BR8K9TQ&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJB6MC2S%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-4-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_3_rating&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35#customerReviews
+                            - generic [ref=f4e2477]:
+                              - generic [ref=f4e2478]: "4.7"
+                              - generic [ref=f4e2479]: 4.7 out of 5 stars.
+                              - generic [ref=f4e2481]: "47"
+                          - link "₹3,29,900.00" [ref=f4e2483] [cursor=pointer]:
+                            - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVULuO00AUVVgBS3itUixS6IJIEWmS8SPOA1nIdryJ83CydjZI24zGM-OH8NpejzeJUqTjC5D4BCoqBD9AS0FBwe8gkQWJUx3pPO7VKZPjrz_e_bpXeayJwnLsXFzY8mS4qpWExqnPkmiLJIUOs5kbhmdSHoZvhv1TYdZZFoPlzfpmpUxHnJtNR4Ka81CUlaasNKVuE17ecXXvWDOXI9Ox3Mqz8n3K-NsizSqPLmzHNOZD27o0B9XPpfKLWwVxhnMSoozlJI1xwVCUxFHCkFf4lQf4Cu_SpBkl1efcAyTGnEcEHCLgYASZULvLEmTZjTb3QBGyK0YBSeOYkSJKE7AWwe0tQHBOOchwlBQsByRNCpYU4kvd0ewBMubTqWksrbntIsueWraJptbKRAPTnSzni5pSLsGTL98_ffz5bVB98rfy8ETtqQgh7HW7SluUoCwL4pFlO_0jY2E05pVXA10zsjMLdLS9fn1AoO31c74LoKv9j70e7PXzva79IUH1xAjM7XC8Jlpk7PhWVsUPpfL7UlgUGe-3WpvNpvlvpVaQtfCmRVs6HI11ZWaI7uuMopyiLA5prhb1kGNEchRRFdavI6oKnZ4ktDtQbtd5rgpABj2fykwhCoC-JAJZEDzQwx4B1Ke9DqWQYErrkYozXsc589VFd5wNu2xiO78BR8K9TQ&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0HJB6MC2S%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1793157045%26sr%3D1-4-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DP8JpG8eKNR&ref_=sbx__sbtcd2_asin_3_price&pd_rd_w=cg3HW&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=xHena&pd_rd_r=8abc352d-344b-489c-b74d-9528a15fbf35
+                            - generic [ref=f4e2485]:
+                              - generic [ref=f4e2486]: ₹3,29,900.00
+                              - generic [aria-hidden] [ref=f4e2487]:
+                                - text: ₹
+                                - generic [ref=f4e2488]:
+                                  - text: 3,29,900
+                                  - generic [ref=f4e2489]: .
+                                - text: "00"
+          - generic [ref=f4e2497]:
+            - link "Sponsored video; click to navigate to featured product page. for iPhone 18 Pro Max Borderless 3D Clear Screen Protector | Full 3D curved borderless glass with 99.9% HD clarity, 9H protection and install kit." [ref=f4e2501] [cursor=pointer]:
+              - /url: https://aax-eu-zaz.amazon.in/x/c/JKLvl5iwU3odaqz49KXBeTQAAAGhgH0eZAoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAlwvRC/clv1c_ek-wBAHWIjbbTt2CJA6kSWg9o0MWfMKd6ktEz_c7pIoRw2vlstVp5JhyecQNpUM3rqon42bkUFq7KOWarR2PVR8vwra97pgLxx7bfmhZoz3GywGIFtiBLqN5GOpQbnIz5Twr9hYkT20LyRT6O0NGtb0BEUiciLXql_RQT5DoyJAVefscHNZ1rqj4S-YOw1Oki-aHSp2D7FFP0f2ln9hgYKqbOQe5LISk9J5XzSEzxrxRedfuLo6hvXGxcw4VHxQC_j0_Lq_oYyI6YQrCa7dxZEQBpKJiiN4cm_EFKQaq_BCrzA7SW_KiLrC94ayJQvGKAN2pSJI1J-iIy6fBqJu_DNRTCK8D1jhxpHFeEOy8Xsfb4tVgzNIGrqOdNwMxbSlC6mgaC_8rTf66to3Wx9dshGSHtL4F5WfLvTEKmpwQHFcmXr5YrZNWY3STD5eZdRzyjUC6OY9gH9k2lUqOn--9fi87Qa2w4ZSKlWY94-KUlxJ-4TqW-Oek5C5Cm2g1XNf-AlyThx4IvMX7x4YTZbaHYeSH0IXidiEdewjzVsMQ3hz9v6UP3x28oEY0c8pZjPkENmST-y1pbWO7Fcu6WyB0QRowCRcMlOo9D2NjECz5a0X7rnei1vy69Z9U_dQsYsNi6SijratdMrJdKET9y4lKhUxE7HFr0zVPPFEK7G2gaPtdd7z-hqZHa-u94WLaULpnkiS6BX5kO7phGT0GJlVTI_h0ZFQtODyNosdRypu0vi2b27niBe7jagRqo1jismezb8qvPMWoa7UGLlewisI1sXKhFPLS-TW1hwQnavbl6NZ8Owyi32iybrS6w1eONIYcncBHt0NrzhOK3jcHLf3AE1rE-eZRFkXeTZtK6bZ1Uf2jfG4ftVx44-LOKK3zYPGoCoFpRxJFqjwZgOO3V99PzpD7-7A0h6dqdpyeW6t8aY6ItsU65C9-wVD_ahDpPHIMG38Z6NPmglpUTkwjlBzJmF4LzTG_RL6MR2ApzlsGyf74ni-fWzI3t4Zh5S9mYBppdbiimJAlQwGgn-TrrxE4l9Ald-JLYy0GCPfP9NUcNcNR4xuVMz_I_6kPLtxCBBOAvXIl441W6qF0kRBX9RbORWFDsBxGdRy3kpxqR4YGnKwOPq5dgiW44FLmuU9Sma75oo8xo4I2iq0-mo4hE6qufGU_eItbTwymQlXR0QH4CakaDRxxSif11nt9a6rEeua1SY4mNrTgDJ3YsLWJPciGwuEBCyzZ7TNCzLuD51IfEsw3bvsUraZHURk5Aj6bOx5c6bhkQeVmIXcCDwXVJrMyhg7fipZoMdjtvRcnDUnljlT9FiaSgSnzkEHjeg8LEMluhbN1Zza9X6kpQsSAHn9AEfl49EumJp56a2fOnAqTMxOxSnBzskeROfQAWziJPIesQBQlsH9egKCqAQbPfJh0VRgsp8WROgiRDaQxtt2RjV0MXIja0neNIKjkqPQ3sRZqd6r9OhRcZUGZ_FZIVnTDPl_H0TDAAsDlTrUyVRxRE-2hnWsmx_AOM5Rqs71-ThxYs4qQ9j3YHjtluw9KIjd95U2nfcyC6RyJdrkx6YMibqkW5zCcOL699JL6nBa1p8gzBz-yJzVFP_nB3qo8Asae3aIxGVM9XTslAbB6__Xaa2sANrEHaxh_nrHoagtFAwyJnJJX60Eexy6CcM7Jjl30uRvgwN9spRavy1FsvmToSKUor121T5l9CJtHgIaCQQhrpDU0hDuIKqgqv18NMyqBRsTuyZi9qcJONv9P0kAo1jpErZHZ/https://www.amazon.in/dp/B0HJMPJH1V?aref=k9e3i7Ofc7&pd_rd_i=B0HJMPJH1V&pf_rd_p=2a10787e-cd6a-4538-8307-70bc4d12c644&pd_rd_wg=lFCy4&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_w=4RByG&pd_rd_r=1d1e1e1c-dc3c-4e5c-8ea9-0e03efc22698
+            - generic [ref=f4e2510]:
+              - link [aria-hidden] [ref=f4e2516] [cursor=pointer]:
+                - /url: https://aax-eu-zaz.amazon.in/x/c/JKLvl5iwU3odaqz49KXBeTQAAAGhgH0eZAoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAlwvRC/clv1c_ek-wBAHWIjbbTt2CJA6kSWg9o0MWfMKd6ktEz_c7pIoRw2vlstVp5JhyecQNpUM3rqon42bkUFq7KOWarR2PVR8vwra97pgLxx7bfmhZoz3GywGIFtiBLqN5GOpQbnIz5Twr9hYkT20LyRT6O0NGtb0BEUiciLXql_RQT5DoyJAVefscHNZ1rqj4S-YOw1Oki-aHSp2D7FFP0f2ln9hgYKqbOQe5LISk9J5XzSEzxrxRedfuLo6hvXGxcw4VHxQC_j0_Lq_oYyI6YQrCa7dxZEQBpKJiiN4cm_EFKQaq_BCrzA7SW_KiLrC94ayJQvGKAN2pSJI1J-iIy6fBqJu_DNRTCK8D1jhxpHFeEOy8Xsfb4tVgzNIGrqOdNwMxbSlC6mgaC_8rTf66to3Wx9dshGSHtL4F5WfLvTEKmpwQHFcmXr5YrZNWY3STD5eZdRzyjUC6OY9gH9k2lUqOn--9fi87Qa2w4ZSKlWY94-KUlxJ-4TqW-Oek5C5Cm2g1XNf-AlyThx4IvMX7x4YTZbaHYeSH0IXidiEdewjzVsMQ3hz9v6UP3x28oEY0c8pZjPkENmST-y1pbWO7Fcu6WyB0QRowCRcMlOo9D2NjECz5a0X7rnei1vy69Z9U_dQsYsNi6SijratdMrJdKET9y4lKhUxE7HFr0zVPPFEK7G2gaPtdd7z-hqZHa-u94WLaULpnkiS6BX5kO7phGT0GJlVTI_h0ZFQtODyNosdRypu0vi2b27niBe7jagRqo1jismezb8qvPMWoa7UGLlewisI1sXKhFPLS-TW1hwQnavbl6NZ8Owyi32iybrS6w1eONIYcncBHt0NrzhOK3jcHLf3AE1rE-eZRFkXeTZtK6bZ1Uf2jfG4ftVx44-LOKK3zYPGoCoFpRxJFqjwZgOO3V99PzpD7-7A0h6dqdpyeW6t8aY6ItsU65C9-wVD_ahDpPHIMG38Z6NPmglpUTkwjlBzJmF4LzTG_RL6MR2ApzlsGyf74ni-fWzI3t4Zh5S9mYBppdbiimJAlQwGgn-TrrxE4l9Ald-JLYy0GCPfP9NUcNcNR4xuVMz_I_6kPLtxCBBOAvXIl441W6qF0kRBX9RbORWFDsBxGdRy3kpxqR4YGnKwOPq5dgiW44FLmuU9Sma75oo8xo4I2iq0-mo4hE6qufGU_eItbTwymQlXR0QH4CakaDRxxSif11nt9a6rEeua1SY4mNrTgDJ3YsLWJPciGwuEBCyzZ7TNCzLuD51IfEsw3bvsUraZHURk5Aj6bOx5c6bhkQeVmIXcCDwXVJrMyhg7fipZoMdjtvRcnDUnljlT9FiaSgSnzkEHjeg8LEMluhbN1Zza9X6kpQsSAHn9AEfl49EumJp56a2fOnAqTMxOxSnBzskeROfQAWziJPIesQBQlsH9egKCqAQbPfJh0VRgsp8WROgiRDaQxtt2RjV0MXIja0neNIKjkqPQ3sRZqd6r9OhRcZUGZ_FZIVnTDPl_H0TDAAsDlTrUyVRxRE-2hnWsmx_AOM5Rqs71-ThxYs4qQ9j3YHjtluw9KIjd95U2nfcyC6RyJdrkx6YMibqkW5zCcOL699JL6nBa1p8gzBz-yJzVFP_nB3qo8Asae3aIxGVM9XTslAbB6__Xaa2sANrEHaxh_nrHoagtFAwyJnJJX60Eexy6CcM7Jjl30uRvgwN9spRavy1FsvmToSKUor121T5l9CJtHgIaCQQhrpDU0hDuIKqgqv18NMyqBRsTuyZi9qcJONv9P0kAo1jpErZHZ/https://www.amazon.in/CASENED-iPhone-Borderless-Screen-Protector/dp/B0HJMPJH1V/ref=sxbs_sbv_search_btf?aref=k9e3i7Ofc7&content-id=amzn1.sym.2a10787e-cd6a-4538-8307-70bc4d12c644%3Aamzn1.sym.2a10787e-cd6a-4538-8307-70bc4d12c644&crid=1CDQ2R5MPVJO6&cv_ct_cx=Iphone+18+pro+max&keywords=Iphone+18+pro+max&pd_rd_i=B0HJMPJH1V&pd_rd_r=1d1e1e1c-dc3c-4e5c-8ea9-0e03efc22698&pd_rd_w=4RByG&pd_rd_wg=lFCy4&pf_rd_p=2a10787e-cd6a-4538-8307-70bc4d12c644&pf_rd_r=2P8VRH66DH04N62F4EA1&qid=1793157045&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=1-1-f1821008-9dea-4812-b2b6-4a6e4a4f2d55
+              - generic [ref=f4e2521]:
+                - generic [ref=f4e2522]:
+                  - generic [ref=f4e2523]: Sponsored
+                  - link [ref=f4e2527] [cursor=pointer]:
+                    - /url: https://aax-eu-zaz.amazon.in/x/c/JKLvl5iwU3odaqz49KXBeTQAAAGhgH0eZAoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAlwvRC/clv1c_ek-wBAHWIjbbTt2CJA6kSWg9o0MWfMKd6ktEz_c7pIoRw2vlstVp5JhyecQNpUM3rqon42bkUFq7KOWarR2PVR8vwra97pgLxx7bfmhZoz3GywGIFtiBLqN5GOpQbnIz5Twr9hYkT20LyRT6O0NGtb0BEUiciLXql_RQT5DoyJAVefscHNZ1rqj4S-YOw1Oki-aHSp2D7FFP0f2ln9hgYKqbOQe5LISk9J5XzSEzxrxRedfuLo6hvXGxcw4VHxQC_j0_Lq_oYyI6YQrCa7dxZEQBpKJiiN4cm_EFKQaq_BCrzA7SW_KiLrC94ayJQvGKAN2pSJI1J-iIy6fBqJu_DNRTCK8D1jhxpHFeEOy8Xsfb4tVgzNIGrqOdNwMxbSlC6mgaC_8rTf66to3Wx9dshGSHtL4F5WfLvTEKmpwQHFcmXr5YrZNWY3STD5eZdRzyjUC6OY9gH9k2lUqOn--9fi87Qa2w4ZSKlWY94-KUlxJ-4TqW-Oek5C5Cm2g1XNf-AlyThx4IvMX7x4YTZbaHYeSH0IXidiEdewjzVsMQ3hz9v6UP3x28oEY0c8pZjPkENmST-y1pbWO7Fcu6WyB0QRowCRcMlOo9D2NjECz5a0X7rnei1vy69Z9U_dQsYsNi6SijratdMrJdKET9y4lKhUxE7HFr0zVPPFEK7G2gaPtdd7z-hqZHa-u94WLaULpnkiS6BX5kO7phGT0GJlVTI_h0ZFQtODyNosdRypu0vi2b27niBe7jagRqo1jismezb8qvPMWoa7UGLlewisI1sXKhFPLS-TW1hwQnavbl6NZ8Owyi32iybrS6w1eONIYcncBHt0NrzhOK3jcHLf3AE1rE-eZRFkXeTZtK6bZ1Uf2jfG4ftVx44-LOKK3zYPGoCoFpRxJFqjwZgOO3V99PzpD7-7A0h6dqdpyeW6t8aY6ItsU65C9-wVD_ahDpPHIMG38Z6NPmglpUTkwjlBzJmF4LzTG_RL6MR2ApzlsGyf74ni-fWzI3t4Zh5S9mYBppdbiimJAlQwGgn-TrrxE4l9Ald-JLYy0GCPfP9NUcNcNR4xuVMz_I_6kPLtxCBBOAvXIl441W6qF0kRBX9RbORWFDsBxGdRy3kpxqR4YGnKwOPq5dgiW44FLmuU9Sma75oo8xo4I2iq0-mo4hE6qufGU_eItbTwymQlXR0QH4CakaDRxxSif11nt9a6rEeua1SY4mNrTgDJ3YsLWJPciGwuEBCyzZ7TNCzLuD51IfEsw3bvsUraZHURk5Aj6bOx5c6bhkQeVmIXcCDwXVJrMyhg7fipZoMdjtvRcnDUnljlT9FiaSgSnzkEHjeg8LEMluhbN1Zza9X6kpQsSAHn9AEfl49EumJp56a2fOnAqTMxOxSnBzskeROfQAWziJPIesQBQlsH9egKCqAQbPfJh0VRgsp8WROgiRDaQxtt2RjV0MXIja0neNIKjkqPQ3sRZqd6r9OhRcZUGZ_FZIVnTDPl_H0TDAAsDlTrUyVRxRE-2hnWsmx_AOM5Rqs71-ThxYs4qQ9j3YHjtluw9KIjd95U2nfcyC6RyJdrkx6YMibqkW5zCcOL699JL6nBa1p8gzBz-yJzVFP_nB3qo8Asae3aIxGVM9XTslAbB6__Xaa2sANrEHaxh_nrHoagtFAwyJnJJX60Eexy6CcM7Jjl30uRvgwN9spRavy1FsvmToSKUor121T5l9CJtHgIaCQQhrpDU0hDuIKqgqv18NMyqBRsTuyZi9qcJONv9P0kAo1jpErZHZ/https://www.amazon.in/CASENED-iPhone-Borderless-Screen-Protector/dp/B0HJMPJH1V/ref=sxbs_sbv_search_btf?aref=k9e3i7Ofc7&content-id=amzn1.sym.2a10787e-cd6a-4538-8307-70bc4d12c644%3Aamzn1.sym.2a10787e-cd6a-4538-8307-70bc4d12c644&crid=1CDQ2R5MPVJO6&cv_ct_cx=Iphone+18+pro+max&keywords=Iphone+18+pro+max&pd_rd_i=B0HJMPJH1V&pd_rd_r=1d1e1e1c-dc3c-4e5c-8ea9-0e03efc22698&pd_rd_w=4RByG&pd_rd_wg=lFCy4&pf_rd_p=2a10787e-cd6a-4538-8307-70bc4d12c644&pf_rd_r=2P8VRH66DH04N62F4EA1&qid=1793157045&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=1-1-f1821008-9dea-4812-b2b6-4a6e4a4f2d55
+                    - heading "for iPhone 18 Pro Max Borderless 3D Clear Screen Protector | Full 3D curved borderless glass with 99.9% HD clarity, 9H protection and install kit." [level=2] [ref=f4e2528]
+                - generic [ref=f4e2530]:
+                  - text: "3.7"
+                  - button "3.7 out of 5 stars, rating details" [ref=f4e2532] [cursor=pointer]:
+                    - generic [ref=f4e2534]: 3.7 out of 5 stars
+                  - link "20 ratings" [ref=f4e2536] [cursor=pointer]:
+                    - /url: https://aax-eu-zaz.amazon.in/x/c/JKLvl5iwU3odaqz49KXBeTQAAAGhgH0eZAoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAlwvRC/clv1c_ek-wBAHWIjbbTt2CJA6kSWg9o0MWfMKd6ktEz_c7pIoRw2vlstVp5JhyecQNpUM3rqon42bkUFq7KOWarR2PVR8vwra97pgLxx7bfmhZoz3GywGIFtiBLqN5GOpQbnIz5Twr9hYkT20LyRT6O0NGtb0BEUiciLXql_RQT5DoyJAVefscHNZ1rqj4S-YOw1Oki-aHSp2D7FFP0f2ln9hgYKqbOQe5LISk9J5XzSEzxrxRedfuLo6hvXGxcw4VHxQC_j0_Lq_oYyI6YQrCa7dxZEQBpKJiiN4cm_EFKQaq_BCrzA7SW_KiLrC94ayJQvGKAN2pSJI1J-iIy6fBqJu_DNRTCK8D1jhxpHFeEOy8Xsfb4tVgzNIGrqOdNwMxbSlC6mgaC_8rTf66to3Wx9dshGSHtL4F5WfLvTEKmpwQHFcmXr5YrZNWY3STD5eZdRzyjUC6OY9gH9k2lUqOn--9fi87Qa2w4ZSKlWY94-KUlxJ-4TqW-Oek5C5Cm2g1XNf-AlyThx4IvMX7x4YTZbaHYeSH0IXidiEdewjzVsMQ3hz9v6UP3x28oEY0c8pZjPkENmST-y1pbWO7Fcu6WyB0QRowCRcMlOo9D2NjECz5a0X7rnei1vy69Z9U_dQsYsNi6SijratdMrJdKET9y4lKhUxE7HFr0zVPPFEK7G2gaPtdd7z-hqZHa-u94WLaULpnkiS6BX5kO7phGT0GJlVTI_h0ZFQtODyNosdRypu0vi2b27niBe7jagRqo1jismezb8qvPMWoa7UGLlewisI1sXKhFPLS-TW1hwQnavbl6NZ8Owyi32iybrS6w1eONIYcncBHt0NrzhOK3jcHLf3AE1rE-eZRFkXeTZtK6bZ1Uf2jfG4ftVx44-LOKK3zYPGoCoFpRxJFqjwZgOO3V99PzpD7-7A0h6dqdpyeW6t8aY6ItsU65C9-wVD_ahDpPHIMG38Z6NPmglpUTkwjlBzJmF4LzTG_RL6MR2ApzlsGyf74ni-fWzI3t4Zh5S9mYBppdbiimJAlQwGgn-TrrxE4l9Ald-JLYy0GCPfP9NUcNcNR4xuVMz_I_6kPLtxCBBOAvXIl441W6qF0kRBX9RbORWFDsBxGdRy3kpxqR4YGnKwOPq5dgiW44FLmuU9Sma75oo8xo4I2iq0-mo4hE6qufGU_eItbTwymQlXR0QH4CakaDRxxSif11nt9a6rEeua1SY4mNrTgDJ3YsLWJPciGwuEBCyzZ7TNCzLuD51IfEsw3bvsUraZHURk5Aj6bOx5c6bhkQeVmIXcCDwXVJrMyhg7fipZoMdjtvRcnDUnljlT9FiaSgSnzkEHjeg8LEMluhbN1Zza9X6kpQsSAHn9AEfl49EumJp56a2fOnAqTMxOxSnBzskeROfQAWziJPIesQBQlsH9egKCqAQbPfJh0VRgsp8WROgiRDaQxtt2RjV0MXIja0neNIKjkqPQ3sRZqd6r9OhRcZUGZ_FZIVnTDPl_H0TDAAsDlTrUyVRxRE-2hnWsmx_AOM5Rqs71-ThxYs4qQ9j3YHjtluw9KIjd95U2nfcyC6RyJdrkx6YMibqkW5zCcOL699JL6nBa1p8gzBz-yJzVFP_nB3qo8Asae3aIxGVM9XTslAbB6__Xaa2sANrEHaxh_nrHoagtFAwyJnJJX60Eexy6CcM7Jjl30uRvgwN9spRavy1FsvmToSKUor121T5l9CJtHgIaCQQhrpDU0hDuIKqgqv18NMyqBRsTuyZi9qcJONv9P0kAo1jpErZHZ/https://www.amazon.in/CASENED-iPhone-Borderless-Screen-Protector/dp/B0HJMPJH1V/ref=sxbs_sbv_search_btf?aref=k9e3i7Ofc7&content-id=amzn1.sym.2a10787e-cd6a-4538-8307-70bc4d12c644%3Aamzn1.sym.2a10787e-cd6a-4538-8307-70bc4d12c644&crid=1CDQ2R5MPVJO6&cv_ct_cx=Iphone+18+pro+max&keywords=Iphone+18+pro+max&pd_rd_i=B0HJMPJH1V&pd_rd_r=1d1e1e1c-dc3c-4e5c-8ea9-0e03efc22698&pd_rd_w=4RByG&pd_rd_wg=lFCy4&pf_rd_p=2a10787e-cd6a-4538-8307-70bc4d12c644&pf_rd_r=2P8VRH66DH04N62F4EA1&qid=1793157045&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=1-1-f1821008-9dea-4812-b2b6-4a6e4a4f2d55#customerReviews
+                    - text: (20)
+                - generic [ref=f4e2539]:
+                  - generic [ref=f4e2540]:
+                    - link "Great Indian Festival" [ref=f4e2542] [cursor=pointer]:
+                      - /url: /deals
+                    - generic [ref=f4e2548]:
+                      - generic [ref=f4e2549]: Price, product page
+                      - 'link "₹559 M.R.P: ₹999 M.R.P: ₹999" [ref=f4e2550] [cursor=pointer]':
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JKLvl5iwU3odaqz49KXBeTQAAAGhgH0eZAoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAlwvRC/clv1c_ek-wBAHWIjbbTt2CJA6kSWg9o0MWfMKd6ktEz_c7pIoRw2vlstVp5JhyecQNpUM3rqon42bkUFq7KOWarR2PVR8vwra97pgLxx7bfmhZoz3GywGIFtiBLqN5GOpQbnIz5Twr9hYkT20LyRT6O0NGtb0BEUiciLXql_RQT5DoyJAVefscHNZ1rqj4S-YOw1Oki-aHSp2D7FFP0f2ln9hgYKqbOQe5LISk9J5XzSEzxrxRedfuLo6hvXGxcw4VHxQC_j0_Lq_oYyI6YQrCa7dxZEQBpKJiiN4cm_EFKQaq_BCrzA7SW_KiLrC94ayJQvGKAN2pSJI1J-iIy6fBqJu_DNRTCK8D1jhxpHFeEOy8Xsfb4tVgzNIGrqOdNwMxbSlC6mgaC_8rTf66to3Wx9dshGSHtL4F5WfLvTEKmpwQHFcmXr5YrZNWY3STD5eZdRzyjUC6OY9gH9k2lUqOn--9fi87Qa2w4ZSKlWY94-KUlxJ-4TqW-Oek5C5Cm2g1XNf-AlyThx4IvMX7x4YTZbaHYeSH0IXidiEdewjzVsMQ3hz9v6UP3x28oEY0c8pZjPkENmST-y1pbWO7Fcu6WyB0QRowCRcMlOo9D2NjECz5a0X7rnei1vy69Z9U_dQsYsNi6SijratdMrJdKET9y4lKhUxE7HFr0zVPPFEK7G2gaPtdd7z-hqZHa-u94WLaULpnkiS6BX5kO7phGT0GJlVTI_h0ZFQtODyNosdRypu0vi2b27niBe7jagRqo1jismezb8qvPMWoa7UGLlewisI1sXKhFPLS-TW1hwQnavbl6NZ8Owyi32iybrS6w1eONIYcncBHt0NrzhOK3jcHLf3AE1rE-eZRFkXeTZtK6bZ1Uf2jfG4ftVx44-LOKK3zYPGoCoFpRxJFqjwZgOO3V99PzpD7-7A0h6dqdpyeW6t8aY6ItsU65C9-wVD_ahDpPHIMG38Z6NPmglpUTkwjlBzJmF4LzTG_RL6MR2ApzlsGyf74ni-fWzI3t4Zh5S9mYBppdbiimJAlQwGgn-TrrxE4l9Ald-JLYy0GCPfP9NUcNcNR4xuVMz_I_6kPLtxCBBOAvXIl441W6qF0kRBX9RbORWFDsBxGdRy3kpxqR4YGnKwOPq5dgiW44FLmuU9Sma75oo8xo4I2iq0-mo4hE6qufGU_eItbTwymQlXR0QH4CakaDRxxSif11nt9a6rEeua1SY4mNrTgDJ3YsLWJPciGwuEBCyzZ7TNCzLuD51IfEsw3bvsUraZHURk5Aj6bOx5c6bhkQeVmIXcCDwXVJrMyhg7fipZoMdjtvRcnDUnljlT9FiaSgSnzkEHjeg8LEMluhbN1Zza9X6kpQsSAHn9AEfl49EumJp56a2fOnAqTMxOxSnBzskeROfQAWziJPIesQBQlsH9egKCqAQbPfJh0VRgsp8WROgiRDaQxtt2RjV0MXIja0neNIKjkqPQ3sRZqd6r9OhRcZUGZ_FZIVnTDPl_H0TDAAsDlTrUyVRxRE-2hnWsmx_AOM5Rqs71-ThxYs4qQ9j3YHjtluw9KIjd95U2nfcyC6RyJdrkx6YMibqkW5zCcOL699JL6nBa1p8gzBz-yJzVFP_nB3qo8Asae3aIxGVM9XTslAbB6__Xaa2sANrEHaxh_nrHoagtFAwyJnJJX60Eexy6CcM7Jjl30uRvgwN9spRavy1FsvmToSKUor121T5l9CJtHgIaCQQhrpDU0hDuIKqgqv18NMyqBRsTuyZi9qcJONv9P0kAo1jpErZHZ/https://www.amazon.in/CASENED-iPhone-Borderless-Screen-Protector/dp/B0HJMPJH1V/ref=sxbs_sbv_search_btf?aref=k9e3i7Ofc7&content-id=amzn1.sym.2a10787e-cd6a-4538-8307-70bc4d12c644%3Aamzn1.sym.2a10787e-cd6a-4538-8307-70bc4d12c644&crid=1CDQ2R5MPVJO6&cv_ct_cx=Iphone+18+pro+max&keywords=Iphone+18+pro+max&pd_rd_i=B0HJMPJH1V&pd_rd_r=1d1e1e1c-dc3c-4e5c-8ea9-0e03efc22698&pd_rd_w=4RByG&pd_rd_wg=lFCy4&pf_rd_p=2a10787e-cd6a-4538-8307-70bc4d12c644&pf_rd_r=2P8VRH66DH04N62F4EA1&qid=1793157045&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=iphone+18+pro+max%2Caps%2C2126&sr=1-1-f1821008-9dea-4812-b2b6-4a6e4a4f2d55
+                        - generic [ref=f4e2551]:
+                          - generic [ref=f4e2552]: ₹559
+                          - generic [aria-hidden] [ref=f4e2553]: ₹559
+                        - generic [ref=f4e2554]: "M.R.P: ₹999"
+                        - generic [ref=f4e2555]:
+                          - text: "M.R.P:"
+                          - generic [ref=f4e2556]:
+                            - generic [ref=f4e2557]: ₹999
+                            - text: ₹999
+                      - text: (44% off)
+                    - generic [ref=f4e2561]:
+                      - generic [ref=f4e2562]: Up to 5% back with Amazon Pay ICICI card
+                      - generic [aria-hidden] [ref=f4e2563]: Up to 5% back with Amazon Pay ICI...
+                  - generic [ref=f4e2566]:
+                    - generic [ref=f4e2567]: FREE delivery Mon, 2 Nov
+                    - generic [ref=f4e2569]: Arrives before Diwali
+          - generic [ref=f4e2576]:
+            - generic "Related searches in Iphone 18 pro max" [ref=f4e2577]:
+              - heading "Related searches" [level=2] [ref=f4e2580]
+            - list [ref=f4e2582]:
+              - generic [ref=f4e2583]:
+                - listitem [ref=f4e2584]:
+                  - link "iphone 15 pro max" [ref=f4e2586] [cursor=pointer]:
+                    - /url: /s?k=iphone+15+pro+max&ref=rsl_sug_0_0&pd_rd_w=gU82I&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=lFCy4&pd_rd_r=1d1e1e1c-dc3c-4e5c-8ea9-0e03efc22698&qid=1793157045
+                - listitem [ref=f4e2592]:
+                  - link "iphone 13" [ref=f4e2594] [cursor=pointer]:
+                    - /url: /s?k=iphone+13&ref=rsl_sug_0_3&pd_rd_w=gU82I&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=lFCy4&pd_rd_r=1d1e1e1c-dc3c-4e5c-8ea9-0e03efc22698&qid=1793157045
+              - generic [ref=f4e2600]:
+                - listitem [ref=f4e2601]:
+                  - link "iphone 15" [ref=f4e2603] [cursor=pointer]:
+                    - /url: /s?k=iphone+15&ref=rsl_sug_0_1&pd_rd_w=gU82I&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=lFCy4&pd_rd_r=1d1e1e1c-dc3c-4e5c-8ea9-0e03efc22698&qid=1793157045
+                - listitem [ref=f4e2609]:
+                  - link "iphone 14" [ref=f4e2611] [cursor=pointer]:
+                    - /url: /s?k=iphone+14&ref=rsl_sug_0_4&pd_rd_w=gU82I&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=lFCy4&pd_rd_r=1d1e1e1c-dc3c-4e5c-8ea9-0e03efc22698&qid=1793157045
+              - generic [ref=f4e2617]:
+                - listitem [ref=f4e2618]:
+                  - link "iphone 14 pro max" [ref=f4e2620] [cursor=pointer]:
+                    - /url: /s?k=iphone+14+pro+max&ref=rsl_sug_0_2&pd_rd_w=gU82I&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=lFCy4&pd_rd_r=1d1e1e1c-dc3c-4e5c-8ea9-0e03efc22698&qid=1793157045
+                - listitem [ref=f4e2626]:
+                  - link "iphone 14 pro" [ref=f4e2628] [cursor=pointer]:
+                    - /url: /s?k=iphone+14+pro&ref=rsl_sug_0_5&pd_rd_w=gU82I&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=lFCy4&pd_rd_r=1d1e1e1c-dc3c-4e5c-8ea9-0e03efc22698&qid=1793157045
+          - navigation "pagination" [ref=f4e2636]:
+            - list [ref=f4e2638]:
+              - listitem [ref=f4e2639]:
+                - button "Previous" [disabled] [ref=f4e2641]
+              - listitem [ref=f4e2644]:
+                - button "Page 1" [ref=f4e2646]: "1"
+              - listitem [ref=f4e2647]:
+                - button "Go to page 2" [ref=f4e2649] [cursor=pointer]: "2"
+              - listitem [ref=f4e2650]:
+                - button "Go to page 3" [ref=f4e2652] [cursor=pointer]: "3"
+              - button [disabled] [ref=f4e2653]:
+                - img [aria-hidden] [ref=f4e2654]: ...
+              - button "20" [disabled] [ref=f4e2656]
+              - listitem [ref=f4e2657]:
+                - button "Go to next page, page 2" [ref=f4e2659] [cursor=pointer]: Next
+          - generic [ref=f4e2665]:
+            - generic [ref=f4e2666]:
+              - heading "Items related to your search" [ref=f4e2667]
+              - button "Leave feedback on Sponsored ad" [ref=f4e2672] [cursor=pointer]: Sponsored
+            - list [ref=f4e2677]:
+              - listitem [ref=f4e2678]:
+                - generic [ref=f4e2679]:
+                  - link [aria-hidden] [ref=f4e2680] [cursor=pointer]:
+                    - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFdUMtu2kAAVNJXSh9CHFKJU4RUDpEW1uu1sVNZldeY1BAgYCBtLtZiL2AF7GXXCTQHbj30Gyr12D_oL_RUqcd-Rs-9VBXpQ2rnNJrRaEaTC_c-fnnz9W7hkY2UQbM_HHZw63hU2lEO9ycsiddBUxnNmmkLXrQ5V5W1cbR_jpeO3m6gkxA3hyvoRabvL3v9BwjrFaxXVKMCz3d9Mt6z3cELt-_5hSe5exGTF1nKCw-Hnb7rdI873rlbL77dye1tnWCcTQr36YJep0klTopPZ5ICwcJ0sWBJRLM4TYBk4ioOGZCMinAGxtmkdIclgdc5RIvLeRaDsaBJBELBaBZfMfC7EYRURBJwGicZEyBMk4wlGcq3iROop_5JUHf91qB7WqrldmD-x4fP375_ul3M_0lvh6hczkuPEYRYUWvQVDQEdXTL6_SPbjmnzmG38KxObIc3PFCzN2T5C1N7Q3ryegp9-19syHRDehti35BpMe9M3fVx8yq0Y-darrGF3u_m3u3OsozLo2p1tVpV_h5TlVkqmKxyOmVVBJFWM1wH2A1iAKwYJiC6SwA0CbENrQ4bau35TSAQbGL5JLChjjQTYzRovVKcHkKNs1YT2BBrqm4q7T4eDrojzXVHaplHgYgCPp9FwsrKM0mDUARxZJmmbhqqYUJUnvOAyjiRFoFKUxt2Wh7eastLJl5bHp-lCTtQjAMu0oMFXW8tOU8z6_9nyzLiAY2CqUgvuYUgVLCJdGTWdNMoxxblsky3-4cUz1Xj7OWF9hNGe9mv&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fstores%2Fpage%2F202578EC-AFB8-4189-B6EB-09BBA85D0F37%3Fstore_ref%3DSB_A06259442TKY1CQ22FWKJ-A0453691MR4UTOV5EEV3%26pd_rd_plhdr%3Dt%26hsa_cr_id%3D9969838902%26lp_asins%3DB01J5UNKI4%26lp_query%3DIphone%2018%20pro%20max%26lp_slot%3Ddesktop-hsa-3psl%26sdp_ad_group%3D20014926297698%26i%3Daps%26aref%3DUa4l38WXk5&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=jc5jN&content-id=amzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892%3Aamzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_p=e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=ry8mX&pd_rd_r=2bc3d809-0ce4-40db-a394-9cbf1a8dc4d0
+                  - generic:
+                    - generic:
+                      - link [ref=f4e2681] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFdUMtu2kAAVNJXSh9CHFKJU4RUDpEW1uu1sVNZldeY1BAgYCBtLtZiL2AF7GXXCTQHbj30Gyr12D_oL_RUqcd-Rs-9VBXpQ2rnNJrRaEaTC_c-fnnz9W7hkY2UQbM_HHZw63hU2lEO9ycsiddBUxnNmmkLXrQ5V5W1cbR_jpeO3m6gkxA3hyvoRabvL3v9BwjrFaxXVKMCz3d9Mt6z3cELt-_5hSe5exGTF1nKCw-Hnb7rdI873rlbL77dye1tnWCcTQr36YJep0klTopPZ5ICwcJ0sWBJRLM4TYBk4ioOGZCMinAGxtmkdIclgdc5RIvLeRaDsaBJBELBaBZfMfC7EYRURBJwGicZEyBMk4wlGcq3iROop_5JUHf91qB7WqrldmD-x4fP375_ul3M_0lvh6hczkuPEYRYUWvQVDQEdXTL6_SPbjmnzmG38KxObIc3PFCzN2T5C1N7Q3ryegp9-19syHRDehti35BpMe9M3fVx8yq0Y-darrGF3u_m3u3OsozLo2p1tVpV_h5TlVkqmKxyOmVVBJFWM1wH2A1iAKwYJiC6SwA0CbENrQ4bau35TSAQbGL5JLChjjQTYzRovVKcHkKNs1YT2BBrqm4q7T4eDrojzXVHaplHgYgCPp9FwsrKM0mDUARxZJmmbhqqYUJUnvOAyjiRFoFKUxt2Wh7eastLJl5bHp-lCTtQjAMu0oMFXW8tOU8z6_9nyzLiAY2CqUgvuYUgVLCJdGTWdNMoxxblsky3-4cUz1Xj7OWF9hNGe9mv&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fstores%2Fpage%2F202578EC-AFB8-4189-B6EB-09BBA85D0F37%3Fstore_ref%3DSB_A06259442TKY1CQ22FWKJ-A0453691MR4UTOV5EEV3%26pd_rd_plhdr%3Dt%26hsa_cr_id%3D9969838902%26lp_asins%3DB01J5UNKI4%26lp_query%3DIphone%2018%20pro%20max%26lp_slot%3Ddesktop-hsa-3psl%26sdp_ad_group%3D20014926297698%26i%3Daps%26aref%3DUa4l38WXk5&ref_=sbx_be_s_3psl_mbd_mb0_asin&pd_rd_w=jc5jN&content-id=amzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892%3Aamzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_p=e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=ry8mX&pd_rd_r=2bc3d809-0ce4-40db-a394-9cbf1a8dc4d0
+                        - img "Sponsored ad from Microsoft Xbox. \"Explore New Xbox Games.\" Shop Microsoft Xbox." [ref=f4e2682]
+                      - generic:
+                        - link [aria-hidden]:
+                          - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFdUMtu2kAAVNJXSh9CHFKJU4RUDpEW1uu1sVNZldeY1BAgYCBtLtZiL2AF7GXXCTQHbj30Gyr12D_oL_RUqcd-Rs-9VBXpQ2rnNJrRaEaTC_c-fnnz9W7hkY2UQbM_HHZw63hU2lEO9ycsiddBUxnNmmkLXrQ5V5W1cbR_jpeO3m6gkxA3hyvoRabvL3v9BwjrFaxXVKMCz3d9Mt6z3cELt-_5hSe5exGTF1nKCw-Hnb7rdI873rlbL77dye1tnWCcTQr36YJep0klTopPZ5ICwcJ0sWBJRLM4TYBk4ioOGZCMinAGxtmkdIclgdc5RIvLeRaDsaBJBELBaBZfMfC7EYRURBJwGicZEyBMk4wlGcq3iROop_5JUHf91qB7WqrldmD-x4fP375_ul3M_0lvh6hczkuPEYRYUWvQVDQEdXTL6_SPbjmnzmG38KxObIc3PFCzN2T5C1N7Q3ryegp9-19syHRDehti35BpMe9M3fVx8yq0Y-darrGF3u_m3u3OsozLo2p1tVpV_h5TlVkqmKxyOmVVBJFWM1wH2A1iAKwYJiC6SwA0CbENrQ4bau35TSAQbGL5JLChjjQTYzRovVKcHkKNs1YT2BBrqm4q7T4eDrojzXVHaplHgYgCPp9FwsrKM0mDUARxZJmmbhqqYUJUnvOAyjiRFoFKUxt2Wh7eastLJl5bHp-lCTtQjAMu0oMFXW8tOU8z6_9nyzLiAY2CqUgvuYUgVLCJdGTWdNMoxxblsky3-4cUz1Xj7OWF9hNGe9mv&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fstores%2Fpage%2F202578EC-AFB8-4189-B6EB-09BBA85D0F37%3Fstore_ref%3DSB_A06259442TKY1CQ22FWKJ-A0453691MR4UTOV5EEV3%26pd_rd_plhdr%3Dt%26hsa_cr_id%3D9969838902%26lp_asins%3DB01J5UNKI4%26lp_query%3DIphone%2018%20pro%20max%26lp_slot%3Ddesktop-hsa-3psl%26sdp_ad_group%3D20014926297698%26i%3Daps%26aref%3DUa4l38WXk5&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=jc5jN&content-id=amzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892%3Aamzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_p=e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=ry8mX&pd_rd_r=2bc3d809-0ce4-40db-a394-9cbf1a8dc4d0
+                        - generic:
+                          - generic:
+                            - link "Microsoft Xbox" [ref=f4e2683] [cursor=pointer]:
+                              - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFdUMtu2kAAVNJXSh9CHFKJU4RUDpEW1uu1sVNZldeY1BAgYCBtLtZiL2AF7GXXCTQHbj30Gyr12D_oL_RUqcd-Rs-9VBXpQ2rnNJrRaEaTC_c-fnnz9W7hkY2UQbM_HHZw63hU2lEO9ycsiddBUxnNmmkLXrQ5V5W1cbR_jpeO3m6gkxA3hyvoRabvL3v9BwjrFaxXVKMCz3d9Mt6z3cELt-_5hSe5exGTF1nKCw-Hnb7rdI873rlbL77dye1tnWCcTQr36YJep0klTopPZ5ICwcJ0sWBJRLM4TYBk4ioOGZCMinAGxtmkdIclgdc5RIvLeRaDsaBJBELBaBZfMfC7EYRURBJwGicZEyBMk4wlGcq3iROop_5JUHf91qB7WqrldmD-x4fP375_ul3M_0lvh6hczkuPEYRYUWvQVDQEdXTL6_SPbjmnzmG38KxObIc3PFCzN2T5C1N7Q3ryegp9-19syHRDehti35BpMe9M3fVx8yq0Y-darrGF3u_m3u3OsozLo2p1tVpV_h5TlVkqmKxyOmVVBJFWM1wH2A1iAKwYJiC6SwA0CbENrQ4bau35TSAQbGL5JLChjjQTYzRovVKcHkKNs1YT2BBrqm4q7T4eDrojzXVHaplHgYgCPp9FwsrKM0mDUARxZJmmbhqqYUJUnvOAyjiRFoFKUxt2Wh7eastLJl5bHp-lCTtQjAMu0oMFXW8tOU8z6_9nyzLiAY2CqUgvuYUgVLCJdGTWdNMoxxblsky3-4cUz1Xj7OWF9hNGe9mv&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fstores%2Fpage%2F202578EC-AFB8-4189-B6EB-09BBA85D0F37%3Fstore_ref%3DSB_A06259442TKY1CQ22FWKJ-A0453691MR4UTOV5EEV3%26pd_rd_plhdr%3Dt%26hsa_cr_id%3D9969838902%26lp_asins%3DB01J5UNKI4%26lp_query%3DIphone%2018%20pro%20max%26lp_slot%3Ddesktop-hsa-3psl%26sdp_ad_group%3D20014926297698%26i%3Daps%26aref%3DUa4l38WXk5&ref_=sbx_be_s_3psl_mbd_mb0_logo&pd_rd_w=jc5jN&content-id=amzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892%3Aamzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_p=e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=ry8mX&pd_rd_r=2bc3d809-0ce4-40db-a394-9cbf1a8dc4d0
+                              - img "Microsoft Xbox" [ref=f4e2684]
+                            - link "Explore New Xbox Games" [ref=f4e2685] [cursor=pointer]:
+                              - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFdUMtu2kAAVNJXSh9CHFKJU4RUDpEW1uu1sVNZldeY1BAgYCBtLtZiL2AF7GXXCTQHbj30Gyr12D_oL_RUqcd-Rs-9VBXpQ2rnNJrRaEaTC_c-fnnz9W7hkY2UQbM_HHZw63hU2lEO9ycsiddBUxnNmmkLXrQ5V5W1cbR_jpeO3m6gkxA3hyvoRabvL3v9BwjrFaxXVKMCz3d9Mt6z3cELt-_5hSe5exGTF1nKCw-Hnb7rdI873rlbL77dye1tnWCcTQr36YJep0klTopPZ5ICwcJ0sWBJRLM4TYBk4ioOGZCMinAGxtmkdIclgdc5RIvLeRaDsaBJBELBaBZfMfC7EYRURBJwGicZEyBMk4wlGcq3iROop_5JUHf91qB7WqrldmD-x4fP375_ul3M_0lvh6hczkuPEYRYUWvQVDQEdXTL6_SPbjmnzmG38KxObIc3PFCzN2T5C1N7Q3ryegp9-19syHRDehti35BpMe9M3fVx8yq0Y-darrGF3u_m3u3OsozLo2p1tVpV_h5TlVkqmKxyOmVVBJFWM1wH2A1iAKwYJiC6SwA0CbENrQ4bau35TSAQbGL5JLChjjQTYzRovVKcHkKNs1YT2BBrqm4q7T4eDrojzXVHaplHgYgCPp9FwsrKM0mDUARxZJmmbhqqYUJUnvOAyjiRFoFKUxt2Wh7eastLJl5bHp-lCTtQjAMu0oMFXW8tOU8z6_9nyzLiAY2CqUgvuYUgVLCJdGTWdNMoxxblsky3-4cUz1Xj7OWF9hNGe9mv&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fstores%2Fpage%2F202578EC-AFB8-4189-B6EB-09BBA85D0F37%3Fstore_ref%3DSB_A06259442TKY1CQ22FWKJ-A0453691MR4UTOV5EEV3%26pd_rd_plhdr%3Dt%26hsa_cr_id%3D9969838902%26lp_asins%3DB01J5UNKI4%26lp_query%3DIphone%2018%20pro%20max%26lp_slot%3Ddesktop-hsa-3psl%26sdp_ad_group%3D20014926297698%26i%3Daps%26aref%3DUa4l38WXk5&ref_=sbx_be_s_3psl_mbd_mb0_hl&pd_rd_w=jc5jN&content-id=amzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892%3Aamzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_p=e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=ry8mX&pd_rd_r=2bc3d809-0ce4-40db-a394-9cbf1a8dc4d0
+                              - generic [ref=f4e2686]:
+                                - generic [ref=f4e2687]: Explore New Xbox Games
+                                - generic [aria-hidden] [ref=f4e2688]: Explore New Xbox Games
+                            - link "Shop Microsoft Xbox" [ref=f4e2689] [cursor=pointer]:
+                              - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFdUMtu2kAAVNJXSh9CHFKJU4RUDpEW1uu1sVNZldeY1BAgYCBtLtZiL2AF7GXXCTQHbj30Gyr12D_oL_RUqcd-Rs-9VBXpQ2rnNJrRaEaTC_c-fnnz9W7hkY2UQbM_HHZw63hU2lEO9ycsiddBUxnNmmkLXrQ5V5W1cbR_jpeO3m6gkxA3hyvoRabvL3v9BwjrFaxXVKMCz3d9Mt6z3cELt-_5hSe5exGTF1nKCw-Hnb7rdI873rlbL77dye1tnWCcTQr36YJep0klTopPZ5ICwcJ0sWBJRLM4TYBk4ioOGZCMinAGxtmkdIclgdc5RIvLeRaDsaBJBELBaBZfMfC7EYRURBJwGicZEyBMk4wlGcq3iROop_5JUHf91qB7WqrldmD-x4fP375_ul3M_0lvh6hczkuPEYRYUWvQVDQEdXTL6_SPbjmnzmG38KxObIc3PFCzN2T5C1N7Q3ryegp9-19syHRDehti35BpMe9M3fVx8yq0Y-darrGF3u_m3u3OsozLo2p1tVpV_h5TlVkqmKxyOmVVBJFWM1wH2A1iAKwYJiC6SwA0CbENrQ4bau35TSAQbGL5JLChjjQTYzRovVKcHkKNs1YT2BBrqm4q7T4eDrojzXVHaplHgYgCPp9FwsrKM0mDUARxZJmmbhqqYUJUnvOAyjiRFoFKUxt2Wh7eastLJl5bHp-lCTtQjAMu0oMFXW8tOU8z6_9nyzLiAY2CqUgvuYUgVLCJdGTWdNMoxxblsky3-4cUz1Xj7OWF9hNGe9mv&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fstores%2Fpage%2F202578EC-AFB8-4189-B6EB-09BBA85D0F37%3Fstore_ref%3DSB_A06259442TKY1CQ22FWKJ-A0453691MR4UTOV5EEV3%26pd_rd_plhdr%3Dt%26hsa_cr_id%3D9969838902%26lp_asins%3DB01J5UNKI4%26lp_query%3DIphone%2018%20pro%20max%26lp_slot%3Ddesktop-hsa-3psl%26sdp_ad_group%3D20014926297698%26i%3Daps%26aref%3DUa4l38WXk5&ref_=sbx_be_s_3psl_mbd_mb0_cta&pd_rd_w=jc5jN&content-id=amzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892%3Aamzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_p=e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=ry8mX&pd_rd_r=2bc3d809-0ce4-40db-a394-9cbf1a8dc4d0
+                              - generic [ref=f4e2692]:
+                                - text: Shop Microsoft
+                                - generic [ref=f4e2693]: Xbox
+              - listitem [ref=f4e2696]:
+                - generic [ref=f4e2697]:
+                  - link [aria-hidden] [ref=f4e2698] [cursor=pointer]:
+                    - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFdUE1v00AUVIuAEj4U5VCknKpI5FCxya7t2N4iC9mOE-I2n05K2ou1sTex1cTe7jptyCESEhz4GdyQOHFA_AyO8HNQCkWCOY303rw3M7lg7-v39z_uFR6bEhq6g9Gooxw3T0s76HB_SpN45bvoNHLTY3jRZkxGK_1ov9eWhk29nzRo3Vt0z0A8nqxRf_BQUtSKolZkvQLPdz1rsmc6w1fOoOUVnubuh1RcZCkrPBp1Bo7dbXZa5069-GEnt7ed-JNsWnhAFmSdJpU4KT6LBAGcBuliQZOQZHGaAEH5VRxQICjhQQQm2bR0lyZ-q3MoLZbzLAYTTpIQBJySLL6i4M9HEBAeCsBInGSUgyBNMppkUr5t2b7c8078uuMdD7u9kpbbQfl3P7-8_faxXszfqrdGZCbmpScShAjjGlIw0rAu3Wl1Bkd37J592C28qFumzRotoJkb6_I3ZubG6ov1DHrmv9hYs43V31jmDZkV8_bMWTXdq8CM7bVYKYb0eTf3aTfKMiaOqtXr6-vK32KqIks5FVVGZrQqmZpW12wIsOnoQFGxArBcawALQtuUoaLpivXyRuBzOjU8yzchkpGk6JLXOlNPXccaYWcATCgjhHV5PHZf9zqNM6uDT8os9Hnos3kUciMrR4L4Affj0IDlOfOJiBNhYLlWUyQNyspzLKs61CGE8i1V8c3m5ZLyN0aLRWlCD5B-wHh6sCCr7RExTzPj_5rLImQ-Cf0ZT5fMkCBUIcQyhqqE9XJsECbKZBumNl66Xuy00fkv7ynbYg&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fstores%2Fpage%2F2A77D7C0-9AE8-4694-935F-B00CA304784B%3Fstore_ref%3DSB_A01312482SIY6VJEBU9ER-A0311983XXJWPNFYBN9L%26pd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26lp_asins%3D9355427034%2C9368080003%2C9368080690%26lp_query%3DIphone%2018%20pro%20max%26lp_slot%3Ddesktop-hsa-3psl%26sdp_ad_group%3D20060093906298%26i%3Daps%26aref%3D5XuJSiEM1Z&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=jc5jN&content-id=amzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892%3Aamzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_p=e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=ry8mX&pd_rd_r=2bc3d809-0ce4-40db-a394-9cbf1a8dc4d0
+                  - generic:
+                    - generic:
+                      - link [ref=f4e2699] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFdUE1v00AUVIuAEj4U5VCknKpI5FCxya7t2N4iC9mOE-I2n05K2ou1sTex1cTe7jptyCESEhz4GdyQOHFA_AyO8HNQCkWCOY303rw3M7lg7-v39z_uFR6bEhq6g9Gooxw3T0s76HB_SpN45bvoNHLTY3jRZkxGK_1ov9eWhk29nzRo3Vt0z0A8nqxRf_BQUtSKolZkvQLPdz1rsmc6w1fOoOUVnubuh1RcZCkrPBp1Bo7dbXZa5069-GEnt7ed-JNsWnhAFmSdJpU4KT6LBAGcBuliQZOQZHGaAEH5VRxQICjhQQQm2bR0lyZ-q3MoLZbzLAYTTpIQBJySLL6i4M9HEBAeCsBInGSUgyBNMppkUr5t2b7c8078uuMdD7u9kpbbQfl3P7-8_faxXszfqrdGZCbmpScShAjjGlIw0rAu3Wl1Bkd37J592C28qFumzRotoJkb6_I3ZubG6ov1DHrmv9hYs43V31jmDZkV8_bMWTXdq8CM7bVYKYb0eTf3aTfKMiaOqtXr6-vK32KqIks5FVVGZrQqmZpW12wIsOnoQFGxArBcawALQtuUoaLpivXyRuBzOjU8yzchkpGk6JLXOlNPXccaYWcATCgjhHV5PHZf9zqNM6uDT8os9Hnos3kUciMrR4L4Affj0IDlOfOJiBNhYLlWUyQNyspzLKs61CGE8i1V8c3m5ZLyN0aLRWlCD5B-wHh6sCCr7RExTzPj_5rLImQ-Cf0ZT5fMkCBUIcQyhqqE9XJsECbKZBumNl66Xuy00fkv7ynbYg&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fstores%2Fpage%2F2A77D7C0-9AE8-4694-935F-B00CA304784B%3Fstore_ref%3DSB_A01312482SIY6VJEBU9ER-A0311983XXJWPNFYBN9L%26pd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26lp_asins%3D9355427034%2C9368080003%2C9368080690%26lp_query%3DIphone%2018%20pro%20max%26lp_slot%3Ddesktop-hsa-3psl%26sdp_ad_group%3D20060093906298%26i%3Daps%26aref%3D5XuJSiEM1Z&ref_=sbx_be_s_3psl_mbd_mb1_logo&pd_rd_w=jc5jN&content-id=amzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892%3Aamzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_p=e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=ry8mX&pd_rd_r=2bc3d809-0ce4-40db-a394-9cbf1a8dc4d0
+                        - img "Shroff Publishers" [ref=f4e2700]
+                      - generic:
+                        - link [aria-hidden]:
+                          - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFdUE1v00AUVIuAEj4U5VCknKpI5FCxya7t2N4iC9mOE-I2n05K2ou1sTex1cTe7jptyCESEhz4GdyQOHFA_AyO8HNQCkWCOY303rw3M7lg7-v39z_uFR6bEhq6g9Gooxw3T0s76HB_SpN45bvoNHLTY3jRZkxGK_1ov9eWhk29nzRo3Vt0z0A8nqxRf_BQUtSKolZkvQLPdz1rsmc6w1fOoOUVnubuh1RcZCkrPBp1Bo7dbXZa5069-GEnt7ed-JNsWnhAFmSdJpU4KT6LBAGcBuliQZOQZHGaAEH5VRxQICjhQQQm2bR0lyZ-q3MoLZbzLAYTTpIQBJySLL6i4M9HEBAeCsBInGSUgyBNMppkUr5t2b7c8078uuMdD7u9kpbbQfl3P7-8_faxXszfqrdGZCbmpScShAjjGlIw0rAu3Wl1Bkd37J592C28qFumzRotoJkb6_I3ZubG6ov1DHrmv9hYs43V31jmDZkV8_bMWTXdq8CM7bVYKYb0eTf3aTfKMiaOqtXr6-vK32KqIks5FVVGZrQqmZpW12wIsOnoQFGxArBcawALQtuUoaLpivXyRuBzOjU8yzchkpGk6JLXOlNPXccaYWcATCgjhHV5PHZf9zqNM6uDT8os9Hnos3kUciMrR4L4Affj0IDlOfOJiBNhYLlWUyQNyspzLKs61CGE8i1V8c3m5ZLyN0aLRWlCD5B-wHh6sCCr7RExTzPj_5rLImQ-Cf0ZT5fMkCBUIcQyhqqE9XJsECbKZBumNl66Xuy00fkv7ynbYg&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fstores%2Fpage%2F2A77D7C0-9AE8-4694-935F-B00CA304784B%3Fstore_ref%3DSB_A01312482SIY6VJEBU9ER-A0311983XXJWPNFYBN9L%26pd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26lp_asins%3D9355427034%2C9368080003%2C9368080690%26lp_query%3DIphone%2018%20pro%20max%26lp_slot%3Ddesktop-hsa-3psl%26sdp_ad_group%3D20060093906298%26i%3Daps%26aref%3D5XuJSiEM1Z&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=jc5jN&content-id=amzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892%3Aamzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_p=e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=ry8mX&pd_rd_r=2bc3d809-0ce4-40db-a394-9cbf1a8dc4d0
+                        - generic:
+                          - generic:
+                            - link "Latest Books on Information Technology" [ref=f4e2701] [cursor=pointer]:
+                              - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFdUE1v00AUVIuAEj4U5VCknKpI5FCxya7t2N4iC9mOE-I2n05K2ou1sTex1cTe7jptyCESEhz4GdyQOHFA_AyO8HNQCkWCOY303rw3M7lg7-v39z_uFR6bEhq6g9Gooxw3T0s76HB_SpN45bvoNHLTY3jRZkxGK_1ov9eWhk29nzRo3Vt0z0A8nqxRf_BQUtSKolZkvQLPdz1rsmc6w1fOoOUVnubuh1RcZCkrPBp1Bo7dbXZa5069-GEnt7ed-JNsWnhAFmSdJpU4KT6LBAGcBuliQZOQZHGaAEH5VRxQICjhQQQm2bR0lyZ-q3MoLZbzLAYTTpIQBJySLL6i4M9HEBAeCsBInGSUgyBNMppkUr5t2b7c8078uuMdD7u9kpbbQfl3P7-8_faxXszfqrdGZCbmpScShAjjGlIw0rAu3Wl1Bkd37J592C28qFumzRotoJkb6_I3ZubG6ov1DHrmv9hYs43V31jmDZkV8_bMWTXdq8CM7bVYKYb0eTf3aTfKMiaOqtXr6-vK32KqIks5FVVGZrQqmZpW12wIsOnoQFGxArBcawALQtuUoaLpivXyRuBzOjU8yzchkpGk6JLXOlNPXccaYWcATCgjhHV5PHZf9zqNM6uDT8os9Hnos3kUciMrR4L4Affj0IDlOfOJiBNhYLlWUyQNyspzLKs61CGE8i1V8c3m5ZLyN0aLRWlCD5B-wHh6sCCr7RExTzPj_5rLImQ-Cf0ZT5fMkCBUIcQyhqqE9XJsECbKZBumNl66Xuy00fkv7ynbYg&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fstores%2Fpage%2F2A77D7C0-9AE8-4694-935F-B00CA304784B%3Fstore_ref%3DSB_A01312482SIY6VJEBU9ER-A0311983XXJWPNFYBN9L%26pd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26lp_asins%3D9355427034%2C9368080003%2C9368080690%26lp_query%3DIphone%2018%20pro%20max%26lp_slot%3Ddesktop-hsa-3psl%26sdp_ad_group%3D20060093906298%26i%3Daps%26aref%3D5XuJSiEM1Z&ref_=sbx_be_s_3psl_mbd_mb1_hl&pd_rd_w=jc5jN&content-id=amzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892%3Aamzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_p=e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=ry8mX&pd_rd_r=2bc3d809-0ce4-40db-a394-9cbf1a8dc4d0
+                              - generic [ref=f4e2702]:
+                                - generic [ref=f4e2703]: Latest Books on Information Technology
+                                - generic [aria-hidden] [ref=f4e2704]: Latest Books on Information Technology
+                            - link "Shop Shroff Publishers" [ref=f4e2705] [cursor=pointer]:
+                              - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFdUE1v00AUVIuAEj4U5VCknKpI5FCxya7t2N4iC9mOE-I2n05K2ou1sTex1cTe7jptyCESEhz4GdyQOHFA_AyO8HNQCkWCOY303rw3M7lg7-v39z_uFR6bEhq6g9Gooxw3T0s76HB_SpN45bvoNHLTY3jRZkxGK_1ov9eWhk29nzRo3Vt0z0A8nqxRf_BQUtSKolZkvQLPdz1rsmc6w1fOoOUVnubuh1RcZCkrPBp1Bo7dbXZa5069-GEnt7ed-JNsWnhAFmSdJpU4KT6LBAGcBuliQZOQZHGaAEH5VRxQICjhQQQm2bR0lyZ-q3MoLZbzLAYTTpIQBJySLL6i4M9HEBAeCsBInGSUgyBNMppkUr5t2b7c8078uuMdD7u9kpbbQfl3P7-8_faxXszfqrdGZCbmpScShAjjGlIw0rAu3Wl1Bkd37J592C28qFumzRotoJkb6_I3ZubG6ov1DHrmv9hYs43V31jmDZkV8_bMWTXdq8CM7bVYKYb0eTf3aTfKMiaOqtXr6-vK32KqIks5FVVGZrQqmZpW12wIsOnoQFGxArBcawALQtuUoaLpivXyRuBzOjU8yzchkpGk6JLXOlNPXccaYWcATCgjhHV5PHZf9zqNM6uDT8os9Hnos3kUciMrR4L4Affj0IDlOfOJiBNhYLlWUyQNyspzLKs61CGE8i1V8c3m5ZLyN0aLRWlCD5B-wHh6sCCr7RExTzPj_5rLImQ-Cf0ZT5fMkCBUIcQyhqqE9XJsECbKZBumNl66Xuy00fkv7ynbYg&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fstores%2Fpage%2F2A77D7C0-9AE8-4694-935F-B00CA304784B%3Fstore_ref%3DSB_A01312482SIY6VJEBU9ER-A0311983XXJWPNFYBN9L%26pd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26lp_asins%3D9355427034%2C9368080003%2C9368080690%26lp_query%3DIphone%2018%20pro%20max%26lp_slot%3Ddesktop-hsa-3psl%26sdp_ad_group%3D20060093906298%26i%3Daps%26aref%3D5XuJSiEM1Z&ref_=sbx_be_s_3psl_mbd_mb1_cta&pd_rd_w=jc5jN&content-id=amzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892%3Aamzn1.sym.e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_p=e3b1209d-74b7-4fc9-bd01-2d594919a892&pf_rd_r=2P8VRH66DH04N62F4EA1&pd_rd_wg=ry8mX&pd_rd_r=2bc3d809-0ce4-40db-a394-9cbf1a8dc4d0
+                              - generic [ref=f4e2708]:
+                                - text: Shop Shroff
+                                - generic [ref=f4e2709]: Publishers
+          - generic [ref=f4e2717]:
+            - heading "Need help?" [level=2] [ref=f4e2720]
+            - generic [ref=f4e2721]:
+              - link "Visit the help section" [ref=f4e2722] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=201889520
+              - text: or
+              - link "contact us" [ref=f4e2723] [cursor=pointer]:
+                - /url: /gp/help/customer/contact-us
+        - link "Go back to filtering menu" [ref=f4e2724] [cursor=pointer]:
+          - /url: "#s-skipLinkTargetForFilterOptions"
+      - dialog "Filters" [ref=f4e2725]:
+        - generic [ref=f4e2726]:
+          - link "Skip to main search results" [ref=f4e2727] [cursor=pointer]:
+            - /url: "#s-skipLinkTargetForMainSearchResults"
+          - generic [ref=f4e2733]:
+            - group [ref=f4e2734]:
+              - heading "Delivery Day" [level=2] [ref=f4e2735]
+              - list "Delivery Day" [ref=f4e2736]:
+                - listitem [ref=f4e2737]:
+                  - link "Apply the filter Get It Today to narrow results" [ref=f4e2739] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_90%3A6741117031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=6741116031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_90_1&ds=v1%3A3qGpTCI4mpbvrAj0LmDa5AUtjY7IymITah7hRCiykzU
+                    - checkbox [aria-hidden] [ref=f4e2742]
+                    - text: Get It Today
+                - listitem [ref=f4e2744]:
+                  - link "Apply the filter Get It by Tomorrow to narrow results" [ref=f4e2746] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_90%3A6741118031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=6741116031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_90_2&ds=v1%3A38H%2B0PpTpENDHMM34BTlZJu%2FaUalWjebURPDBfE3zxk
+                    - checkbox [aria-hidden] [ref=f4e2749]
+                    - text: Get It by Tomorrow
+                - listitem [ref=f4e2751]:
+                  - link "Apply the filter Get It in 2 Days to narrow results" [ref=f4e2753] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_90%3A20912642031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=6741116031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_90_3&ds=v1%3Aovx8MzUCcQ2lntgJU%2FCvusbfebTA1jl9UUj3%2Ba90UdM
+                    - checkbox [aria-hidden] [ref=f4e2756]
+                    - text: Get It in 2 Days
+              - heading "Eligible for Free Delivery" [level=2] [ref=f4e2758]
+              - list "Eligible for Free Delivery" [ref=f4e2759]:
+                - listitem [ref=f4e2760]:
+                  - link "Apply the filter Free Shipping to narrow results" [ref=f4e2762] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_free_shipping_eligible%3A205563695031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=205563694031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_free_shipping_eligible_1&ds=v1%3A3g2kpSh0a0bJ5x1Y93lr0D%2Bqr1F0Oqo2w7IsbaWjCUM
+                    - checkbox [aria-hidden] [ref=f4e2765]
+                    - text: Free Shipping
+                    - generic [ref=f4e2767]: Get FREE Shipping on eligible orders shipped by Amazon
+            - group [ref=f4e2768]:
+              - heading "Brands" [level=2] [ref=f4e2769]
+              - list "Brands" [ref=f4e2770]:
+                - listitem [ref=f4e2771]:
+                  - link "Apply the filter Apple to narrow results" [ref=f4e2773] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_123%3A110955&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=91049095031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_123_1&ds=v1%3AzPZo1%2FIVXcZdI5n9U%2BPZeXncYGvQQMX3bf%2FCItevfz4
+                    - checkbox [aria-hidden] [ref=f4e2776]
+                    - text: Apple
+                - listitem [ref=f4e2778]:
+                  - link "Apply the filter OPPO to narrow results" [ref=f4e2780] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_123%3A559198&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=91049095031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_123_2&ds=v1%3A4D3HLtF7RmokyRR3WbcumddW4vny5Nxj61dZRZla7wo
+                    - checkbox [aria-hidden] [ref=f4e2783]
+                    - text: OPPO
+            - group [ref=f4e2785]:
+              - heading "Customer Reviews" [level=2] [ref=f4e2786]
+              - list "Customer Reviews" [ref=f4e2787]:
+                - listitem [ref=f4e2788]:
+                  - link "Apply the filter 4 Stars & Up to narrow results" [ref=f4e2791] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_72%3A1318476031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=1318475031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_72_1&ds=v1%3A%2BbfcMmNPNkykGh4v6%2BUn4gYBcmFavvW0VL6%2FhgaS5CU
+                    - generic [ref=f4e2792]: 4 Stars
+                    - text: "& Up"
+            - group [ref=f4e2794]:
+              - heading "Storage Capacity" [level=2] [ref=f4e2795]
+              - list "Storage Capacity" [ref=f4e2796]:
+                - listitem [ref=f4e2797]:
+                  - link "Apply the filter 128 GB to narrow results" [ref=f4e2799] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1003492455111%3A81332994031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=44349045031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1003492455111_1&ds=v1%3A5RtypwikXEkcMr8Q5w8VS7QxsTqYiiI4JjQQQtSzqPU
+                    - checkbox [aria-hidden] [ref=f4e2802]
+                    - text: 128 GB
+                - listitem [ref=f4e2804]:
+                  - link "Apply the filter 256 GB to narrow results" [ref=f4e2806] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1003492455111%3A81332996031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=44349045031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1003492455111_2&ds=v1%3AvDRLoDUth%2Fykfym6Cow51XykI6FnLrLeJDUZLDZ0tLU
+                    - checkbox [aria-hidden] [ref=f4e2809]
+                    - text: 256 GB
+                - listitem [ref=f4e2811]:
+                  - link "Apply the filter 512 GB & above to narrow results" [ref=f4e2813] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1003492455111%3A92070749031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=44349045031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1003492455111_3&ds=v1%3A2S6jHhNnfJjkgxvmheyFB5am3Fn3gVsMH3HZpZjC79Q
+                    - checkbox [aria-hidden] [ref=f4e2816]
+                    - text: 512 GB & above
+            - group [ref=f4e2818]:
+              - heading "Item Condition" [level=2] [ref=f4e2819]
+              - list "Item Condition" [ref=f4e2820]:
+                - listitem [ref=f4e2821]:
+                  - link "Apply the filter New to narrow results" [ref=f4e2823] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_condition-type%3A8609960031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=8609959031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_condition-type_1&ds=v1%3AH31o5gw3UsfZFjXzbTIMUaOf7UbpOBqmG1YgDeQsxDE
+                    - checkbox [aria-hidden] [ref=f4e2826]
+                    - text: New
+            - group [ref=f4e2828]:
+              - heading "Cellular Technology" [level=2] [ref=f4e2829]
+              - list "Cellular Technology" [ref=f4e2830]:
+                - listitem [ref=f4e2831]:
+                  - link "Apply the filter 5G to narrow results" [ref=f4e2833] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1003469290111%3A33962382031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=33962288031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1003469290111_1&ds=v1%3Aqko%2BFcK4fxuxu1w8d6a4xCmKbJlkumFnglg5FjgkXUQ
+                    - checkbox [aria-hidden] [ref=f4e2836]
+                    - text: 5G
+            - group [ref=f4e2838]:
+              - generic [ref=f4e2839]:
+                - generic [ref=f4e2840]: Price
+                - generic [ref=f4e2843]:
+                  - generic [ref=f4e2844]:
+                    - generic [ref=f4e2845]: ₹52,900
+                    - generic [aria-hidden] [ref=f4e2846]: –
+                    - generic [ref=f4e2847]: ₹310,200+
+                  - generic [ref=f4e2850]:
+                    - generic:
+                      - slider "Minimum price": "0"
+                    - generic [ref=f4e2851]:
+                      - slider "Maximum price": "180"
+              - list [ref=f4e2852]:
+                - listitem [ref=f4e2853]:
+                  - link "Up to ₹180,000" [ref=f4e2855] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_36%3A-18000000&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=1318502031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_36_1&ds=v1%3AxUWNOkqUO0kBx30RK%2FeSDTVOtAYTXGSfeR04FG2VH%2B8
+                - listitem [ref=f4e2856]:
+                  - link "Over ₹180,000" [ref=f4e2858] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_36%3A18000000-&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=1318502031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_36_2&ds=v1%3AAapJ0VFG%2FnGJPFJDLxtGcyB7%2BDhGkYgMJOIAHG4i6J0
+            - group [ref=f4e2859]:
+              - heading "Availability" [level=2] [ref=f4e2860]
+              - list "Availability" [ref=f4e2861]:
+                - listitem [ref=f4e2862]:
+                  - link "Apply the filter Include Out of Stock to narrow results" [ref=f4e2864] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_availability%3A1318485031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=1318483031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_availability_2&ds=v1%3AA3zJ87qAuAebTeuSbWL2Ee%2Fu12nI5a%2Fd8obuIDqPZYc
+                    - checkbox [aria-hidden] [ref=f4e2867]
+                    - text: Include Out of Stock
+            - group [ref=f4e2869]:
+              - heading "Battery Capacity" [level=2] [ref=f4e2870]
+              - list "Battery Capacity" [ref=f4e2871]:
+                - listitem [ref=f4e2872]:
+                  - link "Apply the filter Up to 2,999 mAh to narrow results" [ref=f4e2874] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-101015098008111%3A91805328031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=91805324031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-101015098008111_1&ds=v1%3Aw8iUEibyF%2FIfrLDpaofhfl%2BYcfERVIyBBTKBsyutj20
+                    - checkbox [aria-hidden] [ref=f4e2877]
+                    - text: Up to 2,999 mAh
+            - group [ref=f4e2879]:
+              - heading "Discount" [level=2] [ref=f4e2880]
+              - list "Discount" [ref=f4e2881]:
+                - listitem [ref=f4e2882]:
+                  - link "10% Off or more" [ref=f4e2884] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_pct-off-with-tax%3A2665399031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=2665398031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_pct-off-with-tax_1&ds=v1%3A6nKJapVX9fVIYdFlmVUt%2BJwTLAHZ8MtpqLswvI7ijic
+                - listitem [ref=f4e2885]:
+                  - link "25% Off or more" [ref=f4e2887] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_pct-off-with-tax%3A2665400031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=2665398031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_pct-off-with-tax_2&ds=v1%3AOqS60DqZQHvq%2FN61RnkW1K9ia8rWQ4sIhYsizLLeaHk
+                - listitem [ref=f4e2888]:
+                  - generic [ref=f4e2889]: 35% Off or more
+                - listitem [ref=f4e2890]:
+                  - generic [ref=f4e2891]: 50% Off or more
+                - listitem [ref=f4e2892]:
+                  - generic [ref=f4e2893]: 60% Off or more
+                - listitem [ref=f4e2894]:
+                  - generic [ref=f4e2895]: 70% Off or more
+            - group [ref=f4e2896]:
+              - heading "RAM Size" [level=2] [ref=f4e2897]
+              - list "RAM Size" [ref=f4e2898]:
+                - listitem [ref=f4e2899]:
+                  - link "Apply the filter Up to 1.9 GB to narrow results" [ref=f4e2901] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1003495121111%3A44897294031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=44897277031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1003495121111_1&ds=v1%3AkeTiyM2Q5vT1Va1BHSGtmC02jkItvQyKNulxuK%2BAmmI
+                    - checkbox [aria-hidden] [ref=f4e2904]
+                    - text: Up to 1.9 GB
+                - listitem [ref=f4e2906]:
+                  - link "Apply the filter 8 to 9.9 GB to narrow results" [ref=f4e2908] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1003495121111%3A44897288031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=44897277031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1003495121111_2&ds=v1%3AuOuFlt6kMb8tlt2zK508XYZt2Y8Y3zQYAO%2FMOc5IrWE
+                    - checkbox [aria-hidden] [ref=f4e2911]
+                    - text: 8 to 9.9 GB
+            - group [ref=f4e2913]:
+              - heading "Screen Size" [level=2] [ref=f4e2914]
+              - list "Screen Size" [ref=f4e2915]:
+                - listitem [ref=f4e2916]:
+                  - link "Apply the filter 15 to 17.9 cm to narrow results" [ref=f4e2918] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_feature_browse-bin%3A212266964031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=212266959031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_feature_browse-bin_1&ds=v1%3AfXKFijxDwDx9IIAn56Ot19K17fSDjQWF2FYdqhQuzxY
+                    - checkbox [aria-hidden] [ref=f4e2921]
+                    - text: 15 to 17.9 cm
+            - group [ref=f4e2923]:
+              - heading "Colour" [level=2] [ref=f4e2924]
+              - list "Colour" [ref=f4e2925]:
+                - listitem [ref=f4e2926]:
+                  - generic:
+                    - link "Apply the filter Silver to narrow results":
+                      - /url: /s?k=Iphone+18+pro+max&rh=p_n_size_two_browse-vebin%3A15564010031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=15563994031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_size_two_browse-vebin_1&ds=v1%3AfZzhRKj6EY1GIdl7vwCe3zJK%2BR%2BEAw8ZL4KHSIx%2Bt0g
+                      - generic [ref=f4e2927] [cursor=pointer]
+                - listitem [ref=f4e2928]:
+                  - generic:
+                    - link "Apply the filter Purple to narrow results":
+                      - /url: /s?k=Iphone+18+pro+max&rh=p_n_size_two_browse-vebin%3A15564008031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=15563994031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_size_two_browse-vebin_2&ds=v1%3AAZx%2B6gpIk7a6vjUbAlN%2FaFmS1lz9goEKLksp%2FjUC9pg
+                      - generic [ref=f4e2929] [cursor=pointer]
+                - listitem [ref=f4e2930]:
+                  - generic:
+                    - link "Apply the filter Black to narrow results":
+                      - /url: /s?k=Iphone+18+pro+max&rh=p_n_size_two_browse-vebin%3A15563995031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=15563994031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_size_two_browse-vebin_3&ds=v1%3A0aQ0JWlFC1Xue95%2F3MG4lR0ev206UtZHThyoHn%2F4R4c
+                      - generic [ref=f4e2931] [cursor=pointer]
+                - listitem [ref=f4e2932]:
+                  - generic:
+                    - link "Apply the filter Orange to narrow results":
+                      - /url: /s?k=Iphone+18+pro+max&rh=p_n_size_two_browse-vebin%3A15564002031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=15563994031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_size_two_browse-vebin_4&ds=v1%3A%2FFOVUFtHBI3vqSmSqUtriVGwYRrqSXyiwMNbZ%2FQ2S6s
+                      - generic [ref=f4e2933] [cursor=pointer]
+            - group [ref=f4e2934]:
+              - heading "Mobile Phone Primary Camera Resolution" [level=2] [ref=f4e2935]
+              - list "Mobile Phone Primary Camera Resolution" [ref=f4e2936]:
+                - listitem [ref=f4e2937]:
+                  - link "Apply the filter 32 MP & Above to narrow results" [ref=f4e2939] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_feature_fourteen_browse-bin%3A21329559031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=21345983031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_feature_fourteen_browse-bin_1&ds=v1%3Axr76H23ESv0goCnkNq%2B1boJCHM9tYhAygaEPsNksHlM
+                    - checkbox [aria-hidden] [ref=f4e2942]
+                    - text: 32 MP & Above
+            - group [ref=f4e2944]:
+              - heading "Camera Resolution" [level=2] [ref=f4e2945]
+              - list "Camera Resolution" [ref=f4e2946]:
+                - listitem [ref=f4e2947]:
+                  - link "Apply the filter 20 MP & above to narrow results" [ref=f4e2949] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1004151207091%3A1898707031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=1898694031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1004151207091_1&ds=v1%3A5AcdWDQQDVPbqlTnHwvexEVO1lYBBR0n3zlE7iH7FVY
+                    - checkbox [aria-hidden] [ref=f4e2952]
+                    - text: 20 MP & above
+            - group [ref=f4e2954]:
+              - heading "Seller" [level=2] [ref=f4e2955]
+              - list "Seller" [ref=f4e2956]:
+                - listitem [ref=f4e2957]:
+                  - link "Apply the filter Clicktech Retail Private Ltd to narrow results" [ref=f4e2959] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_6%3AAJ6SIZC8YQDZX&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=1318474031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_6_1&ds=v1%3AEBmFRzye67icC261wPUcwLJX%2BDqqOrRVubaCU4la808
+                    - checkbox [aria-hidden] [ref=f4e2962]
+                    - text: Clicktech Retail Private Ltd
+            - group [ref=f4e2964]:
+              - heading "Processor Speed" [level=2] [ref=f4e2965]
+              - list "Processor Speed" [ref=f4e2966]:
+                - listitem [ref=f4e2967]:
+                  - link "Apply the filter Less Than 0.99 GHz to narrow results" [ref=f4e2969] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_feature_nine_browse-bin%3A8561128031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=8561123031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_feature_nine_browse-bin_1&ds=v1%3A5oWqCCVllaYzcoZWf3d2lgxawCBcyIJCs1UHEvQktlY
+                    - checkbox [aria-hidden] [ref=f4e2972]
+                    - text: Less Than 0.99 GHz
+                - listitem [ref=f4e2974]:
+                  - link "Apply the filter 2.5 GHz & Above to narrow results" [ref=f4e2976] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_feature_nine_browse-bin%3A8561127031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=8561123031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_feature_nine_browse-bin_2&ds=v1%3AvY5918jE0FaYGBKaLpKJWAt7u7pflDwvT4vxW4lw%2BYU
+                    - checkbox [aria-hidden] [ref=f4e2979]
+                    - text: 2.5 GHz & Above
+            - group [ref=f4e2981]:
+              - heading "SIM Card Slot Count" [level=2] [ref=f4e2982]
+              - list "SIM Card Slot Count" [ref=f4e2983]:
+                - listitem [ref=f4e2984]:
+                  - link "Apply the filter Dual SIM to narrow results" [ref=f4e2986] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1002989427111%3A27179459031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=27179439031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1002989427111_1&ds=v1%3AN4GdVpn3A1PcZWRYChRJD%2FiuVfQQk9BK%2FcZrkzwmKBU
+                    - checkbox [aria-hidden] [ref=f4e2989]
+                    - text: Dual SIM
+            - group [ref=f4e2991]:
+              - heading "Connector Type" [level=2] [ref=f4e2992]
+              - list "Connector Type" [ref=f4e2993]:
+                - listitem [ref=f4e2994]:
+                  - link "Apply the filter USB Type C to narrow results" [ref=f4e2996] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1002085485111%3A27403491031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=27403487031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1002085485111_1&ds=v1%3AbB5vgHpOVncD27Z39twW1tHRhCTE2gEYhXs0Gbddfk0
+                    - checkbox [aria-hidden] [ref=f4e2999]
+                    - text: USB Type C
+            - group [ref=f4e3001]:
+              - heading "Connectivity" [level=2] [ref=f4e3002]
+              - list "Connectivity" [ref=f4e3003]:
+                - listitem [ref=f4e3004]:
+                  - link "Apply the filter Bluetooth to narrow results" [ref=f4e3006] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1002112230111%3A27363277031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=27363274031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1002112230111_1&ds=v1%3A9MY7naX6gwqggWotxiff7zYVWh3MrX5k69C3HOS0Fnw
+                    - checkbox [aria-hidden] [ref=f4e3009]
+                    - text: Bluetooth
+                - listitem [ref=f4e3011]:
+                  - link "Apply the filter USB to narrow results" [ref=f4e3013] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1002112230111%3A27363276031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=27363274031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1002112230111_2&ds=v1%3AGmiPrEn1cn%2BCD7nSyEgPe9Bc36d9wlWJwlpbGs6XWQM
+                    - checkbox [aria-hidden] [ref=f4e3016]
+                    - text: USB
+                - listitem [ref=f4e3018]:
+                  - link "Apply the filter Wi-Fi to narrow results" [ref=f4e3020] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1002112230111%3A27363278031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=27363274031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1002112230111_3&ds=v1%3A6RKGnAHQNpGBYOOFohCyIRXjKSdgmGPVtKdPrIWFBEw
+                    - checkbox [aria-hidden] [ref=f4e3023]
+                    - text: Wi-Fi
+            - group [ref=f4e3025]:
+              - heading "Display Type" [level=2] [ref=f4e3026]
+              - list "Display Type" [ref=f4e3027]:
+                - listitem [ref=f4e3028]:
+                  - link "Apply the filter AMOLED to narrow results" [ref=f4e3030] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-101013595158111%3A66009619031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=66009617031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-101013595158111_1&ds=v1%3ArcIGfAteN2KPZhYtMsTWHjmOkKhaoyvXPww9ApVnvgk
+                    - checkbox [aria-hidden] [ref=f4e3033]
+                    - text: AMOLED
+                - listitem [ref=f4e3035]:
+                  - link "Apply the filter OLED to narrow results" [ref=f4e3037] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-101013595158111%3A66009620031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=66009617031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-101013595158111_2&ds=v1%3AAPsAWnx6x0a2v8KsGeC0ltpMh7IjBGhNpMVA57gSt30
+                    - checkbox [aria-hidden] [ref=f4e3040]
+                    - text: OLED
+            - group [ref=f4e3042]:
+              - heading "Front Camera Resolution" [level=2] [ref=f4e3043]
+              - list "Front Camera Resolution" [ref=f4e3044]:
+                - listitem [ref=f4e3045]:
+                  - link "Apply the filter 13.0 MP & above to narrow results" [ref=f4e3047] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1003565058111%3A61505197031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=61505195031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1003565058111_1&ds=v1%3AGXnndMQVYgtTmAVpj2xZeVMJYRnIfZvcqJ3BtG68sjY
+                    - checkbox [aria-hidden] [ref=f4e3050]
+                    - text: 13.0 MP & above
+            - group [ref=f4e3052]:
+              - heading "Wireless Network Technology" [level=2] [ref=f4e3053]
+              - list "Wireless Network Technology" [ref=f4e3054]:
+                - listitem [ref=f4e3055]:
+                  - link "Apply the filter Bluetooth to narrow results" [ref=f4e3057] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-101015498571111%3A207962825031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=100436133031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-101015498571111_1&ds=v1%3AvVTjwJnwyXAn64tByePP6ut7kx1XSHi1dnNo2AmcdpQ
+                    - checkbox [aria-hidden] [ref=f4e3060]
+                    - text: Bluetooth
+                - listitem [ref=f4e3062]:
+                  - link "Apply the filter GSM to narrow results" [ref=f4e3064] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-101015498571111%3A100436155031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=100436133031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-101015498571111_2&ds=v1%3AFhLA11zT1BLN6a8pc9uBTFvXpVSTZ8k7%2FmLkDgsjtuc
+                    - checkbox [aria-hidden] [ref=f4e3067]
+                    - text: GSM
+                - listitem [ref=f4e3069]:
+                  - link "Apply the filter LTE to narrow results" [ref=f4e3071] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-101015498571111%3A100436153031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=100436133031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-101015498571111_3&ds=v1%3A9Gcq4zd49WYu%2BhinyWAn1ej%2BlrcZIOrQpqzyk2XgIsg
+                    - checkbox [aria-hidden] [ref=f4e3074]
+                    - text: LTE
+                - listitem [ref=f4e3076]:
+                  - link "Apply the filter Wi-Fi to narrow results" [ref=f4e3078] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-101015498571111%3A100436151031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=100436133031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-101015498571111_4&ds=v1%3Awh9tkAXIyY1haNrUWkMm3HrLUEPDAiYefrTQVLaBuFM
+                    - checkbox [aria-hidden] [ref=f4e3081]
+                    - text: Wi-Fi
+            - group [ref=f4e3083]:
+              - heading "GPS Navigation" [level=2] [ref=f4e3084]
+              - list "GPS Navigation" [ref=f4e3085]:
+                - listitem [ref=f4e3086]:
+                  - link "Apply the filter True to narrow results" [ref=f4e3088] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-101015364874111%3A96329643031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=96329629031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-101015364874111_1&ds=v1%3Apxm5a5AJUa6OQCuJlHoj82AjPN%2BGE47t9NrngjVThyg
+                    - checkbox [aria-hidden] [ref=f4e3091]
+                    - text: "True"
+            - group [ref=f4e3093]:
+              - heading "Battery Life" [level=2] [ref=f4e3094]
+              - list "Battery Life" [ref=f4e3095]:
+                - listitem [ref=f4e3096]:
+                  - link "Apply the filter 19 h & above to narrow results" [ref=f4e3098] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1003486052111%3A42062130031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=42062008031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1003486052111_1&ds=v1%3A4zGmOlRPYiG1iGvC3BDLcMvyXFV%2BCCO0A%2B%2FDUjmGlvU
+                    - checkbox [aria-hidden] [ref=f4e3101]
+                    - text: 19 h & above
+            - group [ref=f4e3103]:
+              - heading "Security Feature" [level=2] [ref=f4e3104]
+              - list "Security Feature" [ref=f4e3105]:
+                - listitem [ref=f4e3106]:
+                  - link "Apply the filter Face Recognition to narrow results" [ref=f4e3108] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1002085472111%3A27355807031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=27355796031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1002085472111_1&ds=v1%3AcZBNiUZ%2FJnZXOaC08lFwe4DqaZngdcdy%2F5iYz4j%2FlLM
+                    - checkbox [aria-hidden] [ref=f4e3111]
+                    - text: Face Recognition
+                - listitem [ref=f4e3113]:
+                  - link "Apply the filter Fingerprint Recognition to narrow results" [ref=f4e3115] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1002085472111%3A27355812031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=27355796031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1002085472111_2&ds=v1%3A1bUhJRh2qZg57GLHm2JM6I2qJgU%2BTn6rHdMiDlGbCsU
+                    - checkbox [aria-hidden] [ref=f4e3118]
+                    - text: Fingerprint Recognition
+            - group [ref=f4e3120]:
+              - heading "Country of Origin" [level=2] [ref=f4e3121]
+              - list "Country of Origin" [ref=f4e3122]:
+                - listitem [ref=f4e3123]:
+                  - link "Apply the filter India to narrow results" [ref=f4e3125] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_country_of_origin-bin%3AIN&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=215263484031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_country_of_origin-bin_1&ds=v1%3A51KVZ3y%2B08hcHpJDuWTwGsKFui74AuS%2FsUEGz7ZYWAw
+                    - checkbox [aria-hidden] [ref=f4e3128]
+                    - text: India
+                - listitem [ref=f4e3130]:
+                  - link "Apply the filter China to narrow results" [ref=f4e3132] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_country_of_origin-bin%3ACN&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=215263484031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_country_of_origin-bin_2&ds=v1%3A3edrJHIjBKjE9oBwMEp60%2F7RNh%2BD19fEcd08YmkOFPg
+                    - checkbox [aria-hidden] [ref=f4e3135]
+                    - text: China
+            - group [ref=f4e3137]:
+              - heading "Weight" [level=2] [ref=f4e3138]
+              - list "Weight" [ref=f4e3139]:
+                - listitem [ref=f4e3140]:
+                  - link "Apply the filter 142 to 197.9 g to narrow results" [ref=f4e3142] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1003491669111%3A42659588031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=42659587031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1003491669111_1&ds=v1%3AMuM2f%2F5zNPuvFKnZa%2FWV8xNsAGUIaOkW9LVReNU8IXE
+                    - checkbox [aria-hidden] [ref=f4e3145]
+                    - text: 142 to 197.9 g
+                - listitem [ref=f4e3147]:
+                  - link "Apply the filter 198 to 254.9 g to narrow results" [ref=f4e3149] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1003491669111%3A42659589031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=42659587031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1003491669111_2&ds=v1%3A%2BRG4DC0Oo1Sdbif99Vp%2FrGywD9nqXL6ysu9hB6aKN5U
+                    - checkbox [aria-hidden] [ref=f4e3152]
+                    - text: 198 to 254.9 g
+            - group [ref=f4e3154]:
+              - heading "Input" [level=2] [ref=f4e3155]
+              - list "Input" [ref=f4e3156]:
+                - listitem [ref=f4e3157]:
+                  - link "Apply the filter Touchscreen to narrow results" [ref=f4e3159] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1002097072111%3A27362061031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=27362059031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1002097072111_1&ds=v1%3AMFUkcsNL80t3%2BeF4YyzPjTcefJhZMGEP49qt%2FWymI1g
+                    - checkbox [aria-hidden] [ref=f4e3162]
+                    - text: Touchscreen
+            - group [ref=f4e3164]:
+              - heading "Rear Camera Photo Sensor Resolution" [level=2] [ref=f4e3165]
+              - list "Rear Camera Photo Sensor Resolution" [ref=f4e3166]:
+                - listitem [ref=f4e3167]:
+                  - link "Apply the filter 16 MP & Above to narrow results" [ref=f4e3169] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1003477899111%3A42253778031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=42253749031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1003477899111_1&ds=v1%3AMYPqVGUANBbkNYHuEatPjPCocz%2BQ9qMgNS2yJR6ZzUU
+                    - checkbox [aria-hidden] [ref=f4e3172]
+                    - text: 16 MP & Above
+            - group [ref=f4e3174]:
+              - heading "Sim Card Size" [level=2] [ref=f4e3175]
+              - list "Sim Card Size" [ref=f4e3176]:
+                - listitem [ref=f4e3177]:
+                  - link "Apply the filter Nano to narrow results" [ref=f4e3179] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1002989370111%3A27179455031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=27179438031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1002989370111_1&ds=v1%3AVOLaFhZBohIeoQTNefoPwSrPyQ9PyTgzw0AcajL6p24
+                    - checkbox [aria-hidden] [ref=f4e3182]
+                    - text: Nano
+            - group [ref=f4e3184]:
+              - heading "New Arrivals" [level=2] [ref=f4e3185]
+              - list "New Arrivals" [ref=f4e3186]:
+                - listitem [ref=f4e3187]:
+                  - link "Last 30 days" [ref=f4e3189] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_date_first_available_absolute%3A1318487031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=1318486031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_date_first_available_absolute_1&ds=v1%3AAKsixaR%2B6esKAmNCzvX3VnwuL%2BbxNPbyuoWi%2BxsSlUk
+                - listitem [ref=f4e3190]:
+                  - link "Last 90 days" [ref=f4e3192] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_date_first_available_absolute%3A1318488031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=1318486031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_date_first_available_absolute_2&ds=v1%3AkeRUXpXW3qzZTGH1SetaKd0Yavvb5QEWugEUyPGCgcA
+            - group [ref=f4e3193]:
+              - heading "Video Capture Resolution" [level=2] [ref=f4e3194]
+              - list "Video Capture Resolution" [ref=f4e3195]:
+                - listitem [ref=f4e3196]:
+                  - link "Apply the filter 4k to narrow results" [ref=f4e3198] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-1003305462111%3A28430294031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=28430291031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-1003305462111_1&ds=v1%3AYt5uy2moxp1AJ%2BuHXfg0R07zX1bQ7IVgh1wP1JEOXQw
+                    - checkbox [aria-hidden] [ref=f4e3201]
+                    - text: 4k
+            - group [ref=f4e3203]:
+              - heading "Included Components" [level=2] [ref=f4e3204]
+              - list "Included Components" [ref=f4e3205]:
+                - listitem [ref=f4e3206]:
+                  - link "Apply the filter Phone Case to narrow results" [ref=f4e3208] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-101013594324111%3A66008623031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=66008593031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-101013594324111_1&ds=v1%3AlETcZxGSdZLaAgtap4gsb69UrWOanhzc9zhOEcdtEDs
+                    - checkbox [aria-hidden] [ref=f4e3211]
+                    - text: Phone Case
+                - listitem [ref=f4e3213]:
+                  - link "Apply the filter Power Adapter to narrow results" [ref=f4e3215] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-101013594324111%3A66008624031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=66008593031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-101013594324111_2&ds=v1%3Ax%2F9qsHhsDSnENjAnJE7O2eYHNau3Y3u7rGwxu7uEJH4
+                    - checkbox [aria-hidden] [ref=f4e3218]
+                    - text: Power Adapter
+                - listitem [ref=f4e3220]:
+                  - link "Apply the filter SIM Tray Ejector to narrow results" [ref=f4e3222] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-101013594324111%3A66008617031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=66008593031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-101013594324111_3&ds=v1%3AuOJ%2BrsSst%2FFtlT7byZwD%2FJBnxwhG%2F1JMkZ%2FeplRqW%2BY
+                    - checkbox [aria-hidden] [ref=f4e3225]
+                    - text: SIM Tray Ejector
+                - listitem [ref=f4e3227]:
+                  - link "Apply the filter USB Cable to narrow results" [ref=f4e3229] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-101013594324111%3A66008618031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=66008593031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-101013594324111_4&ds=v1%3A9HUTin9e61PDZ1XHPeYKYoGepqUoOemuGzs3varhwbE
+                    - checkbox [aria-hidden] [ref=f4e3232]
+                    - text: USB Cable
+            - group [ref=f4e3234]:
+              - heading "Supported Satellite Navigation System" [level=2] [ref=f4e3235]
+              - list "Supported Satellite Navigation System" [ref=f4e3236]:
+                - listitem [ref=f4e3237]:
+                  - link "Apply the filter BeiDou to narrow results" [ref=f4e3239] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-101015498432111%3A100424900031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=100424895031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-101015498432111_1&ds=v1%3A1WaRuFVyaYEOcO7866MfufqfxMI2N76g3MgaIVUZPkA
+                    - checkbox [aria-hidden] [ref=f4e3242]
+                    - text: BeiDou
+                - listitem [ref=f4e3244]:
+                  - link "Apply the filter GLONASS to narrow results" [ref=f4e3246] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-101015498432111%3A100424903031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=100424895031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-101015498432111_2&ds=v1%3AuYWouRWxa3JyohAsGt2YBKoVYMUlSFIY91vtCEB%2BfWk
+                    - checkbox [aria-hidden] [ref=f4e3249]
+                    - text: GLONASS
+                - listitem [ref=f4e3251]:
+                  - link "Apply the filter GPS to narrow results" [ref=f4e3253] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-101015498432111%3A100424905031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=100424895031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-101015498432111_3&ds=v1%3AusdoFWBnycx6UtMV%2FuCxIgeOE1HUFgV0W0f6g44NHug
+                    - checkbox [aria-hidden] [ref=f4e3256]
+                    - text: GPS
+                - listitem [ref=f4e3258]:
+                  - link "Apply the filter Galileo to narrow results" [ref=f4e3260] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-101015498432111%3A100424904031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=100424895031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-101015498432111_4&ds=v1%3AD0Bf49ivFLLOKD96GecjtVhLIB62mNtZOTPW8ZKaSMY
+                    - checkbox [aria-hidden] [ref=f4e3263]
+                    - text: Galileo
+            - group [ref=f4e3265]:
+              - heading "Flash" [level=2] [ref=f4e3266]
+              - list "Flash" [ref=f4e3267]:
+                - listitem [ref=f4e3268]:
+                  - link "Apply the filter Dual LED to narrow results" [ref=f4e3270] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-101015500208111%3A100427322031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=100427311031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-101015500208111_1&ds=v1%3A9%2FAP%2FwLFY%2FB3XSChcnlfkRMsD1%2F4TLV5y1gWTzrOOuQ
+                    - checkbox [aria-hidden] [ref=f4e3273]
+                    - text: Dual LED
+            - group [ref=f4e3275]:
+              - heading "Purpose" [level=2] [ref=f4e3276]
+              - list "Purpose" [ref=f4e3277]:
+                - listitem [ref=f4e3278]:
+                  - link "Apply the filter Photography to narrow results" [ref=f4e3280] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-101016756045111%3A207854437031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=207854435031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-101016756045111_1&ds=v1%3A5wDb5yZMIVGRW%2BJodo7iNlnN1zk8EuW0v6Q3HGtOMIk
+                    - checkbox [aria-hidden] [ref=f4e3283]
+                    - text: Photography
+            - group [ref=f4e3285]:
+              - heading "Display Refresh Rate in Hertz" [level=2] [ref=f4e3286]
+              - list "Display Refresh Rate in Hertz" [ref=f4e3287]:
+                - listitem [ref=f4e3288]:
+                  - link "Apply the filter 120 to narrow results" [ref=f4e3290] [cursor=pointer]:
+                    - /url: /s?k=Iphone+18+pro+max&rh=p_n_g-101017397158111%3A214852071031&dc&crid=1CDQ2R5MPVJO6&qid=1793157045&rnid=214852064031&sprefix=iphone+18+pro+max%2Caps%2C2126&ref=sr_nr_p_n_g-101017397158111_1&ds=v1%3AUxYTXPGYKF9puUJzIZqlIltMMn3lxcZDwQ9N9dzyRyE
+                    - checkbox [aria-hidden] [ref=f4e3293]
+                    - text: "120"
+  - complementary "Your recently viewed items and featured recommendations"
+  - generic [ref=f4e3295]:
+    - button "Back to top" [ref=f4e3296] [cursor=pointer]
+    - generic [ref=f4e3298]:
+      - generic [ref=f4e3299]:
+        - heading "Get to Know Us" [level=6] [ref=f4e3300]
+        - list [ref=f4e3301]:
+          - listitem [ref=f4e3302]:
+            - link "About Amazon" [ref=f4e3303] [cursor=pointer]:
+              - /url: https://www.aboutamazon.in/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=f4e3304]:
+            - link "Careers" [ref=f4e3305] [cursor=pointer]:
+              - /url: https://amazon.jobs
+          - listitem [ref=f4e3306]:
+            - link "Press Releases" [ref=f4e3307] [cursor=pointer]:
+              - /url: https://press.aboutamazon.in/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=f4e3308]:
+            - link "Amazon Science" [ref=f4e3309] [cursor=pointer]:
+              - /url: https://www.amazon.science
+      - generic [ref=f4e3311]:
+        - heading "Connect with Us" [level=6] [ref=f4e3312]
+        - list [ref=f4e3313]:
+          - listitem [ref=f4e3314]:
+            - link "Facebook" [ref=f4e3315] [cursor=pointer]:
+              - /url: https://www.facebook.com/AmazonIN
+          - listitem [ref=f4e3316]:
+            - link "Twitter" [ref=f4e3317] [cursor=pointer]:
+              - /url: https://x.com/AmazonIN
+          - listitem [ref=f4e3318]:
+            - link "Instagram" [ref=f4e3319] [cursor=pointer]:
+              - /url: https://www.instagram.com/amazondotin
+      - generic [ref=f4e3321]:
+        - heading "Make Money with Us" [level=6] [ref=f4e3322]
+        - list [ref=f4e3323]:
+          - listitem [ref=f4e3324]:
+            - link "Sell on Amazon" [ref=f4e3325] [cursor=pointer]:
+              - /url: /b/?node=2838698031&ld=AZINSOANavDesktopFooter_C&ref_=nav_footer_sell_C
+          - listitem [ref=f4e3326]:
+            - link "Sell under Amazon Accelerator" [ref=f4e3327] [cursor=pointer]:
+              - /url: https://accelerator.amazon.in/?ref_=map_1_b2b_GW_FT
+          - listitem [ref=f4e3328]:
+            - link "Protect and Build Your Brand" [ref=f4e3329] [cursor=pointer]:
+              - /url: https://brandservices.amazon.in/?ref=AOINABRLGNRFOOT&ld=AOINABRLGNRFOOT
+          - listitem [ref=f4e3330]:
+            - link "Amazon Global Selling" [ref=f4e3331] [cursor=pointer]:
+              - /url: https://sell.amazon.in/grow-your-business/amazon-global-selling.html?ld=AZIN_Footer_V1&ref=AZIN_Footer_V1
+          - listitem [ref=f4e3332]:
+            - link "Supply to Amazon" [ref=f4e3333] [cursor=pointer]:
+              - /url: https://supply.amazon.com/?ref_=footer_sta&lang=en-IN
+          - listitem [ref=f4e3334]:
+            - link "Become an Affiliate" [ref=f4e3335] [cursor=pointer]:
+              - /url: https://affiliate-program.amazon.in/?utm_campaign=assocshowcase&utm_medium=footer&utm_source=GW&ref_=footer_assoc
+          - listitem [ref=f4e3336]:
+            - link "Fulfilment by Amazon" [ref=f4e3337] [cursor=pointer]:
+              - /url: https://services.amazon.in/services/fulfilment-by-amazon/benefits.html/ref=az_footer_fba?ld=AWRGINFBAfooter
+          - listitem [ref=f4e3338]:
+            - link "Advertise Your Products" [ref=f4e3339] [cursor=pointer]:
+              - /url: https://advertising.amazon.in/?ref=Amz.in
+          - listitem [ref=f4e3340]:
+            - link "Amazon Pay on Merchants" [ref=f4e3341] [cursor=pointer]:
+              - /url: https://www.amazonpay.in/merchant
+      - generic [ref=f4e3343]:
+        - heading "Let Us Help You" [level=6] [ref=f4e3344]
+        - list [ref=f4e3345]:
+          - listitem [ref=f4e3346]:
+            - link "Your Account" [ref=f4e3347] [cursor=pointer]:
+              - /url: /gp/css/homepage.html?ref_=footer_ya
+          - listitem [ref=f4e3348]:
+            - link "Returns Centre" [ref=f4e3349] [cursor=pointer]:
+              - /url: /gp/css/returns/homepage.html?ref_=footer_hy_f_4
+          - listitem [ref=f4e3350]:
+            - link "Recalls and Product Safety Alerts" [ref=f4e3351] [cursor=pointer]:
+              - /url: https://www.amazon.in/your-product-safety-alerts?ref_=footer_bsx_ypsa
+          - listitem [ref=f4e3352]:
+            - link "100% Purchase Protection" [ref=f4e3353] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=201083470&ref_=footer_swc
+          - listitem [ref=f4e3354]:
+            - link "Amazon App Download" [ref=f4e3355] [cursor=pointer]:
+              - /url: /gp/browse.html?node=6967393031&ref_=footer_mobapp
+          - listitem [ref=f4e3356]:
+            - link "Help" [ref=f4e3357] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=200507590&ref_=footer_gw_m_b_he
+    - generic [ref=f4e3359]:
+      - link "Amazon India Home" [ref=f4e3362] [cursor=pointer]:
+        - /url: /ref=footer_logo
+      - generic [ref=f4e3365]:
+        - generic [ref=f4e3366]:
+          - link "Choose a language for shopping. Current selection is English." [ref=f4e3367] [cursor=pointer]:
+            - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_lang
+            - generic [ref=f4e3369]: English
+          - button "Expand to Change Language or Country" [ref=f4e3370] [cursor=pointer]
+        - button "Choose a country/region for shopping. The current selection is India." [ref=f4e3371] [cursor=pointer]:
+          - generic [ref=f4e3373]: India
+    - generic "More on Amazon" [ref=f4e3374]:
+      - generic "More on Amazon" [ref=f4e3375]:
+        - list [ref=f4e3376]:
+          - listitem [ref=f4e3377]:
+            - link [ref=f4e3378] [cursor=pointer]:
+              - /url: https://www.abebooks.com/
+              - heading "AbeBooks" [level=5] [ref=f4e3379]
+              - generic [ref=f4e3380]: Books, art& collectibles
+          - listitem [aria-hidden] [ref=f4e3381]
+          - listitem [ref=f4e3382]:
+            - link [ref=f4e3383] [cursor=pointer]:
+              - /url: https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=IN_amazonfooter
+              - heading "Amazon Web Services" [level=5] [ref=f4e3384]
+              - generic [ref=f4e3385]: Scalable CloudComputing Services
+          - listitem [aria-hidden] [ref=f4e3386]
+          - listitem [ref=f4e3387]:
+            - link [ref=f4e3388] [cursor=pointer]:
+              - /url: https://www.audible.in/
+              - heading "Audible" [level=5] [ref=f4e3389]
+              - generic [ref=f4e3390]: DownloadAudio Books
+          - listitem [aria-hidden] [ref=f4e3391]
+          - listitem [ref=f4e3392]:
+            - link [ref=f4e3393] [cursor=pointer]:
+              - /url: https://www.imdb.com/
+              - heading "IMDb" [level=5] [ref=f4e3394]
+              - generic [ref=f4e3395]: Movies, TV& Celebrities
+        - list [ref=f4e3396]:
+          - listitem [ref=f4e3397]:
+            - link [ref=f4e3398] [cursor=pointer]:
+              - /url: https://www.shopbop.com/
+              - heading "Shopbop" [level=5] [ref=f4e3399]
+              - generic [ref=f4e3400]: DesignerFashion Brands
+          - listitem [aria-hidden] [ref=f4e3401]
+          - listitem [ref=f4e3402]:
+            - link [ref=f4e3403] [cursor=pointer]:
+              - /url: /business?ref=footer_aingw
+              - heading "Amazon Business" [level=5] [ref=f4e3404]
+              - generic [ref=f4e3405]: Everything ForYour Business
+          - listitem [aria-hidden] [ref=f4e3406]
+          - listitem [ref=f4e3407]:
+            - link "Amazon Music Stream millions of songs" [ref=f4e3408] [cursor=pointer]:
+              - /url: /music/player?ref=footer_apm
+              - heading "Amazon Music" [level=5] [ref=f4e3409]
+              - generic [ref=f4e3410]: Stream millions of songs
+          - listitem [aria-hidden] [ref=f4e3411]
+          - listitem [aria-hidden] [ref=f4e3412]
+    - generic [ref=f4e3413]:
+      - list [ref=f4e3414]:
+        - listitem [ref=f4e3415]:
+          - link "Conditions of Use & Sale" [ref=f4e3416] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=200545940&ref_=footer_cou
+        - listitem [ref=f4e3417]:
+          - link "Privacy Notice" [ref=f4e3418] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=200534380&ref_=footer_privacy
+        - listitem [ref=f4e3419]:
+          - link "Interest-Based Ads" [ref=f4e3420] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=202075050&ref_=footer_iba
+      - generic [ref=f4e3421]: © 1996-2026, Amazon.com, Inc. or its affiliates
+  - iframe [ref=f4e3423]:
+    - iframe [ref=f6e2]
+```

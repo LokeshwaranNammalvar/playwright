@@ -1,0 +1,13 @@
+3
+Cierra	Vega	39	cierra@example.com	10000	Insurance	
+Alden	Cantrell	45	alden@example.com	12000	Compliance	
+Kierra	Gentry	29	kierra@example.com	2000	Legal	
+[ 'Cierra\tVega\t39\tcierra@example.com\t10000\tInsurance\t' ]
+[ 'Alden\tCantrell\t45\talden@example.com\t12000\tCompliance\t' ]
+[ 'Kierra\tGentry\t29\tkierra@example.com\t2000\tLegal\t' ]
+[ 'CierraVega39cierra@example.com10000Insurance' ]
+[ 'AldenCantrell45alden@example.com12000Compliance' ]
+[ 'KierraGentry29kierra@example.com2000Legal' ]
+CierraVega39cierra@example.com10000Insurance
+AldenCantrell45alden@example.com12000Compliance
+KierraGentry29kierra@example.com2000Legal
